@@ -1,0 +1,36 @@
+using Terraria;
+using Terraria.ModLoader;
+using Terraria.ID;
+
+namespace FabusMod.Items.Tiles;
+
+public class ReinforcedWorkBench : ModItem
+{
+	public override void SetStaticDefaults()
+	{
+		DisplayName.SetDefault("Reinforced Work Bench");
+		Tooltip.SetDefault("Used to craft stone-plated weapons");
+	}
+
+	public override void SetDefaults()
+	{
+		Item.width = 36;
+		Item.height = 20;
+		Item.maxStack = 99;
+		Item.useTurn = true;
+		Item.autoReuse = true;
+		Item.useAnimation = 15;
+		Item.useTime = 15;
+		Item.useStyle = ItemUseStyleID.Swing;
+		Item.consumable = true;
+		Item.createTile = ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>();
+	}
+
+	public override void AddRecipes()
+	{
+		Recipe val = CreateRecipe();
+		val.AddIngredient(ItemID.WorkBench, 1);
+		val.AddIngredient(ItemID.StoneBlock, 12);
+		val.Register();
+	}
+}

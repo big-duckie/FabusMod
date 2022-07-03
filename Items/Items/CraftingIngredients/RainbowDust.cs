@@ -1,0 +1,22 @@
+using Terraria;
+using Terraria.ModLoader;
+
+namespace FabusMod.Items.Items.CraftingIngredients;
+
+public class RainbowDust : ModItem
+{
+	public override void SetStaticDefaults()
+	{
+		DisplayName.SetDefault("Rainbow Dust");
+		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nDon't inhale it!");
+	}
+
+	public override void SetDefaults()
+	{
+		Item.width = 24;
+		Item.height = 24;
+		Item.maxStack = 999;
+		Item.expert = true;
+		Item.value = Item.sellPrice(0, 0, 4, 50);
+	}
+}

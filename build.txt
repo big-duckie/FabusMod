@@ -1,0 +1,5 @@
+﻿displayName = ♥ Fabu's Mod ♥
+author = Fabu
+version = 3.0
+homepage = https://forums.terraria.org/index.php?threads/fabus-mod-version-1-0.60792/
+includePDB = true

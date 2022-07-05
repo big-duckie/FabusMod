@@ -8,7 +8,6 @@ public class ReinforcedWorkBench : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Reinforced Work Bench");
 		Tooltip.SetDefault("Used to craft stone-plated weapons");
 	}
 
@@ -28,9 +27,9 @@ public class ReinforcedWorkBench : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.WorkBench, 1);
-		val.AddIngredient(ItemID.StoneBlock, 12);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.WorkBench, 1)
+			.AddIngredient(ItemID.StoneBlock, 12)
+			.Register();
 	}
 }

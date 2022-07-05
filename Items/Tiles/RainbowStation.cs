@@ -8,7 +8,6 @@ public class RainbowStation : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Rainbow Station");
 		Tooltip.SetDefault("Used to craft rainbow weapons");
 	}
 
@@ -29,10 +28,10 @@ public class RainbowStation : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.LunarCraftingStation, 1);
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 12);
-		val.AddTile(TileID.LunarCraftingStation);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.LunarCraftingStation)
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 12)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 	}
 }

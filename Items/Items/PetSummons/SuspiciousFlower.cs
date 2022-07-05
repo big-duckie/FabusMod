@@ -9,7 +9,6 @@ public class SuspiciousFlower : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Suspicious Flower");
 		Tooltip.SetDefault("[c/FFAF4F:Pet Summoning Item]\nI wonder who this flower belongs to? \n[c/46FFFF:~~ Developer Pet ~~]");
 	}
 

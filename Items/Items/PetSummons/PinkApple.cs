@@ -19,7 +19,6 @@ public class PinkApple : ModItem
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Pink Apple");
 		Tooltip.SetDefault("[c/B6FF00:Dyeable]\n[c/FFAF4F:Pet Summoning Item]\nSummons a pink fox to follow you around \n[c/FF2B6E:Currently Unobtainable]");
 	}
 
@@ -33,10 +32,10 @@ public class PinkApple : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Apple>());
-		val.AddIngredient(ItemID.PinkDye);
-		val.AddTile(TileID.DyeVat);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Apple>())
+			.AddIngredient(ItemID.PinkDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

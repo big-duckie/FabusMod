@@ -20,7 +20,6 @@ public class Apple : ModItem
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Apple");
 		Tooltip.SetDefault("[c/B6FF00:Dyeable]\n[c/FFAF4F:Pet Summoning Item]\nSummons a fox to follow you around \n[c/FF2B6E:Currently Unobtainable]");
 	}
 
@@ -34,10 +33,10 @@ public class Apple : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<PinkApple>());
-		recipe.AddIngredient(ItemID.RedDye);
-		recipe.AddTile(TileID.DyeVat);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<PinkApple>())
+			.AddIngredient(ItemID.RedDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

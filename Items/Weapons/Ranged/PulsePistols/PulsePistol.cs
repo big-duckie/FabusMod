@@ -18,6 +18,7 @@ public class PulsePistol : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 10;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 40;
 		Item.height = 28;
 		Item.useTime = 2;
@@ -34,16 +35,14 @@ public class PulsePistol : ModItem
 		Item.rare = ItemRarityID.LightRed;
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.7f;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
-		Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(8f));
-		velocity.X = perturbedSpeed.X;
-		velocity.Y = perturbedSpeed.Y;
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
+		velocity = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(8f));
 		if (type == 14)
 		{
 			type = ModContent.ProjectileType<PulseBullet>();
@@ -58,11 +57,11 @@ public class PulsePistol : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:AdamantiteBar", 6);
-		val.AddIngredient(ItemID.Diamond, 2);
-		val.AddIngredient(ItemID.Sapphire, 2);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:AdamantiteBar", 6)
+			.AddIngredient(ItemID.Diamond, 2)
+			.AddIngredient(ItemID.Sapphire, 2)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

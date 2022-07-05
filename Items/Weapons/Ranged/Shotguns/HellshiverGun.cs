@@ -17,6 +17,7 @@ public class HellshiverGun : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 30;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 78;
 		Item.height = 28;
 		Item.useTime = 35;
@@ -33,13 +34,13 @@ public class HellshiverGun : ModItem
 		Item.useAmmo = AmmoID.Bullet;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
 		int numberProjectiles = 6;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(10f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI, 0f, 0f);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(10f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI, 0f, 0f);
 		}
 		return false;
 	}
@@ -51,17 +52,17 @@ public class HellshiverGun : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<HellfireShotgun>());
-		val.AddRecipeGroup("FabusMod:OrichalcumBar", 6);
-		val.AddIngredient(ItemID.IceBlock, 20);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HellfireShotgun>())
+			.AddRecipeGroup("FabusMod:OrichalcumBar", 6)
+			.AddIngredient(ItemID.IceBlock, 20)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<HellshiverGunHellfire>());
-		val2.AddIngredient(ItemID.BlueFlameDye, 1);
-		val2.AddTile(TileID.DyeVat);
-		val2.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HellshiverGunHellfire>())
+			.AddIngredient(ItemID.BlueFlameDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

@@ -17,6 +17,7 @@ public class Verano : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 60;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 48;
 		Item.height = 36;
 		Item.useTime = 2;
@@ -38,31 +39,29 @@ public class Verano : ModItem
 		return new Vector2(-12f, -8f);
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.8f;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(5f));
-		velocity.X = perturbedSpeed.X;
-		velocity.Y = perturbedSpeed.Y;
+		velocity = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(5f));
 		return true;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<AugmentedUzi>());
-		val.AddIngredient(ItemID.FragmentVortex, 12);
-		val.AddTile(TileID.LunarCraftingStation);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<AugmentedUzi>())
+			.AddIngredient(ItemID.FragmentVortex, 12)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<VeranoRime>());
-		val2.AddIngredient(ItemID.GreenDye, 1);
-		val2.AddTile(TileID.DyeVat);
-		val2.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<VeranoRime>())
+			.AddIngredient(ItemID.GreenDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

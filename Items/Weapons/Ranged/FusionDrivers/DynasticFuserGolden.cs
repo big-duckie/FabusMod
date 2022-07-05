@@ -16,6 +16,7 @@ public class DynasticFuserGolden : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 72;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 70;
 		Item.height = 32;
 		Item.useTime = 4;
@@ -37,17 +38,17 @@ public class DynasticFuserGolden : ModItem
 		return new Vector2(-2f, 2f);
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.55f;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:ProtectionFuser", 1);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 8);
-		val.AddTile(TileID.AdamantiteForge);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:ProtectionFuser")
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 8)
+			.AddTile(TileID.AdamantiteForge)
+			.Register();
 	}
 }

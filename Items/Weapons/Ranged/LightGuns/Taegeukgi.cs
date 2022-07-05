@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.LightBlasts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -18,6 +17,7 @@ public class Taegeukgi : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 40;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 32;
 		Item.height = 38;
 		Item.useTime = 5;
@@ -28,14 +28,14 @@ public class Taegeukgi : ModItem
 		Item.value = Item.sellPrice(0, 8, 25, 0);
 		Item.UseSound = SoundID.Item11;
 		Item.autoReuse = true;
-		Item.shoot = ModContent.ProjectileType<LightBlast>();
+		Item.shoot = ModContent.ProjectileType<Projectiles.LightBlasts.LightBlast>();
 		Item.shootSpeed = 6f;
 		Item.rare = ItemRarityID.LightRed;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 32f;
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 32f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -45,11 +45,11 @@ public class Taegeukgi : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<LightGun>());
-		val.AddRecipeGroup("FabusMod:OrichalcumBar", 6);
-		val.AddIngredient(ItemID.Sapphire, 6);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<LightGun>())
+			.AddRecipeGroup("FabusMod:OrichalcumBar", 6)
+			.AddIngredient(ItemID.Sapphire, 6)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

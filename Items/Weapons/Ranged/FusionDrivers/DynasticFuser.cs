@@ -16,6 +16,7 @@ public class DynasticFuser : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 14;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 72;
 		Item.height = 32;
 		Item.useTime = 7;
@@ -37,18 +38,18 @@ public class DynasticFuser : ModItem
 		return new Vector2(-2f, 2f);
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.3f;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<FusionDriver>());
-		val.AddIngredient(ItemID.HellstoneBar, 12);
-		val.AddIngredient(ItemID.Sapphire, 8);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<FusionDriver>())
+			.AddIngredient(ItemID.HellstoneBar, 12)
+			.AddIngredient(ItemID.Sapphire, 8)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

@@ -18,6 +18,7 @@ public class FoxPistolBlue : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 22;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 36;
 		Item.height = 21;
 		Item.useTime = 12;
@@ -38,9 +39,9 @@ public class FoxPistolBlue : ModItem
 		return new Vector2(0f, -2f);
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 32f;
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 32f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -54,9 +55,7 @@ public class FoxPistolBlue : ModItem
 		{
 			player.AddBuff(ModContent.BuffType<Buffs.FoxPistol.FoxMendingBlue>(), 300, true);
 		}
-		Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(3f));
-		velocity.X = perturbedSpeed.X;
-		velocity.Y = perturbedSpeed.Y;
+		velocity = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(3f));
 		return true;
 	}
 
@@ -88,16 +87,16 @@ public class FoxPistolBlue : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.NatureToken>());
-		val.AddRecipeGroup("FabusMod:GoldBar", 10);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.NatureToken>())
+			.AddRecipeGroup("FabusMod:GoldBar", 10)
+			.AddTile(TileID.Anvils)
+			.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<FoxPistol>(), 1);
-		val2.AddIngredient(ItemID.BlueDye, 1);
-		val2.AddTile(TileID.DyeVat);
-		val2.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<FoxPistol>())
+			.AddIngredient(ItemID.BlueDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

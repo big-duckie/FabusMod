@@ -16,6 +16,7 @@ public class StormBow : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 24;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 18;
 		Item.height = 38;
 		Item.useTime = 18;
@@ -43,7 +44,7 @@ public class StormBow : ModItem
 			Item.useTime = 4;
 			Item.useAnimation = 24;
 			Item.damage = 24;
-            Item.reuseDelay = 90;
+			Item.reuseDelay = 90;
 			Item.shoot = ModContent.ProjectileType<StormArrow>();
 		}
 		else
@@ -55,6 +56,6 @@ public class StormBow : ModItem
 			Item.damage = 28;
 			Item.shoot = ProjectileID.WoodenArrowFriendly;
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 }

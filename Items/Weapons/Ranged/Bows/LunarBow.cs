@@ -18,6 +18,7 @@ public class LunarBow : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 240;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 27;
 		Item.height = 69;
 		Item.useTime = 9;
@@ -33,8 +34,8 @@ public class LunarBow : ModItem
 		Item.shoot = ModContent.ProjectileType<LunarBolt>();
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
 		if (player.altFunctionUse == 2)
 		{
 			if (!player.HasBuff(ModContent.BuffType<Buffs.LunarBow.ShatteredMoonsCurse>()) && player.statLife < player.statLifeMax2)
@@ -62,11 +63,11 @@ public class LunarBow : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.LifeFruit, 5);
-		val.AddIngredient(ItemID.LifeCrystal, 5);
-		val.AddIngredient(ItemID.FragmentVortex, 14);
-		val.AddTile(TileID.LunarCraftingStation);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.LifeFruit, 5)
+			.AddIngredient(ItemID.LifeCrystal, 5)
+			.AddIngredient(ItemID.FragmentVortex, 14)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 	}
 }

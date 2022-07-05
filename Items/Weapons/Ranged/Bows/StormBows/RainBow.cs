@@ -16,6 +16,7 @@ public class RainBow : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 90;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 30;
 		Item.height = 50;
 		Item.useTime = 3;
@@ -55,15 +56,15 @@ public class RainBow : ModItem
 			Item.damage = 90;
 			Item.shoot = ModContent.ProjectileType<RainbowArrow>();
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<GoldenKabuki>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<GoldenKabuki>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

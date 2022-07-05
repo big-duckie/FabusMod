@@ -18,6 +18,7 @@ public class PulseSprayerCadet : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 54;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 40;
 		Item.height = 28;
 		Item.useTime = 2;
@@ -34,7 +35,7 @@ public class PulseSprayerCadet : ModItem
 		Item.rare = ItemRarityID.Red;
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.8f;
 	}
@@ -44,11 +45,9 @@ public class PulseSprayerCadet : ModItem
 		return new Vector2(1f, -2f);
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
-		Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(8f));
-		velocity.X = perturbedSpeed.X;
-		velocity.Y = perturbedSpeed.Y;
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
+		velocity = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(8f));
 		if (type == 14)
 		{
 			type = ModContent.ProjectileType<PulseBullet>();
@@ -58,10 +57,10 @@ public class PulseSprayerCadet : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<PulseSprayer>());
-		val.AddIngredient(ItemID.SilverDye, 1);
-		val.AddTile(TileID.DyeVat);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<PulseSprayer>())
+			.AddIngredient(ItemID.SilverDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

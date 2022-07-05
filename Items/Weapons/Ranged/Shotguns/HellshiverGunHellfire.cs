@@ -17,6 +17,7 @@ public class HellshiverGunHellfire : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 30;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 78;
 		Item.height = 28;
 		Item.useTime = 35;
@@ -33,13 +34,13 @@ public class HellshiverGunHellfire : ModItem
 		Item.useAmmo = AmmoID.Bullet;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
 		int numberProjectiles = 6;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(10f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(10f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
@@ -51,10 +52,10 @@ public class HellshiverGunHellfire : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<HellshiverGun>());
-		val.AddIngredient(ItemID.FlameDye, 1);
-		val.AddTile(TileID.DyeVat);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HellshiverGun>())
+			.AddIngredient(ItemID.FlameDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

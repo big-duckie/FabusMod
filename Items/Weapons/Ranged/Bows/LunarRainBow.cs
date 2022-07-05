@@ -18,6 +18,7 @@ public class LunarRainBow : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 320;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 27;
 		Item.height = 69;
 		Item.useTime = 7;
@@ -33,8 +34,8 @@ public class LunarRainBow : ModItem
 		Item.shoot = ModContent.ProjectileType<SpectralMoonBolt>();
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
 		if (player.altFunctionUse == 2)
 		{
 			if (!player.HasBuff(ModContent.BuffType<Buffs.LunarBow.SpectralMoonsCurse>()) && player.statLife < player.statLifeMax2)
@@ -62,10 +63,10 @@ public class LunarRainBow : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<LunarBow>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<LunarBow>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

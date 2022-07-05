@@ -17,6 +17,7 @@ public class HellkinShotgun : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 46;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 80;
 		Item.height = 34;
 		Item.useTime = 28;
@@ -33,13 +34,13 @@ public class HellkinShotgun : ModItem
 		Item.useAmmo = AmmoID.Bullet;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
 		int numberProjectiles = 6;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(8f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(8f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return true;
 	}
@@ -70,7 +71,7 @@ public class HellkinShotgun : ModItem
 			Item.useTime = 28;
 			Item.useAnimation = 28;
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override Vector2? HoldoutOffset()
@@ -80,17 +81,17 @@ public class HellkinShotgun : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:HellshiverGun");
-		val.AddIngredient(ItemID.HallowedBar, 6);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:HellshiverGun")
+			.AddIngredient(ItemID.HallowedBar, 6)
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<HellkinShotgunDracula>());
-		val2.AddIngredient(ItemID.OrangeDye, 1);
-		val2.AddTile(TileID.DyeVat);
-		val2.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HellkinShotgunDracula>())
+			.AddIngredient(ItemID.OrangeDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

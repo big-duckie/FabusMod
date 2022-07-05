@@ -16,6 +16,7 @@ public class ProtectionFuserCarbonFiber : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 36;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 72;
 		Item.height = 32;
 		Item.useTime = 5;
@@ -37,17 +38,17 @@ public class ProtectionFuserCarbonFiber : ModItem
 		return new Vector2(-2f, 2f);
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
-    {
+	public override bool CanConsumeAmmo(Item ammo, Player player)
+	{
 		return Utils.NextFloat(Main.rand) >= 0.42f;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<ProtectionFuser>());
-		val.AddIngredient(ItemID.BlackDye, 1);
-		val.AddTile(TileID.DyeVat);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<ProtectionFuser>())
+			.AddIngredient(ItemID.BlackDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

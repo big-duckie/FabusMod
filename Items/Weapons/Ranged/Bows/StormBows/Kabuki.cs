@@ -16,6 +16,7 @@ public class Kabuki : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 42;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 18;
 		Item.height = 38;
 		Item.useTime = 14;
@@ -55,15 +56,15 @@ public class Kabuki : ModItem
 			Item.damage = 42;
 			Item.shoot = ProjectileID.HellfireArrow;
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<DemonsBow>());
-		val.AddIngredient(ItemID.HallowedBar, 6);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<DemonsBow>())
+			.AddIngredient(ItemID.HallowedBar, 6)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

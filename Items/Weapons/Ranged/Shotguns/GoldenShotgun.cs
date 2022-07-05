@@ -17,6 +17,7 @@ public class GoldenShotgun : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 52;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 80;
 		Item.height = 34;
 		Item.useTime = 25;
@@ -33,13 +34,13 @@ public class GoldenShotgun : ModItem
 		Item.useAmmo = AmmoID.Bullet;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
 		int numberProjectiles = 7;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(10f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(10f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return true;
 	}
@@ -70,7 +71,7 @@ public class GoldenShotgun : ModItem
 			Item.useTime = 25;
 			Item.useAnimation = 25;
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override Vector2? HoldoutOffset()
@@ -80,11 +81,11 @@ public class GoldenShotgun : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:HellkinShotgun", 1);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 8);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4);
-		val.AddTile(TileID.AdamantiteForge);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:HellkinShotgun")
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 8)
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4)
+			.AddTile(TileID.AdamantiteForge)
+			.Register();
 	}
 }

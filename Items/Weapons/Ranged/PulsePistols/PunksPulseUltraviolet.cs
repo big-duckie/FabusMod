@@ -18,6 +18,7 @@ public class PunksPulseUltraviolet : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 25;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 40;
 		Item.height = 28;
 		Item.useTime = 2;
@@ -34,7 +35,7 @@ public class PunksPulseUltraviolet : ModItem
 		Item.rare = ItemRarityID.Pink;
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.7f;
 	}
@@ -44,11 +45,9 @@ public class PunksPulseUltraviolet : ModItem
 		return new Vector2(1f, -2f);
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(8f));
-		velocity.X = perturbedSpeed.X;
-		velocity.Y = perturbedSpeed.Y;
+		velocity = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(8f));
 		if (type == 14)
 		{
 			type = ModContent.ProjectileType<PulseBulletPink>();
@@ -58,10 +57,10 @@ public class PunksPulseUltraviolet : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<PunksPulse>());
-		val.AddIngredient(ItemID.PinkDye, 1);
-		val.AddTile(TileID.DyeVat);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<PunksPulse>())
+			.AddIngredient(ItemID.PinkDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

@@ -17,6 +17,7 @@ public class MachinePistol : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 10;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 50;
 		Item.height = 38;
 		Item.useTime = 2;
@@ -33,7 +34,7 @@ public class MachinePistol : ModItem
 		Item.rare = ItemRarityID.LightRed;
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.8f;
 	}
@@ -43,20 +44,18 @@ public class MachinePistol : ModItem
 		return new Vector2(-12f, -8f);
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(6f));
-		velocity.X = perturbedSpeed.X;
-		velocity.Y = perturbedSpeed.Y;
+		velocity = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(6f));
 		return true;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:OrichalcumBar", 16);
-		val.AddIngredient(ItemID.Amethyst, 5);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:OrichalcumBar", 16)
+			.AddIngredient(ItemID.Amethyst, 5)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

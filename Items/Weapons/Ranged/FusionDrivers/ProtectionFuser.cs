@@ -16,6 +16,7 @@ public class ProtectionFuser : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 36;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 72;
 		Item.height = 32;
 		Item.useTime = 5;
@@ -37,23 +38,23 @@ public class ProtectionFuser : ModItem
 		return new Vector2(-2f, 2f);
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.42f;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<DynasticFuser>());
-		val.AddRecipeGroup("FabusMod:AdamantiteBar", 12);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<DynasticFuser>())
+			.AddRecipeGroup("FabusMod:AdamantiteBar", 12)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<ProtectionFuserCarbonFiber>());
-		val2.AddIngredient(ItemID.SilverDye, 1);
-		val2.AddTile(TileID.DyeVat);
-		val2.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<ProtectionFuserCarbonFiber>())
+			.AddIngredient(ItemID.SilverDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

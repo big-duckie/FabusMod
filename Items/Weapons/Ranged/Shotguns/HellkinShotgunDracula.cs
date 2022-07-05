@@ -17,6 +17,7 @@ public class HellkinShotgunDracula : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 46;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 78;
 		Item.height = 30;
 		Item.useTime = 28;
@@ -33,13 +34,13 @@ public class HellkinShotgunDracula : ModItem
 		Item.useAmmo = AmmoID.Bullet;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
 		int numberProjectiles = 6;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(8f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(8f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return true;
 	}
@@ -70,7 +71,7 @@ public class HellkinShotgunDracula : ModItem
 			Item.useTime = 28;
 			Item.useAnimation = 28;
 		}
-		return this.CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override Vector2? HoldoutOffset()
@@ -80,10 +81,10 @@ public class HellkinShotgunDracula : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<HellkinShotgun>());
-		val.AddIngredient(ItemID.RedDye, 1);
-		val.AddTile(TileID.DyeVat);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HellkinShotgun>())
+			.AddIngredient(ItemID.RedDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.LightBlasts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -18,6 +17,7 @@ public class LightGun : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 14;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 32;
 		Item.height = 38;
 		Item.useTime = 7;
@@ -28,14 +28,14 @@ public class LightGun : ModItem
 		Item.value = Item.sellPrice(0, 5, 0, 0);
 		Item.UseSound = SoundID.Item11;
 		Item.autoReuse = true;
-		Item.shoot = ModContent.ProjectileType<LightBlast>();
+		Item.shoot = ModContent.ProjectileType<Projectiles.LightBlasts.LightBlast>();
 		Item.shootSpeed = 7f;
 		Item.rare = ItemRarityID.Green;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 32f;
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 32f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -45,11 +45,11 @@ public class LightGun : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:GoldBar", 20);
-		val.AddIngredient(ItemID.Diamond, 4);
-		val.AddIngredient(ItemID.Amethyst, 6);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:GoldBar", 20)
+			.AddIngredient(ItemID.Diamond, 4)
+			.AddIngredient(ItemID.Amethyst, 6)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

@@ -17,6 +17,7 @@ public class Peacekeeper : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 12;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 50;
 		Item.height = 26;
 		Item.useTime = 15;
@@ -38,9 +39,9 @@ public class Peacekeeper : ModItem
 		return new Vector2(-2f, -2f);
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 35f;
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 35f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -50,10 +51,10 @@ public class Peacekeeper : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("IronBar", 10);
-		val.AddIngredient(ItemID.Sapphire, 2);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddRecipeGroup("IronBar", 10);
+		recipe.AddIngredient(ItemID.Sapphire, 2);
+		recipe.AddTile(TileID.Anvils);
+		recipe.Register();
 	}
 }

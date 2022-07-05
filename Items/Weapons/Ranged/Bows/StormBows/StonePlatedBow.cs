@@ -15,6 +15,7 @@ public class StonePlatedBow : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 5;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 18;
 		Item.height = 38;
 		Item.useTime = 32;
@@ -31,11 +32,11 @@ public class StonePlatedBow : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedBowPart>(), 2);
-		val.AddIngredient(ItemID.StoneBlock, 4);
-		val.AddIngredient(ItemID.FallenStar, 1);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedBowPart>(), 2)
+			.AddIngredient(ItemID.StoneBlock, 4)
+			.AddIngredient(ItemID.FallenStar)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>())
+			.Register();
 	}
 }

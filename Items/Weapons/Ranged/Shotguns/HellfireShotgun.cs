@@ -17,6 +17,7 @@ public class HellfireShotgun : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 21;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 78;
 		Item.height = 28;
 		Item.useTime = 45;
@@ -33,13 +34,13 @@ public class HellfireShotgun : ModItem
 		Item.useAmmo = AmmoID.Bullet;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
 		int numberProjectiles = 5;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(12f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(12f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
@@ -51,10 +52,10 @@ public class HellfireShotgun : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.Obsidian, 16);
-		val.AddIngredient(ItemID.HellstoneBar, 4);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.Obsidian, 16)
+			.AddIngredient(ItemID.HellstoneBar, 4)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

@@ -16,6 +16,7 @@ public class DemonsBow : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 34;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 18;
 		Item.height = 38;
 		Item.useTime = 16;
@@ -55,16 +56,16 @@ public class DemonsBow : ModItem
 			Item.damage = 34;
 			Item.shoot = ProjectileID.HellfireArrow;
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<StormBow>());
-		val.AddIngredient(ModContent.ItemType<StonePlatedBow>());
-		val.AddIngredient(ItemID.HellstoneBar, 6);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<StormBow>())
+			.AddIngredient(ModContent.ItemType<StonePlatedBow>())
+			.AddIngredient(ItemID.HellstoneBar, 6)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

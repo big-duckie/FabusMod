@@ -18,6 +18,7 @@ public class SpectralHowler : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 260;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 36;
 		Item.height = 21;
 		Item.useTime = 6;
@@ -38,9 +39,9 @@ public class SpectralHowler : ModItem
 		return new Vector2(-6f, -2f);
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 32f;
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 32f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -53,9 +54,7 @@ public class SpectralHowler : ModItem
 		{
 			player.AddBuff(ModContent.BuffType<Buffs.FoxPistol.SpectralMending>(), 420, true);
 		}
-		Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(3f));
-		velocity.X = perturbedSpeed.X;
-		velocity.Y = perturbedSpeed.Y;
+		velocity = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(3f));
 		return true;
 	}
 
@@ -87,11 +86,11 @@ public class SpectralHowler : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:FoxPistol", 1);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowToken>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 4);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:FoxPistol")
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowToken>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 4)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

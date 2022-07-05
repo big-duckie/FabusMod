@@ -16,6 +16,7 @@ public class GoldenKabuki : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 58;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 18;
 		Item.height = 38;
 		Item.useTime = 12;
@@ -55,15 +56,15 @@ public class GoldenKabuki : ModItem
 			Item.damage = 58;
 			Item.shoot = ProjectileID.HolyArrow;
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Kabuki>());
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 6);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Kabuki>())
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 6)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

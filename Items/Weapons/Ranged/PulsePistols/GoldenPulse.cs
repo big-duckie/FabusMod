@@ -18,6 +18,7 @@ public class GoldenPulse : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 66;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 40;
 		Item.height = 28;
 		Item.useTime = 2;
@@ -34,7 +35,7 @@ public class GoldenPulse : ModItem
 		Item.rare = 12;
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.9f;
 	}
@@ -44,11 +45,9 @@ public class GoldenPulse : ModItem
 		return new Vector2(1f, -2f);
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(8f));
-		velocity.X = perturbedSpeed.X;
-		velocity.Y = perturbedSpeed.Y;
+		velocity = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(8f));
 		if (type == 14)
 		{
 			type = ModContent.ProjectileType<PulseBulletGolden>();
@@ -58,10 +57,10 @@ public class GoldenPulse : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:PulseSprayer", 1);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 2);
-		val.AddTile(TileID.LunarCraftingStation);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:PulseSprayer")
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 2)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 	}
 }

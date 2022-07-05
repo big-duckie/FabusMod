@@ -18,6 +18,7 @@ public class FusedRainbow : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 85;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 70;
 		Item.height = 32;
 		Item.useTime = 2;
@@ -39,13 +40,13 @@ public class FusedRainbow : ModItem
 		return new Vector2(-2f, 2f);
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
-    {
+	public override bool CanConsumeAmmo(Item ammo, Player player)
+	{
 		return Utils.NextFloat(Main.rand) >= 0.8f;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
 		if (type == 14)
 		{
 			type = ModContent.ProjectileType<RainbowBullet>();
@@ -55,10 +56,10 @@ public class FusedRainbow : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<DynasticFuserGolden>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 12);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<DynasticFuserGolden>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 12)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

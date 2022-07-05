@@ -18,6 +18,7 @@ public class Unity : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 150;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 38;
 		Item.height = 24;
 		Item.useTime = 2;
@@ -40,14 +41,14 @@ public class Unity : ModItem
 		return new Vector2(-2f, -2f);
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
-    {
+	public override bool CanConsumeAmmo(Item ammo, Player player)
+	{
 		return Utils.NextFloat(Main.rand) >= 0.6f;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 35f;
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 35f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -61,10 +62,10 @@ public class Unity : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<GoddessRevolver>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 8);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<GoddessRevolver>());
+		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 8);
+		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
+		recipe.Register();
 	}
 }

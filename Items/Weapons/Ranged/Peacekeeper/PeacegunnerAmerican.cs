@@ -17,6 +17,7 @@ public class PeacegunnerAmerican : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 32;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 50;
 		Item.height = 28;
 		Item.useTime = 12;
@@ -38,9 +39,9 @@ public class PeacegunnerAmerican : ModItem
 		return new Vector2(-2f, -2f);
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 35f;
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 35f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -50,11 +51,11 @@ public class PeacegunnerAmerican : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Peacegunner>());
-		val.AddIngredient(ItemID.BlueDye, 1);
-		val.AddIngredient(ItemID.RedDye, 1);
-		val.AddTile(TileID.DyeVat);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<Peacegunner>());
+		recipe.AddIngredient(ItemID.BlueDye);
+		recipe.AddIngredient(ItemID.RedDye);
+		recipe.AddTile(TileID.DyeVat);
+		recipe.Register();
 	}
 }

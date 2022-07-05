@@ -1,4 +1,3 @@
-using FabusMod.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -18,6 +17,7 @@ public class CosmicHacker : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 82;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 48;
 		Item.height = 36;
 		Item.useTime = 2;
@@ -39,29 +39,27 @@ public class CosmicHacker : ModItem
 		return new Vector2(-8f, -8f);
 	}
 
-    public override bool CanConsumeAmmo(Item ammo, Player player)
+	public override bool CanConsumeAmmo(Item ammo, Player player)
 	{
 		return Utils.NextFloat(Main.rand) >= 0.9f;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(5f));
-		velocity.X = perturbedSpeed.X;
-		velocity.Y = perturbedSpeed.Y;
+		velocity = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(5f));
 		if (type == 14)
 		{
-			type = ModContent.ProjectileType<RainbowBullet>();
+			type = ModContent.ProjectileType<Projectiles.RainbowBullet>();
 		}
 		return true;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<MachinePistolGolden>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 10);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<MachinePistolGolden>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 10)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

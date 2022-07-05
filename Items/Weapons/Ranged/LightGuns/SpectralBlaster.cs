@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.LightBlasts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -18,6 +17,7 @@ public class SpectralBlaster : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 100;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 32;
 		Item.height = 38;
 		Item.useTime = 2;
@@ -28,14 +28,14 @@ public class SpectralBlaster : ModItem
 		Item.value = Item.sellPrice(1, 55, 0, 0);
 		Item.UseSound = SoundID.Item11;
 		Item.autoReuse = true;
-		Item.shoot = ModContent.ProjectileType<RainbowLightBlast>();
+		Item.shoot = ModContent.ProjectileType<Projectiles.LightBlasts.RainbowLightBlast>();
 		Item.shootSpeed = 10f;
 		Item.expert = true;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 32f;
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 32f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -45,10 +45,10 @@ public class SpectralBlaster : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<GoldenStinger>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		Recipe recipe = CreateRecipe()
+			.AddIngredient(ModContent.ItemType<GoldenStinger>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

@@ -16,6 +16,7 @@ public class FusionDriver : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 5;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 72;
 		Item.height = 32;
 		Item.useTime = 8;
@@ -39,10 +40,10 @@ public class FusionDriver : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("IronBar", 12);
-		val.AddIngredient(ItemID.Emerald, 4);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("IronBar", 12)
+			.AddIngredient(ItemID.Emerald, 4)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

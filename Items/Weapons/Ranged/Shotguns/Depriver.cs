@@ -18,6 +18,7 @@ public class Depriver : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 120;
+		Item.DamageType = DamageClass.Ranged;
 		Item.width = 70;
 		Item.height = 36;
 		Item.useTime = 18;
@@ -34,7 +35,7 @@ public class Depriver : ModItem
 		Item.useAmmo = AmmoID.Bullet;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
 		if (type == 14)
 		{
@@ -43,8 +44,8 @@ public class Depriver : ModItem
 		int numberProjectiles = 8;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(10f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(10f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
@@ -75,7 +76,7 @@ public class Depriver : ModItem
 			Item.useTime = 20;
 			Item.useAnimation = 20;
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override Vector2? HoldoutOffset()
@@ -85,10 +86,10 @@ public class Depriver : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<GoldenShotgun>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 8);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<GoldenShotgun>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 8)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

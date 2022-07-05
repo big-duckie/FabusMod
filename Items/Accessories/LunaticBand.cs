@@ -27,34 +27,34 @@ public class LunaticBand : ModItem
 	{
 		player.GetDamage(DamageClass.Generic) += 0.14f;
 		player.buffImmune[BuffID.OnFire] = true;
-		player.buffImmune[BuffID.VortexDebuff] = true;
 		player.buffImmune[BuffID.Obstructed] = true;
+		player.buffImmune[BuffID.VortexDebuff] = true;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<SolarBand>());
-		val.AddIngredient(ItemID.LunarBar, 8);
-		val.AddTile(TileID.LunarCraftingStation);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<SolarBand>())
+			.AddIngredient(ItemID.LunarBar, 8)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<VortexBand>());
-		val2.AddIngredient(ItemID.LunarBar, 8);
-		val2.AddTile(TileID.LunarCraftingStation);
-		val2.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<VortexBand>())
+			.AddIngredient(ItemID.LunarBar, 8)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 
-		Recipe val3 = CreateRecipe();
-		val3.AddIngredient(ModContent.ItemType<StardustBand>());
-		val3.AddIngredient(ItemID.LunarBar, 8);
-		val3.AddTile(TileID.LunarCraftingStation);
-		val3.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<StardustBand>())
+			.AddIngredient(ItemID.LunarBar, 8)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 
-		Recipe val4 = CreateRecipe();
-		val4.AddIngredient(ModContent.ItemType<NebulaBand>());
-		val4.AddIngredient(ItemID.LunarBar, 8);
-		val4.AddTile(TileID.LunarCraftingStation);
-		val4.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<NebulaBand>())
+			.AddIngredient(ItemID.LunarBar, 8)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 	}
 }

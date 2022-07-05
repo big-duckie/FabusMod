@@ -9,7 +9,6 @@ public class IronBand : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Iron Band");
 	}
 
 	public override void SetDefaults()
@@ -24,10 +23,10 @@ public class IronBand : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.BrokenBand>());
-		val.AddRecipeGroup("IronBar", 3);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.BrokenBand>())
+			.AddRecipeGroup("IronBar", 3)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

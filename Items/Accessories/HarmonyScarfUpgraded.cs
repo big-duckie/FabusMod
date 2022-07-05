@@ -28,27 +28,27 @@ public class HarmonyScarfUpgraded : ModItem
 		player.statManaMax2 += 120;
 		player.statLifeMax2 += 120;
 		player.GetDamage(DamageClass.Generic) += 0.3f;
-		player.buffImmune[24] = true;
-		player.buffImmune[164] = true;
-		player.buffImmune[163] = true;
+		player.buffImmune[BuffID.OnFire] = true;
+		player.buffImmune[BuffID.Obstructed] = true;
+		player.buffImmune[BuffID.VortexDebuff] = true;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<HarmonyScarf>());
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowToken>());
-		val.AddIngredient(ItemID.Sapphire, 15);
-		val.AddIngredient(ItemID.Ruby, 15);
-		val.AddIngredient(ItemID.Amethyst, 15);
-		val.AddIngredient(ItemID.SoulofLight, 30);
-		val.AddIngredient(ItemID.SoulofNight, 30);
-		val.AddIngredient(ItemID.SoulofSight, 30);
-		val.AddIngredient(ItemID.SoulofFright, 30);
-		val.AddIngredient(ItemID.SoulofMight, 30);
-		val.AddIngredient(ItemID.LunarBar, 20);
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 20);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HarmonyScarf>())
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowToken>())
+			.AddIngredient(ItemID.Sapphire, 15)
+			.AddIngredient(ItemID.Ruby, 15)
+			.AddIngredient(ItemID.Amethyst, 15)
+			.AddIngredient(ItemID.SoulofLight, 30)
+			.AddIngredient(ItemID.SoulofNight, 30)
+			.AddIngredient(ItemID.SoulofSight, 30)
+			.AddIngredient(ItemID.SoulofFright, 30)
+			.AddIngredient(ItemID.SoulofMight, 30)
+			.AddIngredient(ItemID.LunarBar, 20)
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 20)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

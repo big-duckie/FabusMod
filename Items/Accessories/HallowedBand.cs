@@ -25,16 +25,16 @@ public class HallowedBand : ModItem
 	public override void UpdateAccessory(Player player, bool hideVisual)
 	{
 		player.GetDamage(DamageClass.Generic) += 0.08f;
-		player.buffImmune[24] = true;
+		player.buffImmune[BuffID.OnFire] = true;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<HellfireBand>());
-		recipe.AddIngredient(ItemID.HallowedBar, 3);
-		recipe.AddIngredient(ItemID.Ruby, 2);
-		recipe.AddTile(TileID.Anvils);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HellfireBand>())
+			.AddIngredient(ItemID.HallowedBar, 3)
+			.AddIngredient(ItemID.Ruby, 2)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

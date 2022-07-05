@@ -43,10 +43,10 @@ public class ValkyrieWings : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.HallowedBar, 10);
-		val.AddIngredient(ItemID.SoulofFlight, 20);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.HallowedBar, 10)
+			.AddIngredient(ItemID.SoulofFlight, 20)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

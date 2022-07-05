@@ -82,7 +82,7 @@ public class SpectralHowler : ModItem
 			Item.damage = 260;
 			Item.shoot = ModContent.ProjectileType<RainbowBolt>();
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()

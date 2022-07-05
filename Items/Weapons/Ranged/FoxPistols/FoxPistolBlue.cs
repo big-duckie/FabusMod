@@ -83,7 +83,7 @@ public class FoxPistolBlue : ModItem
 			Item.damage = 22;
 			Item.shoot = ModContent.ProjectileType<BlueBolt>();
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()

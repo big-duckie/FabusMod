@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.IllusoryMirror;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -32,7 +31,7 @@ public class SpectralIllusion : ModItem
 		Item.expert = true;
 		Item.reuseDelay = 20;
 		Item.UseSound = SoundID.Item72;
-		Item.shoot = ModContent.ProjectileType<SpectralIllusionProj>();
+		Item.shoot = ModContent.ProjectileType<Projectiles.IllusoryMirror.SpectralIllusionProj>();
 	}
 
 	public override Vector2? HoldoutOffset()
@@ -56,7 +55,7 @@ public class SpectralIllusion : ModItem
 				Item.shootSpeed = 0f;
 				Item.mana = 50;
 				player.AddBuff(ModContent.BuffType<Buffs.IllusoryMirror.SpectralBlossomActive>(), 1200, true);
-				Item.shoot = ModContent.ProjectileType<SpectralIllusionRMB>();
+				Item.shoot = ModContent.ProjectileType<Projectiles.IllusoryMirror.SpectralIllusionRMB>();
 				Item.UseSound = SoundID.Item76;
 				Item.reuseDelay = 20;
 			}
@@ -67,7 +66,7 @@ public class SpectralIllusion : ModItem
 			Item.useAnimation = 16;
 			Item.shootSpeed = 7f;
 			Item.mana = 6;
-			Item.shoot = ModContent.ProjectileType<SpectralIllusionProj>();
+			Item.shoot = ModContent.ProjectileType<Projectiles.IllusoryMirror.SpectralIllusionProj>();
 			Item.UseSound = SoundID.Item72;
 			Item.reuseDelay = 18;
 		}
@@ -77,19 +76,19 @@ public class SpectralIllusion : ModItem
 			Item.useTime = 4;
 			Item.shootSpeed = 7f;
 			Item.mana = 6;
-			Item.shoot = ModContent.ProjectileType<SpectralIllusionProj>();
+			Item.shoot = ModContent.ProjectileType<Projectiles.IllusoryMirror.SpectralIllusionProj>();
 			Item.UseSound = SoundID.Item72;
 			Item.reuseDelay = 20;
 		}
-		return this.CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<IllusoryMirror>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<IllusoryMirror>());
+		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14);
+		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
+		recipe.Register();
 	}
 }

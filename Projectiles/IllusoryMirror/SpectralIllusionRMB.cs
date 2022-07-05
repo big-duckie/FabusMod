@@ -31,26 +31,29 @@ public class SpectralIllusionRMB : ModProjectile
 		AnimateProjectile();
 		if (Main.rand.NextBool(2))
 		{
-			int num1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowHealingDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[num1].scale = 2f;
-			Main.dust[num1].velocity.Y -= 0.5f;
-			Main.dust[num1].velocity.X = 0f;
-			Main.dust[num1].noGravity = true;
-			int num2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default, 1f);
-			int num3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default, 1f);
-			int num4 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default, 1f);
-			Main.dust[num2].scale = 2f;
-			Main.dust[num2].velocity.Y += 0.5f;
-			Main.dust[num2].velocity.X = 0f;
-			Main.dust[num2].noGravity = true;
-			Main.dust[num3].scale = 2f;
-			Main.dust[num3].velocity.Y += 0.5f;
-			Main.dust[num3].velocity.X = 0f;
-			Main.dust[num3].noGravity = true;
-			Main.dust[num4].scale = 2f;
-			Main.dust[num4].velocity.Y += 0.5f;
-			Main.dust[num4].velocity.X = 0f;
-			Main.dust[num4].noGravity = true;
+			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowHealingDust>(), 0f, 0f, 0, default, 1f);
+			Main.dust[dust1].scale = 2f;
+			Main.dust[dust1].velocity.Y -= 0.5f;
+			Main.dust[dust1].velocity.X = 0f;
+			Main.dust[dust1].noGravity = true;
+
+			int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default, 1f);
+			Main.dust[dust2].scale = 2f;
+			Main.dust[dust2].velocity.Y += 0.5f;
+			Main.dust[dust2].velocity.X = 0f;
+			Main.dust[dust2].noGravity = true;
+
+			int dust3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default, 1f);
+			Main.dust[dust3].scale = 2f;
+			Main.dust[dust3].velocity.Y += 0.5f;
+			Main.dust[dust3].velocity.X = 0f;
+			Main.dust[dust3].noGravity = true;
+
+			int dust4 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default, 1f);
+			Main.dust[dust4].scale = 2f;
+			Main.dust[dust4].velocity.Y += 0.5f;
+			Main.dust[dust4].velocity.X = 0f;
+			Main.dust[dust4].noGravity = true;
 		}
 		for (int i = 0; i < 255; i++)
 		{

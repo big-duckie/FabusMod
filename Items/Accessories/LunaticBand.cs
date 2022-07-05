@@ -10,7 +10,7 @@ public class LunaticBand : ModItem
 	public override void SetStaticDefaults()
 	{
 		DisplayName.SetDefault("Lunatic Charm");
-		Tooltip.SetDefault("14% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs");
+		Tooltip.SetDefault("14% increased all damage\nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs");
 	}
 
 	public override void SetDefaults()
@@ -18,7 +18,7 @@ public class LunaticBand : ModItem
 		Item.width = 40;
 		Item.height = 42;
 		Item.value = Item.sellPrice(0, 20, 0, 0);
-		Item.rare = 12;
+		Item.rare = ItemRarityID.Red;
 		Item.accessory = true;
 		Item.defense = 12;
 	}
@@ -26,9 +26,9 @@ public class LunaticBand : ModItem
 	public override void UpdateAccessory(Player player, bool hideVisual)
 	{
 		player.GetDamage(DamageClass.Generic) += 0.14f;
-		player.buffImmune[24] = true;
-		player.buffImmune[164] = true;
-		player.buffImmune[163] = true;
+		player.buffImmune[BuffID.OnFire] = true;
+		player.buffImmune[BuffID.VortexDebuff] = true;
+		player.buffImmune[BuffID.Obstructed] = true;
 	}
 
 	public override void AddRecipes()

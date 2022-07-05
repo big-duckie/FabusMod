@@ -28,7 +28,7 @@ public class ReinforcedWorkBench : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddIngredient(ItemID.WorkBench, 1)
+			.AddIngredient(ItemID.WorkBench)
 			.AddIngredient(ItemID.StoneBlock, 12)
 			.Register();
 	}

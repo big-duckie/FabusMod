@@ -7,7 +7,6 @@ public class NatureToken : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Nature Token");
 		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nUsed to convert the raw power of nature into weapons");
 	}
 

@@ -7,7 +7,6 @@ public class RainbowDust : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Rainbow Dust");
 		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nDon't inhale it!");
 	}
 

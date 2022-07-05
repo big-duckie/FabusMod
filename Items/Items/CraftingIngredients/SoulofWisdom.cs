@@ -21,16 +21,16 @@ public class SoulofWisdom : ModItem
 		Item.maxStack = 99;
 		Item.value = Item.sellPrice(0, 2, 40, 0);
 		Item.rare = ItemRarityID.Pink;
-		//Sets.ItemNoGravity[Item.type] = true;
+		ItemID.Sets.ItemNoGravity[Type] = true;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.SoulofFright, 1);
-		val.AddIngredient(ItemID.SoulofMight, 1);
-		val.AddIngredient(ItemID.SoulofSight, 1);
-		val.AddTile(TileID.AdamantiteForge);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.SoulofFright)
+			.AddIngredient(ItemID.SoulofMight)
+			.AddIngredient(ItemID.SoulofSight)
+			.AddTile(TileID.AdamantiteForge)
+			.Register();
 	}
 }

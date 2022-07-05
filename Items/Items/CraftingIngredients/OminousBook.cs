@@ -7,7 +7,6 @@ public class OminousBook : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Ominous Book");
 		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nAn ominous presence emits from this book. Maybe pack some gems and bring it to an altar?");
 	}
 

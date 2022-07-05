@@ -8,7 +8,6 @@ public class BrokenBand : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Broken Band");
 		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\n'This broken band feels oddly important to you...' \nIt would be wise to keep it.");
 	}
 

@@ -8,7 +8,6 @@ public class GoddessGold : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Goddess Gold");
 		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nGold to fit a goddess!");
 	}
 
@@ -23,18 +22,18 @@ public class GoddessGold : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.Ectoplasm);
-		val.AddIngredient(ItemID.GoldBar, 2);
-		val.AddIngredient(ModContent.ItemType<SoulofWisdom>());
-		val.AddTile(TileID.AdamantiteForge);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.Ectoplasm)
+			.AddIngredient(ItemID.GoldBar, 2)
+			.AddIngredient(ModContent.ItemType<SoulofWisdom>())
+			.AddTile(TileID.AdamantiteForge)
+			.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ItemID.Ectoplasm);
-		val2.AddIngredient(ItemID.PlatinumBar, 2);
-		val2.AddIngredient(ModContent.ItemType<SoulofWisdom>());
-		val2.AddTile(TileID.AdamantiteForge);
-		val2.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.Ectoplasm)
+			.AddIngredient(ItemID.PlatinumBar, 2)
+			.AddIngredient(ModContent.ItemType<SoulofWisdom>())
+			.AddTile(TileID.AdamantiteForge)
+			.Register();
 	}
 }

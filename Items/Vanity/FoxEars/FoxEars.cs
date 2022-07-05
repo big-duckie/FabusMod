@@ -9,7 +9,6 @@ public class FoxEars : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Fox Ears");
 		Tooltip.SetDefault("[c/B6FF00:Dyeable]");
 
 		ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true;
@@ -26,9 +25,9 @@ public class FoxEars : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.Leather, 2);
-		val.AddTile(TileID.WorkBenches);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.Leather, 2)
+			.AddTile(TileID.WorkBenches)
+			.Register();
 	}
 }

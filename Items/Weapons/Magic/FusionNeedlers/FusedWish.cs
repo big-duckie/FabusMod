@@ -9,7 +9,6 @@ public class FusedWish : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Fused Wish");
 		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots homing rainbow needles\n[c/FF0000:Watch your mana!]");
 	}
 
@@ -40,10 +39,10 @@ public class FusedWish : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<FusedXmas>());
-		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 12);
-		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<FusedXmas>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 12)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

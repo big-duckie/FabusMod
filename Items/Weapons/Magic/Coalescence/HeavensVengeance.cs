@@ -33,10 +33,10 @@ public class HeavensVengeance : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<HellfireBeam>(), 1);
-		recipe.AddIngredient(ItemID.HallowedBar, 14);
-		recipe.AddTile(TileID.MythrilAnvil);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HellfireBeam>(), 1)
+			.AddIngredient(ItemID.HallowedBar, 14)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

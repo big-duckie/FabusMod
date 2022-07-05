@@ -41,18 +41,18 @@ public class TheWhisperingIceDonator : ModItem
 		int numberProjectiles = 3;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(5f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI, 0f, 0f);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(5f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ItemID.FrostCore, 2);
-		recipe.AddRecipeGroup("FabusMod:AdamantiteBar", 6);
-		recipe.AddTile(TileID.MythrilAnvil);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.FrostCore, 2)
+			.AddRecipeGroup("FabusMod:AdamantiteBar", 6)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

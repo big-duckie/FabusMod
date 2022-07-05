@@ -8,7 +8,6 @@ public class HellfireBeam : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Hellfire Beam");
 		Tooltip.SetDefault("Enemies are invulnerable for 5 frames after getting hit \nBurn your foes out of existence with a powerful laser beam! \nInflicts the [c/DA0205:On Fire!] debuff for 2 seconds on hit");
 	}
 
@@ -33,10 +32,10 @@ public class HellfireBeam : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<Coalescence>());
-		recipe.AddIngredient(ItemID.HellstoneBar, 16);
-		recipe.AddTile(TileID.Hellforge);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Coalescence>())
+			.AddIngredient(ItemID.HellstoneBar, 16)
+			.AddTile(TileID.Hellforge)
+			.Register();
 	}
 }

@@ -10,9 +10,8 @@ public class GoldenStaff : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Staff");
 		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots four oval-shaped magic projectiles twice in quick succession \nHas a high critical hit chance");
-		Item.staff[Item.type] = true;
+		Item.staff[Type] = true;
 	}
 
 	public override void SetDefaults()
@@ -38,23 +37,23 @@ public class GoldenStaff : ModItem
 		Item.shootSpeed = 40f;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
 		int numberProjectiles = 4;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(10f));
-			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(10f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
-    }
+	}
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<NatureStaff>());
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 6);
-		recipe.AddTile(TileID.MythrilAnvil);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<NatureStaff>())
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 6)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

@@ -36,10 +36,10 @@ public class PiercingStaff : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ItemID.WandofSparking, 1);
-		recipe.AddRecipeGroup("IronBar", 3);
-		recipe.AddTile(TileID.Anvils);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.WandofSparking)
+			.AddRecipeGroup("IronBar", 3)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

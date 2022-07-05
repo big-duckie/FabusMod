@@ -10,7 +10,6 @@ public class NatureStaff : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Nature Staff");
 		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots three oval-shaped magic projectiles twice in quick succession \nHas a 25% chance of inflicting the [c/0E3517:Poisoned] debuff for 3 seconds \nHas a high critical hit chance");
 		Item.staff[Item.type] = true;
 	}
@@ -38,24 +37,24 @@ public class NatureStaff : ModItem
 		Item.shootSpeed = 40f;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
 		int numberProjectiles = 3;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(10f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI, 0f, 0f);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(10f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddRecipeGroup("FabusMod:SorcerousHellstaff");
-		recipe.AddIngredient(ItemID.HallowedBar, 6);
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.NatureToken>());
-		recipe.AddTile(TileID.MythrilAnvil);
-		recipe.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:SorcerousHellstaff")
+			.AddIngredient(ItemID.HallowedBar, 6)
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.NatureToken>())
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

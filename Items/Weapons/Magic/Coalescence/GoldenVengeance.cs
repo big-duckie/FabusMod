@@ -8,7 +8,6 @@ public class GoldenVengeance : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Vengeance");
 		Tooltip.SetDefault("Enemies are invulnerable for 4 frames after getting hit \nPurify your foes out of existence with a powerful laser beam! \nInflicts the [c/FFFB62:Holy Smite] debuff for 4 seconds, and the [c/DAD45E:Midas] debuff for 3 seconds on hit\n[c/FFFB62:Holy Smite] causes enemies to lose life quickly \n[c/DAD45E:Midas] causes enemies to drop more money on death");
 	}
 
@@ -33,10 +32,10 @@ public class GoldenVengeance : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<HeavensVengeance>());
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 12);
-		recipe.AddTile(TileID.MythrilAnvil);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HeavensVengeance>())
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 12)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

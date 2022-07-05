@@ -8,7 +8,6 @@ public class Coalescence : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Coalescence");
 		Tooltip.SetDefault("Enemies are invulnerable for 8 frames after getting hit \nBeam your foes out of existence with a powerful laser beam!");
 	}
 
@@ -33,16 +32,16 @@ public class Coalescence : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.OminousBook>());
-		recipe.AddIngredient(ItemID.Diamond, 5);
-		recipe.AddIngredient(ItemID.Emerald, 5);
-		recipe.AddIngredient(ItemID.Sapphire, 5);
-		recipe.AddIngredient(ItemID.Ruby, 5);
-		recipe.AddIngredient(ItemID.Topaz, 5);
-		recipe.AddIngredient(ItemID.Amethyst, 5);
-		recipe.AddRecipeGroup("FabusMod:DemoniteBar", 10);
-		recipe.AddTile(TileID.Books);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.OminousBook>())
+			.AddIngredient(ItemID.Diamond, 5)
+			.AddIngredient(ItemID.Emerald, 5)
+			.AddIngredient(ItemID.Sapphire, 5)
+			.AddIngredient(ItemID.Ruby, 5)
+			.AddIngredient(ItemID.Topaz, 5)
+			.AddIngredient(ItemID.Amethyst, 5)
+			.AddRecipeGroup("FabusMod:DemoniteBar", 10)
+			.AddTile(TileID.Books)
+			.Register();
 	}
 }

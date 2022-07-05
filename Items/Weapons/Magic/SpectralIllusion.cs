@@ -9,7 +9,6 @@ public class SpectralIllusion : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Spectral Illusion");
 		Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nShoots 6 instant beams in quick succession\nUsing <right> uses 50 Mana to summon a [c/82E8E8:Spectral Blossom] at the player's position for 20 seconds:\n - Being around the [c/82E8E8:Spectral Blossom] buffs HP regeneration, increases attack speed, and increases magic damage by 18%\n - Being around the [c/82E8E8:Spectral Blossom] also increases invincibility time after being hit, and has a cooldown of [c/BF5E3B:50 seconds] once it disappears\nBest used on 'High' video quality!");
 	}
 
@@ -86,10 +85,10 @@ public class SpectralIllusion : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<IllusoryMirror>());
-		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14);
-		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<IllusoryMirror>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

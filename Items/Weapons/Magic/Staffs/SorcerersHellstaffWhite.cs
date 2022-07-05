@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace FabusMod.Items.Weapons.Magic.Staffs;
 
-public class SorcerousHellstaffWhite : ModItem
+public class SorcerersHellstaffWhite : ModItem
 {
 	public override void SetStaticDefaults()
 	{
@@ -38,10 +38,10 @@ public class SorcerousHellstaffWhite : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<SorcerousHellstaff>());
-		recipe.AddIngredient(ItemID.PinkandSilverDye, 1);
-		recipe.AddTile(TileID.DyeVat);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<SorcerersHellstaff>())
+			.AddIngredient(ItemID.PinkandSilverDye, 1)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

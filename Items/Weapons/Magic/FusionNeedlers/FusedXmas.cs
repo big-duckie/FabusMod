@@ -9,7 +9,6 @@ public class FusedXmas : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Fused Xmas");
 		Tooltip.SetDefault("[c/B6FF00:Autoshoots]\n[c/FF0000:Watch your mana!]");
 	}
 
@@ -40,10 +39,10 @@ public class FusedXmas : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<FusionNeedler>());
-		recipe.AddIngredient(ItemID.FragmentVortex, 12);
-		recipe.AddTile(TileID.LunarCraftingStation);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<FusionNeedler>())
+			.AddIngredient(ItemID.FragmentVortex, 12)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 	}
 }

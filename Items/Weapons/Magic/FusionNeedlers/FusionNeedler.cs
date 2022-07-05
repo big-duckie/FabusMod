@@ -9,7 +9,6 @@ public class FusionNeedler : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Fusion Needler");
 		Tooltip.SetDefault("[c/B6FF00:Autoshoots]\n[c/FF0000:Watch your mana!]");
 	}
 
@@ -40,10 +39,10 @@ public class FusionNeedler : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<Ranged.FusionDrivers.FusionDriver>());
-		recipe.AddIngredient(ItemID.Razorpine);
-		recipe.AddTile(TileID.AdamantiteForge);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Ranged.FusionDrivers.FusionDriver>())
+			.AddIngredient(ItemID.Razorpine)
+			.AddTile(TileID.AdamantiteForge)
+			.Register();
 	}
 }

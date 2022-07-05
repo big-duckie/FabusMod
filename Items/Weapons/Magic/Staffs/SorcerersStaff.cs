@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace FabusMod.Items.Weapons.Magic.Staffs;
 
-public class SorcerousStaff : ModItem
+public class SorcerersStaff : ModItem
 {
 	public override void SetStaticDefaults()
 	{
@@ -38,11 +38,11 @@ public class SorcerousStaff : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddRecipeGroup("FabusMod:GoldBar", 8);
-		recipe.AddIngredient(ItemID.Sapphire, 6);
-		recipe.AddIngredient(ItemID.Emerald, 4);
-		recipe.AddTile(TileID.Anvils);
-		recipe.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:GoldBar", 8)
+			.AddIngredient(ItemID.Sapphire, 6)
+			.AddIngredient(ItemID.Emerald, 4)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

@@ -8,7 +8,6 @@ public class RainbowChunk : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Rainbow Chunk");
 		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nFull of colors!");
 	}
 
@@ -23,14 +22,14 @@ public class RainbowChunk : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowDust>(), 4);
-		val.AddIngredient(ItemID.LunarBar);
-		val.AddIngredient(ItemID.FragmentNebula);
-		val.AddIngredient(ItemID.FragmentSolar);
-		val.AddIngredient(ItemID.FragmentVortex);
-		val.AddIngredient(ItemID.FragmentStardust);
-		val.AddTile(TileID.LunarCraftingStation);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowDust>(), 4)
+			.AddIngredient(ItemID.LunarBar)
+			.AddIngredient(ItemID.FragmentNebula)
+			.AddIngredient(ItemID.FragmentSolar)
+			.AddIngredient(ItemID.FragmentVortex)
+			.AddIngredient(ItemID.FragmentStardust)
+			.AddTile(TileID.LunarCraftingStation)
+			.Register();
 	}
 }

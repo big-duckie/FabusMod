@@ -18,6 +18,7 @@ public class NatureStaff : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 36;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.mana = 6;
 		Item.crit = 42;
@@ -50,11 +51,11 @@ public class NatureStaff : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:SorcerousHellstaff");
-		val.AddIngredient(ItemID.HallowedBar, 6);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.NatureToken>());
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddRecipeGroup("FabusMod:SorcerousHellstaff");
+		recipe.AddIngredient(ItemID.HallowedBar, 6);
+		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.NatureToken>());
+		recipe.AddTile(TileID.MythrilAnvil);
+		recipe.Register();
 	}
 }

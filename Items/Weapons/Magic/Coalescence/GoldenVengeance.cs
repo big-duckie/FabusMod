@@ -15,6 +15,7 @@ public class GoldenVengeance : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 48;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.channel = true;
 		Item.mana = 10;
@@ -32,10 +33,10 @@ public class GoldenVengeance : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<HeavensVengeance>());
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 12);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<HeavensVengeance>());
+		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 12);
+		recipe.AddTile(TileID.MythrilAnvil);
+		recipe.Register();
 	}
 }

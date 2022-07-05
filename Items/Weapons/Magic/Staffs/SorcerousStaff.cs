@@ -16,6 +16,7 @@ public class SorcerousStaff : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 13;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.mana = 6;
 		Item.crit = 26;
@@ -37,11 +38,11 @@ public class SorcerousStaff : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:GoldBar", 8);
-		val.AddIngredient(ItemID.Sapphire, 6);
-		val.AddIngredient(ItemID.Emerald, 4);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddRecipeGroup("FabusMod:GoldBar", 8);
+		recipe.AddIngredient(ItemID.Sapphire, 6);
+		recipe.AddIngredient(ItemID.Emerald, 4);
+		recipe.AddTile(TileID.Anvils);
+		recipe.Register();
 	}
 }

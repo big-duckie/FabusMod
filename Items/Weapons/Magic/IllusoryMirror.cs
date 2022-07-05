@@ -17,8 +17,8 @@ public class IllusoryMirror : ModItem
 	{
 		Item.CloneDefaults(ItemID.ShadowbeamStaff);
 		Item.damage = 175;
-		Item.noMelee = true;
 		Item.DamageType = DamageClass.Magic;
+		Item.noMelee = true;
 		Item.mana = 7;
 		Item.width = 29;
 		Item.height = 21;

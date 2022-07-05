@@ -16,6 +16,7 @@ public class FusedWish : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 160;
+		Item.DamageType = DamageClass.Magic;
 		Item.mana = 3;
 		Item.width = 80;
 		Item.height = 54;
@@ -39,10 +40,10 @@ public class FusedWish : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<FusedXmas>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 12);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<FusedXmas>());
+		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 12);
+		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
+		recipe.Register();
 	}
 }

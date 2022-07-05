@@ -18,6 +18,7 @@ public class TheWhisperingIceDonator : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 70;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.mana = 8;
 		Item.width = 54;
@@ -48,10 +49,10 @@ public class TheWhisperingIceDonator : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.FrostCore, 2);
-		val.AddRecipeGroup("FabusMod:AdamantiteBar", 6);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ItemID.FrostCore, 2);
+		recipe.AddRecipeGroup("FabusMod:AdamantiteBar", 6);
+		recipe.AddTile(TileID.MythrilAnvil);
+		recipe.Register();
 	}
 }

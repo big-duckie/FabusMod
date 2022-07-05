@@ -16,6 +16,7 @@ public class SorcerousHellstaff : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 26;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.mana = 6;
 		Item.crit = 32;
@@ -37,18 +38,18 @@ public class SorcerousHellstaff : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<SorcerousStaff>());
-		val.AddIngredient(ItemID.HellstoneBar, 6);
-		val.AddIngredient(ItemID.Obsidian, 4);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		Recipe recipe1 = CreateRecipe();
+		recipe1.AddIngredient(ModContent.ItemType<SorcerousStaff>());
+		recipe1.AddIngredient(ItemID.HellstoneBar, 6);
+		recipe1.AddIngredient(ItemID.Obsidian, 4);
+		recipe1.AddTile(TileID.Anvils);
+		recipe1.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<SorcerousHellstaffWhite>());
-		val2.AddIngredient(ItemID.BlueDye);
-		val2.AddIngredient(ItemID.RedDye);
-		val2.AddTile(TileID.DyeVat);
-		val2.Register();
+		Recipe recipe2 = CreateRecipe();
+		recipe2.AddIngredient(ModContent.ItemType<SorcerousHellstaffWhite>());
+		recipe2.AddIngredient(ItemID.BlueDye);
+		recipe2.AddIngredient(ItemID.RedDye);
+		recipe2.AddTile(TileID.DyeVat);
+		recipe2.Register();
 	}
 }

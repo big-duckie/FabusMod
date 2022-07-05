@@ -15,6 +15,7 @@ public class DelightfulDevastation : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 160;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.channel = true;
 		Item.mana = 15;
@@ -32,10 +33,10 @@ public class DelightfulDevastation : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<GoldenVengeance>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 10);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<GoldenVengeance>());
+		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 10);
+		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
+		recipe.Register();
 	}
 }

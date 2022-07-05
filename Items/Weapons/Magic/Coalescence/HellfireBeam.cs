@@ -15,6 +15,7 @@ public class HellfireBeam : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 17;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.channel = true;
 		Item.mana = 7;
@@ -32,10 +33,10 @@ public class HellfireBeam : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Coalescence>());
-		val.AddIngredient(ItemID.HellstoneBar, 16);
-		val.AddTile(TileID.Hellforge);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<Coalescence>());
+		recipe.AddIngredient(ItemID.HellstoneBar, 16);
+		recipe.AddTile(TileID.Hellforge);
+		recipe.Register();
 	}
 }

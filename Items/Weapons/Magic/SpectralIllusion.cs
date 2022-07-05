@@ -17,6 +17,7 @@ public class SpectralIllusion : ModItem
 	{
 		Item.CloneDefaults(ItemID.ShadowbeamStaff);
 		Item.damage = 325;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.mana = 6;
 		Item.width = 33;

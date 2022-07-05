@@ -15,6 +15,7 @@ public class HeavensVengeance : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 28;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.channel = true;
 		Item.mana = 8;
@@ -32,10 +33,10 @@ public class HeavensVengeance : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<HellfireBeam>(), 1);
-		val.AddIngredient(ItemID.HallowedBar, 14);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<HellfireBeam>(), 1);
+		recipe.AddIngredient(ItemID.HallowedBar, 14);
+		recipe.AddTile(TileID.MythrilAnvil);
+		recipe.Register();
 	}
 }

@@ -16,6 +16,7 @@ public class FusedXmas : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 140;
+		Item.DamageType = DamageClass.Magic;
 		Item.mana = 3;
 		Item.width = 80;
 		Item.height = 52;
@@ -34,16 +35,15 @@ public class FusedXmas : ModItem
 
 	public override Vector2? HoldoutOffset()
 	{
-		//IL_000a: Unknown result type (might be due to invalid IL or missing references)
 		return new Vector2(-2f, 2f);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<FusionNeedler>());
-		val.AddIngredient(ItemID.FragmentVortex, 12);
-		val.AddTile(TileID.LunarCraftingStation);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<FusionNeedler>());
+		recipe.AddIngredient(ItemID.FragmentVortex, 12);
+		recipe.AddTile(TileID.LunarCraftingStation);
+		recipe.Register();
 	}
 }

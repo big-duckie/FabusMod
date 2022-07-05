@@ -18,6 +18,7 @@ public class Tranquility : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 58;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.mana = 7;
 		Item.crit = 52;
@@ -50,10 +51,10 @@ public class Tranquility : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<GoldenStaff>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<GoldenStaff>());
+		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6);
+		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
+		recipe.Register();
 	}
 }

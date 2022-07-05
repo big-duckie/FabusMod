@@ -18,6 +18,7 @@ public class GoldenStaff : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 46;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.mana = 6;
 		Item.crit = 52;
@@ -50,10 +51,10 @@ public class GoldenStaff : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<NatureStaff>());
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 6);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<NatureStaff>());
+		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 6);
+		recipe.AddTile(TileID.MythrilAnvil);
+		recipe.Register();
 	}
 }

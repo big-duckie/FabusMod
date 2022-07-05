@@ -16,6 +16,7 @@ public class PiercingStaff : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 16;
+		Item.DamageType = DamageClass.Magic;
 		Item.noMelee = true;
 		Item.mana = 3;
 		Item.width = 40;
@@ -35,10 +36,10 @@ public class PiercingStaff : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.WandofSparking, 1);
-		val.AddRecipeGroup("IronBar", 3);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ItemID.WandofSparking, 1);
+		recipe.AddRecipeGroup("IronBar", 3);
+		recipe.AddTile(TileID.Anvils);
+		recipe.Register();
 	}
 }

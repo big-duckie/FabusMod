@@ -16,6 +16,7 @@ public class FusionNeedler : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 120;
+		Item.DamageType = DamageClass.Magic;
 		Item.mana = 3;
 		Item.width = 76;
 		Item.height = 44;
@@ -39,10 +40,10 @@ public class FusionNeedler : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Ranged.FusionDrivers.FusionDriver>());
-		val.AddIngredient(ItemID.Razorpine);
-		val.AddTile(TileID.AdamantiteForge);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<Ranged.FusionDrivers.FusionDriver>());
+		recipe.AddIngredient(ItemID.Razorpine);
+		recipe.AddTile(TileID.AdamantiteForge);
+		recipe.Register();
 	}
 }

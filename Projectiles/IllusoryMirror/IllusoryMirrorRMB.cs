@@ -31,16 +31,17 @@ public class IllusoryMirrorRMB : ModProjectile
 		AnimateProjectile();
 		if (Main.rand.NextBool(2))
 		{
-			int num1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.HealingDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[num1].scale = 2f;
-			Main.dust[num1].velocity.Y -= 0.5f;
-			Main.dust[num1].velocity.X = 0f;
-			Main.dust[num1].noGravity = true;
-			int num2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.IllusoryMirrorRMBDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[num2].scale = 2f;
-			Main.dust[num2].velocity.Y += 0.5f;
-			Main.dust[num2].velocity.X = 0f;
-			Main.dust[num2].noGravity = true;
+			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.HealingDust>());
+			Main.dust[dust1].scale = 2f;
+			Main.dust[dust1].velocity.Y -= 0.5f;
+			Main.dust[dust1].velocity.X = 0f;
+			Main.dust[dust1].noGravity = true;
+
+			int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.IllusoryMirrorRMBDust>());
+			Main.dust[dust2].scale = 2f;
+			Main.dust[dust2].velocity.Y += 0.5f;
+			Main.dust[dust2].velocity.X = 0f;
+			Main.dust[dust2].noGravity = true;
 		}
 		for (int i = 0; i < 255; i++)
 		{

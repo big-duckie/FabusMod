@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.IllusoryMirror;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -19,6 +18,7 @@ public class IllusoryMirror : ModItem
 		Item.CloneDefaults(ItemID.ShadowbeamStaff);
 		Item.damage = 175;
 		Item.noMelee = true;
+		Item.DamageType = DamageClass.Magic;
 		Item.mana = 7;
 		Item.width = 29;
 		Item.height = 21;
@@ -32,12 +32,12 @@ public class IllusoryMirror : ModItem
 		Item.expert = true;
 		Item.reuseDelay = 20;
 		Item.UseSound = SoundID.Item72;
-		Item.shoot = ModContent.ProjectileType<IllusoryMirrorProj>();
+		Item.shoot = ModContent.ProjectileType<Projectiles.IllusoryMirror.IllusoryMirrorProj>();
 	}
 
 	public override Vector2? HoldoutOffset()
 	{
-		return new Vector2(4f, 0f);
+        return new Vector2(4f, 0f);
 	}
 
 	public override bool AltFunctionUse(Player player)
@@ -56,7 +56,7 @@ public class IllusoryMirror : ModItem
 				Item.shootSpeed = 0f;
 				Item.mana = 50;
 				player.AddBuff(ModContent.BuffType<Buffs.IllusoryMirror.BlossomActive>(), 1200, true);
-				Item.shoot = ModContent.ProjectileType<IllusoryMirrorRMB>();
+				Item.shoot = ModContent.ProjectileType<Projectiles.IllusoryMirror.IllusoryMirrorRMB>();
 				Item.UseSound = SoundID.Item76;
 			}
 		}
@@ -66,7 +66,7 @@ public class IllusoryMirror : ModItem
 			Item.useAnimation = 20;
 			Item.shootSpeed = 7f;
 			Item.mana = 7;
-			Item.shoot = ModContent.ProjectileType<IllusoryMirrorProj>();
+			Item.shoot = ModContent.ProjectileType<Projectiles.IllusoryMirror.IllusoryMirrorProj>();
 			Item.UseSound = SoundID.Item72;
 		}
 		else
@@ -75,19 +75,19 @@ public class IllusoryMirror : ModItem
 			Item.useTime = 5;
 			Item.shootSpeed = 7f;
 			Item.mana = 7;
-			Item.shoot = ModContent.ProjectileType<IllusoryMirrorProj>();
+			Item.shoot = ModContent.ProjectileType<Projectiles.IllusoryMirror.IllusoryMirrorProj>();
 			Item.UseSound = SoundID.Item72;
 		}
-		return this.CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.LifeFruit, 5);
-		val.AddIngredient(ItemID.LifeCrystal, 5);
-		val.AddIngredient(ItemID.FragmentNebula, 14);
-		val.AddTile(TileID.LunarCraftingStation);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ItemID.LifeFruit, 5);
+		recipe.AddIngredient(ItemID.LifeCrystal, 5);
+		recipe.AddIngredient(ItemID.FragmentNebula, 14);
+		recipe.AddTile(TileID.LunarCraftingStation);
+		recipe.Register();
 	}
 }

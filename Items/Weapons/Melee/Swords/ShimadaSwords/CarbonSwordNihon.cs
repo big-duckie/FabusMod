@@ -18,6 +18,7 @@ public class CarbonSwordNihon : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 74;
+		Item.DamageType = DamageClass.Melee;
 		Item.crit = 8;
 		Item.width = 54;
 		Item.height = 68;
@@ -53,20 +54,20 @@ public class CarbonSwordNihon : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.NightsAxeSparkle>());
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.NightsAxeSparkle>());
+			Main.dust[dust].scale = 1f;
+			Main.dust[dust].velocity.Y = 0f;
+			Main.dust[dust].velocity.X = 0.5f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<CarbonSword>());
-		val.AddIngredient(ItemID.SilverDye, 1);
-		val.AddTile(TileID.DyeVat);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<CarbonSword>());
+		recipe.AddIngredient(ItemID.SilverDye, 1);
+		recipe.AddTile(TileID.DyeVat);
+		recipe.Register();
 	}
 }

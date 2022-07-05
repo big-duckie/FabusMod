@@ -17,6 +17,7 @@ public class TheRainbowsCurse : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 154;
+		Item.DamageType = DamageClass.Melee;
 		Item.width = 48;
 		Item.height = 48;
 		Item.useTime = 8;
@@ -35,21 +36,23 @@ public class TheRainbowsCurse : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust>());
-			int num2 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust2>());
-			int num3 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust3>());
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
-			Main.dust[num2].scale = 1f;
-			Main.dust[num2].velocity.Y = 0f;
-			Main.dust[num2].velocity.X = 0.5f;
-			Main.dust[num2].noGravity = true;
-			Main.dust[num3].scale = 1f;
-			Main.dust[num3].velocity.Y = 0f;
-			Main.dust[num3].velocity.X = 0.5f;
-			Main.dust[num3].noGravity = true;
+			int dust1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust>());
+			Main.dust[dust1].scale = 1f;
+			Main.dust[dust1].velocity.Y = 0f;
+			Main.dust[dust1].velocity.X = 0.5f;
+			Main.dust[dust1].noGravity = true;
+
+			int dust2 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust2>());
+			Main.dust[dust2].scale = 1f;
+			Main.dust[dust2].velocity.Y = 0f;
+			Main.dust[dust2].velocity.X = 0.5f;
+			Main.dust[dust2].noGravity = true;
+
+			int dust3 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust3>());
+			Main.dust[dust3].scale = 1f;
+			Main.dust[dust3].velocity.Y = 0f;
+			Main.dust[dust3].velocity.X = 0.5f;
+			Main.dust[dust3].noGravity = true;
 		}
 	}
 
@@ -83,10 +86,10 @@ public class TheRainbowsCurse : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<GoldenDagger>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<GoldenDagger>());
+		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6);
+		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
+		recipe.Register();
 	}
 }

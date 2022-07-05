@@ -17,6 +17,7 @@ public class TheRainbowsHonor : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 195;
+		Item.DamageType = DamageClass.Melee;
 		Item.crit = 8;
 		Item.width = 56;
 		Item.height = 76;
@@ -41,21 +42,23 @@ public class TheRainbowsHonor : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default(Color), 1f);
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
-			int num2 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default(Color), 1f);
-			Main.dust[num2].scale = 1f;
-			Main.dust[num2].velocity.Y = 0f;
-			Main.dust[num2].velocity.X = 0.5f;
-			Main.dust[num2].noGravity = true;
-			int num3 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default(Color), 1f);
-			Main.dust[num3].scale = 1f;
-			Main.dust[num3].velocity.Y = 0f;
-			Main.dust[num3].velocity.X = 0.5f;
-			Main.dust[num3].noGravity = true;
+			int dust1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default(Color), 1f);
+			Main.dust[dust1].scale = 1f;
+			Main.dust[dust1].velocity.Y = 0f;
+			Main.dust[dust1].velocity.X = 0.5f;
+			Main.dust[dust1].noGravity = true;
+
+			int dust2 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default(Color), 1f);
+			Main.dust[dust2].scale = 1f;
+			Main.dust[dust2].velocity.Y = 0f;
+			Main.dust[dust2].velocity.X = 0.5f;
+			Main.dust[dust2].noGravity = true;
+
+			int dust3 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default(Color), 1f);
+			Main.dust[dust3].scale = 1f;
+			Main.dust[dust3].velocity.Y = 0f;
+			Main.dust[dust3].velocity.X = 0.5f;
+			Main.dust[dust3].noGravity = true;
 		}
 	}
 
@@ -93,15 +96,15 @@ public class TheRainbowsHonor : ModItem
 			}
 			Item.UseSound = SoundID.Item1;
 		}
-		return this.CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<GoldenFury>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 10);
-		val.AddTile(null, "RainbowStation");
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<GoldenFury>());
+		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 10);
+		recipe.AddTile(null, "RainbowStation");
+		recipe.Register();
 	}
 }

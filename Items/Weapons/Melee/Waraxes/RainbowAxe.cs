@@ -18,6 +18,7 @@ public class RainbowAxe : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 280;
+		Item.DamageType = DamageClass.Melee;
 		Item.width = 54;
 		Item.height = 58;
 		Item.useTime = 20;
@@ -70,7 +71,7 @@ public class RainbowAxe : ModItem
 			Item.tileBoost = 6;
 			Item.shoot = ProjectileID.None;
 		}
-		return this.CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
@@ -88,13 +89,13 @@ public class RainbowAxe : ModItem
 
     public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.LunarHamaxeSolar);
-		val.AddIngredient(ItemID.LunarHamaxeVortex);
-		val.AddIngredient(ItemID.LunarHamaxeNebula);
-		val.AddIngredient(ItemID.LunarHamaxeStardust);
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ItemID.LunarHamaxeSolar);
+		recipe.AddIngredient(ItemID.LunarHamaxeVortex);
+		recipe.AddIngredient(ItemID.LunarHamaxeNebula);
+		recipe.AddIngredient(ItemID.LunarHamaxeStardust);
+		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14);
+		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
+		recipe.Register();
 	}
 }

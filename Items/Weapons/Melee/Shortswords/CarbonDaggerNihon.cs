@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.Shortsword;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -18,6 +17,7 @@ public class CarbonDaggerNihon : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 62;
+		Item.DamageType = DamageClass.Melee;
 		Item.width = 30;
 		Item.height = 30;
 		Item.useTime = 11;
@@ -28,7 +28,7 @@ public class CarbonDaggerNihon : ModItem
 		Item.rare = ItemRarityID.LightRed;
 		Item.UseSound = SoundID.Item1;
 		Item.autoReuse = true;
-		Item.shoot = ModContent.ProjectileType<CarbonKnifeNihon>();
+		Item.shoot = ModContent.ProjectileType<Projectiles.Shortsword.CarbonKnifeNihon>();
 		Item.shootSpeed = 10f;
 	}
 
@@ -36,11 +36,11 @@ public class CarbonDaggerNihon : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.OniDust>());
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.OniDust>());
+			Main.dust[dust].scale = 1f;
+			Main.dust[dust].velocity.Y = 0f;
+			Main.dust[dust].velocity.X = 0.5f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 

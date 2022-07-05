@@ -16,6 +16,7 @@ public class Wakizashi : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 15;
+		Item.DamageType = DamageClass.Melee;
 		Item.width = 30;
 		Item.height = 30;
 		Item.useTime = 13;
@@ -32,11 +33,11 @@ public class Wakizashi : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust>());
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust>());
+			Main.dust[dust].scale = 1f;
+			Main.dust[dust].velocity.Y = 0f;
+			Main.dust[dust].velocity.X = 0.5f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
@@ -47,11 +48,11 @@ public class Wakizashi : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<StonePlatedShortsword>());
-		val.AddRecipeGroup("IronBar", 6);
-		val.AddIngredient(ItemID.Emerald, 2);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<StonePlatedShortsword>());
+		recipe.AddRecipeGroup("IronBar", 6);
+		recipe.AddIngredient(ItemID.Emerald, 2);
+		recipe.AddTile(TileID.Anvils);
+		recipe.Register();
 	}
 }

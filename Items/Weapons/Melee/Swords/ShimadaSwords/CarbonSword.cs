@@ -18,6 +18,7 @@ public class CarbonSword : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 74;
+		Item.DamageType = DamageClass.Melee;
 		Item.crit = 8;
 		Item.width = 54;
 		Item.height = 68;
@@ -48,11 +49,11 @@ public class CarbonSword : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust2>());
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust2>());
+			Main.dust[dust].scale = 1f;
+			Main.dust[dust].velocity.Y = 0f;
+			Main.dust[dust].velocity.X = 0.5f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
@@ -63,16 +64,16 @@ public class CarbonSword : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<ShimadaSword>());
-		val.AddRecipeGroup("FabusMod:OrichalcumBar", 10);
-		val.AddTile(TileID.DemonAltar);
-		val.Register();
+		Recipe recipe1 = CreateRecipe();
+		recipe1.AddIngredient(ModContent.ItemType<ShimadaSword>());
+		recipe1.AddRecipeGroup("FabusMod:OrichalcumBar", 10);
+		recipe1.AddTile(TileID.DemonAltar);
+		recipe1.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<CarbonSwordNihon>());
-		val2.AddIngredient(ItemID.BlueDye, 1);
-		val2.AddTile(TileID.DyeVat);
-		val2.Register();
+		Recipe recipe2 = CreateRecipe();
+		recipe2.AddIngredient(ModContent.ItemType<CarbonSwordNihon>());
+		recipe2.AddIngredient(ItemID.BlueDye, 1);
+		recipe2.AddTile(TileID.DyeVat);
+		recipe2.Register();
 	}
 }

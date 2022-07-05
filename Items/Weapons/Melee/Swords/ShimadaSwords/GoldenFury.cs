@@ -17,6 +17,7 @@ public class GoldenFury : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 100;
+		Item.DamageType = DamageClass.Melee;
 		Item.crit = 8;
 		Item.width = 63;
 		Item.height = 76;
@@ -83,16 +84,16 @@ public class GoldenFury : ModItem
 			}
 			Item.UseSound = SoundID.Item1;
 		}
-		return this.CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<DemonsFury>());
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 10);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4);
-		val.AddTile(TileID.DemonAltar);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<DemonsFury>());
+		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 10);
+		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4);
+		recipe.AddTile(TileID.DemonAltar);
+		recipe.Register();
 	}
 }

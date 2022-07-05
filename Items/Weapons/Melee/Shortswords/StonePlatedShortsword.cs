@@ -14,6 +14,7 @@ public class StonePlatedShortsword : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 9;
+		Item.DamageType = DamageClass.Melee;
 		Item.width = 30;
 		Item.height = 30;
 		Item.useTime = 13;
@@ -28,10 +29,10 @@ public class StonePlatedShortsword : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedShortswordPart>());
-		val.AddIngredient(ItemID.StoneBlock, 6);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>());
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedShortswordPart>());
+		recipe.AddIngredient(ItemID.StoneBlock, 6);
+		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>());
+		recipe.Register();
 	}
 }

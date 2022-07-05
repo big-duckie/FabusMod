@@ -14,6 +14,7 @@ public class StonePlatedKatana : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 8;
+		Item.DamageType = DamageClass.Melee;
 		Item.crit = 8;
 		Item.width = 56;
 		Item.height = 66;
@@ -29,10 +30,10 @@ public class StonePlatedKatana : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedSwordParts>());
-		val.AddIngredient(ItemID.StoneBlock, 12);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>());
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedSwordParts>());
+		recipe.AddIngredient(ItemID.StoneBlock, 12);
+		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>());
+		recipe.Register();
 	}
 }

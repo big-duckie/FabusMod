@@ -18,6 +18,7 @@ public class CarbonDagger : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 62;
+		Item.DamageType = DamageClass.Melee;
 		Item.width = 30;
 		Item.height = 30;
 		Item.useTime = 11;
@@ -36,11 +37,11 @@ public class CarbonDagger : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust2>());
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust2>());
+			Main.dust[dust].scale = 1f;
+			Main.dust[dust].velocity.Y = 0f;
+			Main.dust[dust].velocity.X = 0.5f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
@@ -65,17 +66,17 @@ public class CarbonDagger : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Wakizashi>());
-		val.AddRecipeGroup("FabusMod:OrichalcumBar", 6);
-		val.AddIngredient(ItemID.Sapphire, 2);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		Recipe recipe1 = CreateRecipe();
+		recipe1.AddIngredient(ModContent.ItemType<Wakizashi>());
+		recipe1.AddRecipeGroup("FabusMod:OrichalcumBar", 6);
+		recipe1.AddIngredient(ItemID.Sapphire, 2);
+		recipe1.AddTile(TileID.MythrilAnvil);
+		recipe1.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<CarbonDaggerNihon>());
-		val2.AddIngredient(ItemID.BlueDye, 1);
-		val2.AddTile(TileID.DyeVat);
-		val2.Register();
+		Recipe recipe2 = CreateRecipe();
+		recipe2.AddIngredient(ModContent.ItemType<CarbonDaggerNihon>());
+		recipe2.AddIngredient(ItemID.BlueDye, 1);
+		recipe2.AddTile(TileID.DyeVat);
+		recipe2.Register();
 	}
 }

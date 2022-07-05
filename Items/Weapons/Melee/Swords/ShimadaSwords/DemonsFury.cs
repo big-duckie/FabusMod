@@ -17,6 +17,7 @@ public class DemonsFury : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 80;
+		Item.DamageType = DamageClass.Melee;
 		Item.crit = 8;
 		Item.width = 63;
 		Item.height = 76;
@@ -41,11 +42,11 @@ public class DemonsFury : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust3>());
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust3>());
+			Main.dust[dust].scale = 1f;
+			Main.dust[dust].velocity.Y = 0f;
+			Main.dust[dust].velocity.X = 0.5f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
@@ -83,17 +84,17 @@ public class DemonsFury : ModItem
 			}
 			Item.UseSound = SoundID.Item1;
 		}
-		return CanUseItem(player);
+		return base.CanUseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:CarbonSword", 1);
-		val.AddRecipeGroup("FabusMod:AdamantiteBar", 10);
-		val.AddIngredient(ItemID.SoulofNight, 8);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4);
-		val.AddTile(TileID.DemonAltar);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddRecipeGroup("FabusMod:CarbonSword", 1);
+		recipe.AddRecipeGroup("FabusMod:AdamantiteBar", 10);
+		recipe.AddIngredient(ItemID.SoulofNight, 8);
+		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4);
+		recipe.AddTile(TileID.DemonAltar);
+		recipe.Register();
 	}
 }

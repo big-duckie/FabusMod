@@ -17,6 +17,7 @@ public class OniDagger : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 92;
+		Item.DamageType = DamageClass.Melee;
 		Item.width = 40;
 		Item.height = 40;
 		Item.useTime = 11;
@@ -35,11 +36,11 @@ public class OniDagger : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust3>());
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RyuuDust3>());
+			Main.dust[dust].scale = 1f;
+			Main.dust[dust].velocity.Y = 0f;
+			Main.dust[dust].velocity.X = 0.5f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
@@ -65,12 +66,12 @@ public class OniDagger : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:CarbonDagger", 1);
-		val.AddRecipeGroup("FabusMod:AdamantiteBar", 6);
-		val.AddIngredient(ItemID.SoulofNight, 4);
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 2);
-		val.AddTile(TileID.MythrilAnvil);
-		val.Register();
+		Recipe recipe = CreateRecipe();
+		recipe.AddRecipeGroup("FabusMod:CarbonDagger", 1);
+		recipe.AddRecipeGroup("FabusMod:AdamantiteBar", 6);
+		recipe.AddIngredient(ItemID.SoulofNight, 4);
+		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 2);
+		recipe.AddTile(TileID.MythrilAnvil);
+		recipe.Register();
 	}
 }

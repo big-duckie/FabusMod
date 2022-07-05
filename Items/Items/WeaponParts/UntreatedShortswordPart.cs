@@ -8,7 +8,6 @@ public class UntreatedShortswordPart : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Untreated Shortsword Part");
 		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]");
 	}
 
@@ -23,9 +22,9 @@ public class UntreatedShortswordPart : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("Wood", 6);
-		val.AddTile(TileID.WorkBenches);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("Wood", 6)
+			.AddTile(TileID.WorkBenches)
+			.Register();
 	}
 }

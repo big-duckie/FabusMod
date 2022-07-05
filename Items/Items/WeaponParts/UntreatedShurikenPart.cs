@@ -8,7 +8,6 @@ public class UntreatedShurikenPart : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Untreated Shuriken Part");
 		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]");
 	}
 
@@ -23,9 +22,9 @@ public class UntreatedShurikenPart : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("Wood", 3);
-		val.AddTile(TileID.WorkBenches);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("Wood", 3)
+			.AddTile(TileID.WorkBenches)
+			.Register();
 	}
 }

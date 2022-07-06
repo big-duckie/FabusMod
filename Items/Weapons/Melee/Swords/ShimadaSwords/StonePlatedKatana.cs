@@ -30,10 +30,10 @@ public class StonePlatedKatana : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedSwordParts>());
-		recipe.AddIngredient(ItemID.StoneBlock, 12);
-		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>());
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedSwordParts>())
+			.AddIngredient(ItemID.StoneBlock, 12)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>())
+			.Register();
 	}
 }

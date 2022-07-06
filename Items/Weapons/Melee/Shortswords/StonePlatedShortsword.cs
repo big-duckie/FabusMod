@@ -29,10 +29,10 @@ public class StonePlatedShortsword : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedShortswordPart>());
-		recipe.AddIngredient(ItemID.StoneBlock, 6);
-		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>());
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedShortswordPart>())
+			.AddIngredient(ItemID.StoneBlock, 6)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>())
+			.Register();
 	}
 }

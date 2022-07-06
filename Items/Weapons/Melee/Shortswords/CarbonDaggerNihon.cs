@@ -49,13 +49,13 @@ public class CarbonDaggerNihon : ModItem
 		int healingAmount = damage / 16;
 		player.statLife += healingAmount;
 		player.HealEffect(healingAmount, true);
-		target.AddBuff(20, 480, false);
-		player.AddBuff(115, 480, true);
+		target.AddBuff(BuffID.Poisoned, 480, false);
+		player.AddBuff(BuffID.Rage, 480, true);
 	}
 
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 45f;
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 45f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0)) {
 			position += muzzleOffset;
         }
@@ -64,10 +64,10 @@ public class CarbonDaggerNihon : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = Recipe.Create(Type);
-		recipe.AddIngredient(ModContent.ItemType<CarbonDagger>());
-		recipe.AddIngredient(ItemID.BlueDye, 1);
-		recipe.AddTile(TileID.DyeVat);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<CarbonDagger>())
+			.AddIngredient(ItemID.BlueDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

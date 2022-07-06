@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.Shimada;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -64,7 +63,7 @@ public class DemonsFury : ModItem
 			Item.useAnimation = 60;
 			Item.shootSpeed = 0f;
 			Item.mana = 40;
-			Item.shoot = ModContent.ProjectileType<DemonProjRMB>();
+			Item.shoot = ModContent.ProjectileType<Projectiles.Shimada.DemonProjRMB>();
 			Item.UseSound = SoundID.Item88;
 		}
 		else
@@ -76,11 +75,11 @@ public class DemonsFury : ModItem
 			Item.mana = 0;
 			if (Utils.NextFloat(Main.rand) < 0.08f)
 			{
-				Item.shoot = ModContent.ProjectileType<DemonProjTwo>();
+				Item.shoot = ModContent.ProjectileType<Projectiles.Shimada.DemonProjTwo>();
 			}
 			else
 			{
-				Item.shoot = ModContent.ProjectileType<DemonWave>();
+				Item.shoot = ModContent.ProjectileType<Projectiles.Shimada.DemonWave>();
 			}
 			Item.UseSound = SoundID.Item1;
 		}
@@ -89,12 +88,12 @@ public class DemonsFury : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddRecipeGroup("FabusMod:CarbonSword", 1);
-		recipe.AddRecipeGroup("FabusMod:AdamantiteBar", 10);
-		recipe.AddIngredient(ItemID.SoulofNight, 8);
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4);
-		recipe.AddTile(TileID.DemonAltar);
-		recipe.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:CarbonSword")
+			.AddRecipeGroup("FabusMod:AdamantiteBar", 10)
+			.AddIngredient(ItemID.SoulofNight, 8)
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4)
+			.AddTile(TileID.DemonAltar)
+			.Register();
 	}
 }

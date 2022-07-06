@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.Shimada;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -28,19 +27,19 @@ public class CarbonSwordNihon : ModItem
 		Item.knockBack = 2f;
 		Item.value = Item.sellPrice(0, 6, 0, 0);
 		Item.rare = ItemRarityID.LightRed;
-		Item.shoot = ModContent.ProjectileType<ShimadaWaveNihon>();
+		Item.shoot = ModContent.ProjectileType<Projectiles.Shimada.ShimadaWaveNihon>();
 		Item.shootSpeed = 10f;
 		Item.UseSound = SoundID.Item1;
 		Item.autoReuse = true;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
 		int numberProjectiles = 3;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(0f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI, 0f, 0f);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(0f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
@@ -64,10 +63,10 @@ public class CarbonSwordNihon : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<CarbonSword>());
-		recipe.AddIngredient(ItemID.SilverDye, 1);
-		recipe.AddTile(TileID.DyeVat);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<CarbonSword>())
+			.AddIngredient(ItemID.SilverDye, 1)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

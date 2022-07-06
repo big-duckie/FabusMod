@@ -11,7 +11,6 @@ public class CarbonDagger : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Carbon Dagger");
 		Tooltip.SetDefault("[c/B6FF00:Autoswings, dyeable]\nThrows a medium-ranged Carbon Knife that deals more damage the closer you are to the target \nShortsword hits inflict [c/007700:Poison] debuff for 8 seconds\n[c/FF0000:Shortsword hits steal a small amount of life] \nShortsword hits grant the [c/FC3A3A:Rage] buff for 8 seconds");
 	}
 
@@ -50,13 +49,13 @@ public class CarbonDagger : ModItem
 		int healingAmount = damage / 18;
 		player.statLife += healingAmount;
 		player.HealEffect(healingAmount, true);
-		target.AddBuff(20, 480, false);
-		player.AddBuff(115, 480, true);
+		target.AddBuff(BuffID.Poisoned, 480, false);
+		player.AddBuff(BuffID.Rage, 480, true);
 	}
 
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 45f;
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 45f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -66,17 +65,17 @@ public class CarbonDagger : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe1 = CreateRecipe();
-		recipe1.AddIngredient(ModContent.ItemType<Wakizashi>());
-		recipe1.AddRecipeGroup("FabusMod:OrichalcumBar", 6);
-		recipe1.AddIngredient(ItemID.Sapphire, 2);
-		recipe1.AddTile(TileID.MythrilAnvil);
-		recipe1.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Wakizashi>())
+			.AddRecipeGroup("FabusMod:OrichalcumBar", 6)
+			.AddIngredient(ItemID.Sapphire, 2)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 
-		Recipe recipe2 = CreateRecipe();
-		recipe2.AddIngredient(ModContent.ItemType<CarbonDaggerNihon>());
-		recipe2.AddIngredient(ItemID.BlueDye, 1);
-		recipe2.AddTile(TileID.DyeVat);
-		recipe2.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<CarbonDaggerNihon>())
+			.AddIngredient(ItemID.BlueDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

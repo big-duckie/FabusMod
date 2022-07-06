@@ -6,11 +6,10 @@ using Terraria.ModLoader;
 
 namespace FabusMod.Items.Weapons.Melee.Swords.ShimadaSwords;
 
-public class TheRainbowsHonor : ModItem
+public class DreamCatcher : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Dream Catcher");
 		Tooltip.SetDefault("[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 8 times, and regenerates 1 Mana with every hit\nInflicts [c/806580:Bad Dream] for 16 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up [c/C4AB37:Midas]-inducing spikes from the ground, dealing damage with a 2% chance of granting a [c/FF52DC:Dream] stack\nHas a 10% chance to fire homing, soul-absorbing shards, healing for 20 HP and granting a stack of [c/FF52DC:Dream] when hit\nHaving 6 stacks of [c/FF52DC:Dream] restores 85 HP and Mana and puts you into an enraged state for 8 seconds, increasing melee damage dealt");
 	}
 
@@ -42,19 +41,19 @@ public class TheRainbowsHonor : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int dust1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default(Color), 1f);
+			int dust1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust>());
 			Main.dust[dust1].scale = 1f;
 			Main.dust[dust1].velocity.Y = 0f;
 			Main.dust[dust1].velocity.X = 0.5f;
 			Main.dust[dust1].noGravity = true;
 
-			int dust2 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default(Color), 1f);
+			int dust2 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust2>());
 			Main.dust[dust2].scale = 1f;
 			Main.dust[dust2].velocity.Y = 0f;
 			Main.dust[dust2].velocity.X = 0.5f;
 			Main.dust[dust2].noGravity = true;
 
-			int dust3 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default(Color), 1f);
+			int dust3 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.RainbowDust3>());
 			Main.dust[dust3].scale = 1f;
 			Main.dust[dust3].velocity.Y = 0f;
 			Main.dust[dust3].velocity.X = 0.5f;
@@ -101,10 +100,10 @@ public class TheRainbowsHonor : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<GoldenFury>());
-		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 10);
-		recipe.AddTile(null, "RainbowStation");
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<GoldenFury>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 10)
+			.AddTile(null, "RainbowStation")
+			.Register();
 	}
 }

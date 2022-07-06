@@ -41,25 +41,25 @@ public class RainbowClaymore : ModItem
 		}
 	}
 
-	public override void AddRecipes()
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<GoldenSlasher>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
-	}
-
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
 		float numberProjectiles = 3f;
 		float rotation = MathHelper.ToRadians(45f);
-		position += Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 45f;
+		position += Vector2.Normalize(velocity) * 45f;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedBy(new Vector2(velocity.X, velocity.Y), (double)MathHelper.Lerp(0f - rotation, rotation, i / (numberProjectiles - 1f)), default) * 0.2f;
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI, 0f, 0f);
+			Vector2 perturbedSpeed = Utils.RotatedBy(velocity, (double)MathHelper.Lerp(0f - rotation, rotation, i / (numberProjectiles - 1f)), default) * 0.2f;
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
+	}
+
+	public override void AddRecipes()
+	{
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<GoldenSlasher>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

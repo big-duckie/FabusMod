@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.Shimada;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -11,7 +10,6 @@ public class CarbonSword : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Carbon Sword");
 		Tooltip.SetDefault("[c/B6FF00:Autoswings, dyeable]\nFires a stream of particles that deals damage three times\nInflicts [c/7B2D2F:Advanced Blood Loss] for 10 seconds when hit with the blade, dealing damage over time");
 	}
 
@@ -28,19 +26,19 @@ public class CarbonSword : ModItem
 		Item.knockBack = 2f;
 		Item.value = Item.sellPrice(0, 6, 0, 0);
 		Item.rare = ItemRarityID.LightRed;
-		Item.shoot = ModContent.ProjectileType<ShimadaWave>();
+		Item.shoot = ModContent.ProjectileType<Projectiles.Shimada.ShimadaWave>();
 		Item.shootSpeed = 10f;
 		Item.UseSound = SoundID.Item1;
 		Item.autoReuse = true;
 	}
 
-    public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
-    {
+	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+	{
 		int numberProjectiles = 3;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(0f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI, 0f, 0f);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(0f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
@@ -64,16 +62,16 @@ public class CarbonSword : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe1 = CreateRecipe();
-		recipe1.AddIngredient(ModContent.ItemType<ShimadaSword>());
-		recipe1.AddRecipeGroup("FabusMod:OrichalcumBar", 10);
-		recipe1.AddTile(TileID.DemonAltar);
-		recipe1.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<ShimadaSword>())
+			.AddRecipeGroup("FabusMod:OrichalcumBar", 10)
+			.AddTile(TileID.DemonAltar)
+			.Register();
 
-		Recipe recipe2 = CreateRecipe();
-		recipe2.AddIngredient(ModContent.ItemType<CarbonSwordNihon>());
-		recipe2.AddIngredient(ItemID.BlueDye, 1);
-		recipe2.AddTile(TileID.DyeVat);
-		recipe2.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<CarbonSwordNihon>())
+			.AddIngredient(ItemID.BlueDye, 1)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

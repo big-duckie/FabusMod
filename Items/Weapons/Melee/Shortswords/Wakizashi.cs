@@ -9,7 +9,6 @@ public class Wakizashi : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Wakizashi");
 		Tooltip.SetDefault("Inflicts [c/007700:Poison] debuff for 5 seconds on hit");
 	}
 
@@ -48,11 +47,11 @@ public class Wakizashi : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<StonePlatedShortsword>());
-		recipe.AddRecipeGroup("IronBar", 6);
-		recipe.AddIngredient(ItemID.Emerald, 2);
-		recipe.AddTile(TileID.Anvils);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<StonePlatedShortsword>())
+			.AddRecipeGroup("IronBar", 6)
+			.AddIngredient(ItemID.Emerald, 2)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

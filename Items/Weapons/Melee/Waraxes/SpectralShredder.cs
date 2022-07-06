@@ -1,4 +1,3 @@
-using FabusMod.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,11 +6,10 @@ using Terraria.ModLoader;
 
 namespace FabusMod.Items.Weapons.Melee.Waraxes;
 
-public class RainbowAxe : ModItem
+public class SpectralShredder : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Spectral Shredder");
 		Tooltip.SetDefault("[c/B6FF00:Autoswings] \nPressing <right> fires a long-ranged Rainbow-Axe wall");
 	}
 
@@ -59,7 +57,7 @@ public class RainbowAxe : ModItem
 			Item.damage = 280;
 			Item.axe = 38;
 			Item.tileBoost = 6;
-			Item.shoot = ModContent.ProjectileType<RainbowAxeBeam>();
+			Item.shoot = ModContent.ProjectileType<Projectiles.RainbowAxeBeam>();
 		}
 		else
 		{
@@ -78,24 +76,24 @@ public class RainbowAxe : ModItem
     {
 		float numberProjectiles = 16f;
 		float rotation = MathHelper.ToRadians(35f);
-		position += Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 80f;
+		position += Vector2.Normalize(velocity) * 80f;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedBy(new Vector2(velocity.X, velocity.Y), (double)MathHelper.Lerp(0f - rotation, rotation, i / (numberProjectiles - 1f)), default) * 0.2f;
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+			Vector2 perturbedSpeed = Utils.RotatedBy(velocity, (double)MathHelper.Lerp(0f - rotation, rotation, i / (numberProjectiles - 1f)), default) * 0.2f;
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
 
     public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ItemID.LunarHamaxeSolar);
-		recipe.AddIngredient(ItemID.LunarHamaxeVortex);
-		recipe.AddIngredient(ItemID.LunarHamaxeNebula);
-		recipe.AddIngredient(ItemID.LunarHamaxeStardust);
-		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14);
-		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.LunarHamaxeSolar)
+			.AddIngredient(ItemID.LunarHamaxeVortex)
+			.AddIngredient(ItemID.LunarHamaxeNebula)
+			.AddIngredient(ItemID.LunarHamaxeStardust)
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

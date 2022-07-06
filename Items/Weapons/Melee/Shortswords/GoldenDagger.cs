@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.Shortsword;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -27,7 +26,7 @@ public class GoldenDagger : ModItem
 		Item.knockBack = 6f;
 		Item.value = Item.sellPrice(0, 54, 96, 0);
 		Item.rare = ItemRarityID.Yellow;
-		Item.shoot = ModContent.ProjectileType<GoldenKnife>();
+		Item.shoot = ModContent.ProjectileType<Projectiles.Shortsword.GoldenKnife>();
 		Item.shootSpeed = 50f;
 		Item.UseSound = SoundID.Item1;
 		Item.autoReuse = true;
@@ -49,12 +48,12 @@ public class GoldenDagger : ModItem
     {
 		float numberProjectiles = 2f;
 		float rotation = MathHelper.ToRadians(4f);
-		position += Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 6f;
+		position += Vector2.Normalize(velocity) * 6f;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedBy(new Vector2(velocity.X, velocity.Y), (double)MathHelper.Lerp(0f - rotation, rotation, i / (numberProjectiles - 1f)), default) * 0.2f;
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI, 0f, 0f);
-			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 55f;
+			Vector2 perturbedSpeed = Utils.RotatedBy(velocity, (double)MathHelper.Lerp(0f - rotation, rotation, i / (numberProjectiles - 1f)), default) * 0.2f;
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
+			Vector2 muzzleOffset = Vector2.Normalize(velocity) * 55f;
 			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 			{
 				position += muzzleOffset;
@@ -75,11 +74,11 @@ public class GoldenDagger : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<OniDagger>());
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 6);
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4);
-		recipe.AddTile(TileID.AdamantiteForge);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<OniDagger>())
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 6)
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4)
+			.AddTile(TileID.AdamantiteForge)
+			.Register();
 	}
 }

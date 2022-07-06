@@ -60,12 +60,12 @@ public class TheRainbowsCurse : ModItem
     {
 		float numberProjectiles = 3f;
 		float rotation = MathHelper.ToRadians(6f);
-		position += Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 6f;
+		position += Vector2.Normalize(velocity) * 6f;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedBy(new Vector2(velocity.X, velocity.Y), (double)MathHelper.Lerp(0f - rotation, rotation, i / (numberProjectiles - 1f)), default) * 0.2f;
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI, 0f, 0f);
-			Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 60f;
+			Vector2 perturbedSpeed = Utils.RotatedBy(velocity, (double)MathHelper.Lerp(0f - rotation, rotation, i / (numberProjectiles - 1f)), default) * 0.2f;
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
+			Vector2 muzzleOffset = Vector2.Normalize(velocity) * 60f;
 			if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 			{
 				position += muzzleOffset;
@@ -86,10 +86,10 @@ public class TheRainbowsCurse : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<GoldenDagger>());
-		recipe.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6);
-		recipe.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<GoldenDagger>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

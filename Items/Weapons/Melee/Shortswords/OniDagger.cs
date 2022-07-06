@@ -56,7 +56,7 @@ public class OniDagger : ModItem
 
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
-		Vector2 muzzleOffset = Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 55f;
+		Vector2 muzzleOffset = Vector2.Normalize(velocity) * 55f;
 		if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
 		{
 			position += muzzleOffset;
@@ -66,12 +66,12 @@ public class OniDagger : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddRecipeGroup("FabusMod:CarbonDagger", 1);
-		recipe.AddRecipeGroup("FabusMod:AdamantiteBar", 6);
-		recipe.AddIngredient(ItemID.SoulofNight, 4);
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 2);
-		recipe.AddTile(TileID.MythrilAnvil);
-		recipe.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:CarbonDagger")
+			.AddRecipeGroup("FabusMod:AdamantiteBar", 6)
+			.AddIngredient(ItemID.SoulofNight, 4)
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 2)
+			.AddTile(TileID.MythrilAnvil)
+			.Register();
 	}
 }

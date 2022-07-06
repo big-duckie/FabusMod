@@ -9,7 +9,6 @@ public class ShimadaSword : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Shimada Sword");
 		Tooltip.SetDefault("Inflicts [c/7B2D2F:Blood Loss] for 3 seconds on hit, dealing damage over time");
 	}
 
@@ -49,11 +48,11 @@ public class ShimadaSword : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<StonePlatedKatana>());
-		recipe.AddRecipeGroup("FabusMod:LightsBane");
-		recipe.AddIngredient(ItemID.Emerald, 10);
-		recipe.AddTile(TileID.Anvils);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<StonePlatedKatana>())
+			.AddRecipeGroup("FabusMod:LightsBane")
+			.AddIngredient(ItemID.Emerald, 10)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

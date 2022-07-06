@@ -1,4 +1,3 @@
-using FabusMod.Projectiles.Shimada;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -10,7 +9,6 @@ public class GoldenFury : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Fury");
 		Tooltip.SetDefault("[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 6 times, and regenerates 1 Mana with every hit\nInflicts [c/7B2D2F:Advanced Blood Loss] for 14 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up [c/C4AB37:Midas]-inducing spikes from the ground, dealing damage with a 2% chance of granting an [c/D2D25A:Enrichment] stack\nHas a 10% chance to fire soul-absorbing shards, granting a stack of [c/D2D25A:Enrichment] when hit\nHaving 6 stacks of [c/D2D25A:Enrichment] restores 75 HP and Mana");
 	}
 
@@ -42,11 +40,11 @@ public class GoldenFury : ModItem
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.MeatDust>(), 0f, 0f, 0, default(Color), 1f);
-			Main.dust[num1].scale = 1f;
-			Main.dust[num1].velocity.Y = 0f;
-			Main.dust[num1].velocity.X = 0.5f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(new Vector2(hitbox.X, hitbox.Y), hitbox.Width, hitbox.Height, ModContent.DustType<Dusts.MeatDust>(), 0f, 0f, 0, default(Color), 1f);
+			Main.dust[dust].scale = 1f;
+			Main.dust[dust].velocity.Y = 0f;
+			Main.dust[dust].velocity.X = 0.5f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
@@ -64,7 +62,7 @@ public class GoldenFury : ModItem
 			Item.useAnimation = 60;
 			Item.shootSpeed = 0f;
 			Item.mana = 40;
-			Item.shoot = ModContent.ProjectileType<GoldenFuryProjRMB>();
+			Item.shoot = ModContent.ProjectileType<Projectiles.Shimada.GoldenFuryProjRMB>();
 			Item.UseSound = SoundID.Item88;
 		}
 		else
@@ -76,11 +74,11 @@ public class GoldenFury : ModItem
 			Item.mana = 0;
 			if (Utils.NextFloat(Main.rand) < 0.1f)
 			{
-				Item.shoot = ModContent.ProjectileType<GoldenFuryProjTwo>();
+				Item.shoot = ModContent.ProjectileType<Projectiles.Shimada.GoldenFuryProjTwo>();
 			}
 			else
 			{
-				Item.shoot = ModContent.ProjectileType<GoldenFuryWave>();
+				Item.shoot = ModContent.ProjectileType<Projectiles.Shimada.GoldenFuryWave>();
 			}
 			Item.UseSound = SoundID.Item1;
 		}
@@ -89,11 +87,11 @@ public class GoldenFury : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe recipe = CreateRecipe();
-		recipe.AddIngredient(ModContent.ItemType<DemonsFury>());
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 10);
-		recipe.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4);
-		recipe.AddTile(TileID.DemonAltar);
-		recipe.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<DemonsFury>())
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 10)
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 4)
+			.AddTile(TileID.DemonAltar)
+			.Register();
 	}
 }

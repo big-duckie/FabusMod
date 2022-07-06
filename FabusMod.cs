@@ -90,8 +90,8 @@ public class FabusMod : Mod
 		RecipeGroup.RegisterGroup("FabusMod:CarbonDagger", group13);
 
 		RecipeGroup group14 = new(() => Language.GetTextValue("LegacyMisc.37") + " Sorcerer's Hellstaff", new int[2] {
-			Find<ModItem>("SorcerousHellstaff").Type,
-			Find<ModItem>("SorcerousHellstaffWhite").Type
+			Find<ModItem>("SorcerersHellstaff").Type,
+			Find<ModItem>("SorcerersHellstaffWhite").Type
 		});
 		RecipeGroup.RegisterGroup("FabusMod:SorcerousHellstaff", group14);
 

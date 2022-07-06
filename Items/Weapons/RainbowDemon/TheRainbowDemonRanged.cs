@@ -17,6 +17,7 @@ public class TheRainbowDemonRanged : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 82;
+		Item.DamageType = DamageClass.Ranged;
 		Item.noMelee = true;
 		Item.width = 82;
 		Item.height = 39;
@@ -44,18 +45,18 @@ public class TheRainbowDemonRanged : ModItem
 		int numberProjectiles = 10;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(30f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(30f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:TheRainbowDemon", 1);
-		val.AddIngredient(ItemID.FragmentVortex, 2);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:TheRainbowDemon")
+			.AddIngredient(ItemID.FragmentVortex, 2)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

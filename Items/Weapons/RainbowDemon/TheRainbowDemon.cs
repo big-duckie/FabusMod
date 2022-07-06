@@ -10,13 +10,13 @@ public class TheRainbowDemon : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Rainbow Demon");
 		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nUnleashes a barrage of rainbow waves \nDoes not require ammo \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]");
 	}
 
 	public override void SetDefaults()
 	{
 		Item.damage = 82;
+		Item.DamageType = DamageClass.Melee;
 		Item.width = 82;
 		Item.height = 39;
 		Item.useTime = 4;
@@ -43,23 +43,23 @@ public class TheRainbowDemon : ModItem
 		int numberProjectiles = 10;
 		for (int i = 0; i < numberProjectiles; i++)
 		{
-			Vector2 perturbedSpeed = Utils.RotatedByRandom(new Vector2(velocity.X, velocity.Y), (double)MathHelper.ToRadians(30f));
-			Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
+			Vector2 perturbedSpeed = Utils.RotatedByRandom(velocity, (double)MathHelper.ToRadians(30f));
+			Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
 		}
 		return false;
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowHandle> ());
-        val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowMuzzle>());
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowHandle>())
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.RainbowMuzzle>())
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddRecipeGroup("FabusMod:TheRainbowDemon", 1);
-		val2.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val2.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:TheRainbowDemon")
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

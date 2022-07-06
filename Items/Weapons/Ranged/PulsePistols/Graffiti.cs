@@ -60,7 +60,7 @@ public class Graffiti : ModItem
 		CreateRecipe()
 			.AddIngredient(ModContent.ItemType<GoldenPulse>())
 			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 10)
-			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
 			.Register();
 	}
 }

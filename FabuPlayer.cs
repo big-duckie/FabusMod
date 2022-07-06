@@ -104,7 +104,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated2)
 			{
 				SoundEngine.PlaySound(SoundID.Unlock);
-				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Shattered Moon's Blessing ready!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Shattered Moon's Blessing ready!");
 				activated2 = false;
 			}
 
@@ -148,7 +148,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated5)
 			{
 				SoundEngine.PlaySound(SoundID.Unlock);
-				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Spectral Moonlight ready!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Spectral Moonlight ready!");
 				activated5 = false;
 			}
 			if (Player.HasBuff(ModContent.BuffType<Buffs.LunarBow.SpectralMoonlight>()) && !soundPlayed)
@@ -188,7 +188,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated8)
 			{
 				SoundEngine.PlaySound(SoundID.Unlock);
-				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Blossom ready!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Blossom ready!");
 				activated8 = false;
 			}
 			if (Player.HasBuff(ModContent.BuffType<Buffs.IllusoryMirror.SpectralBlossomActive>()))
@@ -207,7 +207,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated10)
 			{
 				SoundEngine.PlaySound(SoundID.Unlock);
-				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Spectral Blossom ready!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Spectral Blossom ready!");
 				activated10 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.SouleaterOne>()))
@@ -217,7 +217,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated11)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(190, 60, 60), "Absorbed a soul!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(190, 60, 60), "Absorbed a soul!");
 				activated11 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.SouleaterTwo>()))
@@ -227,7 +227,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated12)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(190, 60, 60), "Absorbed two souls!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(190, 60, 60), "Absorbed two souls!");
 				activated12 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.SouleaterThree>()))
@@ -237,7 +237,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated13)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(190, 60, 60), "Absorbed three souls!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(190, 60, 60), "Absorbed three souls!");
 				activated13 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.SouleaterFour>()))
@@ -247,7 +247,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated14)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(190, 60, 60), "Absorbed four souls!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(190, 60, 60), "Absorbed four souls!");
 				activated14 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.SouleaterFive>()))
@@ -257,7 +257,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated15)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(92, 229, 237), "Absorbed five souls!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(92, 229, 237), "Absorbed five souls!");
 				activated15 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.EnrichmentOne>()))
@@ -267,7 +267,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated16)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed a soul!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed a soul!",;
 				activated16 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.EnrichmentTwo>()))
@@ -277,7 +277,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated17)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed two souls!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed two souls!");
 				activated17 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.EnrichmentThree>()))
@@ -287,7 +287,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated18)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed three souls!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed three souls!");
 				activated18 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.EnrichmentFour>()))
@@ -297,7 +297,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated19)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed four souls!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed four souls!");
 				activated19 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.EnrichmentFive>()))
@@ -307,7 +307,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated20)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(92, 229, 237), "Absorbed five souls!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(92, 229, 237), "Absorbed five souls!");
 				activated20 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.DreamOne>()))
@@ -317,7 +317,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated21)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped a dream!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped a dream!");
 				activated21 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.DreamTwo>()))
@@ -327,7 +327,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated22)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped two dreams!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped two dreams!");
 				activated22 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.DreamThree>()))
@@ -337,7 +337,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated23)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped three dreams!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped three dreams!");
 				activated23 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.DreamFour>()))
@@ -347,7 +347,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated24)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped four dreams!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped four dreams!");
 				activated24 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.DreamFive>()))
@@ -357,7 +357,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated25)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped five dreams!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(255, 82, 220), "Sapped five dreams!");
 				activated25 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.SpectralRage>()))
@@ -367,7 +367,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated26)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(255, 61, 0), "Enraged!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(255, 61, 0), "Enraged!");
 				activated26 = false;
 			}
 			if (Player.HasBuff(ModContent.BuffType<Buffs.Shotgun.Hypercharging>()))
@@ -395,7 +395,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated29)
 			{
 				SoundEngine.PlaySound(SoundID.Unlock);
-				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Ready to Hypercharge!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Ready to Hypercharge!");
 				activated29 = false;
 			}
 			if (Player.HasBuff(ModContent.BuffType<Buffs.Shotgun.Hypercharging>()) && !soundPlayed)
@@ -417,7 +417,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated30)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(255, 61, 0), "Hypercharged!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(255, 61, 0), "Hypercharged!");
 				activated30 = false;
 			}
 			if (Player.HasBuff(ModContent.BuffType<Buffs.Shotgun.Hypercharge>()))
@@ -426,7 +426,7 @@ public class FabuPlayer : ModPlayer
 			}
 			else if (activated31)
 			{
-				CombatText.NewText(Player.Hitbox, new Color(138, 138, 138), "No longer Hypercharged!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(138, 138, 138), "No longer Hypercharged!");
 				activated31 = false;
 			}
 			if (Player.HasBuff(ModContent.BuffType<Buffs.Shotgun.Ultracharging>()))
@@ -454,7 +454,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated34)
 			{
 				SoundEngine.PlaySound(SoundID.Unlock);
-				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Ready to Ultracharge!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(0, 255, 0), "Ready to Ultracharge!");
 				activated34 = false;
 			}
 			if (Player.HasBuff(ModContent.BuffType<Buffs.Shotgun.Ultracharging>()) && !soundPlayed)
@@ -476,7 +476,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated35)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(255, 61, 0), "Ultracharged!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(255, 61, 0), "Ultracharged!");
 				activated35 = false;
 			}
 			if (Player.HasBuff(ModContent.BuffType<Buffs.Shotgun.Ultracharge>()))
@@ -485,7 +485,7 @@ public class FabuPlayer : ModPlayer
 			}
 			else if (activated36)
 			{
-				CombatText.NewText(Player.Hitbox, new Color(138, 138, 138), "No longer Ultracharged!", false, false);
+				CombatText.NewText(Player.Hitbox, new Color(138, 138, 138), "No longer Ultracharged!");
 				activated36 = false;
 			}
 		}
@@ -519,7 +519,7 @@ public class FabuPlayer : ModPlayer
     {
 		return new[]
 		{
-			new Item(ModContent.ItemType<Items.Items.CraftingIngredients.BrokenBand>(), 1)
+			new Item(ModContent.ItemType<Items.Items.CraftingIngredients.BrokenBand>())
 		};
     }
 }

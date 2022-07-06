@@ -15,8 +15,8 @@ public static class Helper
 	{
 		float NearestPlayerDist = 4.8151624E+09f;
 		int NearestPlayer = -1;
-		Player[] player2 = Main.player;
-		foreach (Player player in player2)
+		Player[] playerList = Main.player;
+		foreach (Player player in playerList)
 		{
 			if (player.Distance(npc.Center) < NearestPlayerDist && player.active)
 			{
@@ -37,8 +37,8 @@ public static class Helper
 	{
 		float NearestNPCDist = -1f;
 		int NearestNPC = -1;
-		NPC[] npc2 = Main.npc;
-		foreach (NPC npc in npc2)
+		NPC[] npcList = Main.npc;
+		foreach (NPC npc in npcList)
 		{
 			if (npc.active && (!NoBoss || !npc.boss) && (Friendly || (!npc.friendly && npc.lifeMax > 5)) && (NearestNPCDist == -1f || npc.Distance(Point) < NearestNPCDist))
 			{
@@ -53,8 +53,8 @@ public static class Helper
 	{
 		float NearestPlayerDist = -1f;
 		int NearestPlayer = -1;
-		Player[] player2 = Main.player;
-		foreach (Player player in player2)
+		Player[] playerList = Main.player;
+		foreach (Player player in playerList)
 		{
 			if ((!Alive || (player.active && !player.dead)) && (NearestPlayerDist == -1f || player.Distance(Point) < NearestPlayerDist))
 			{
@@ -69,8 +69,8 @@ public static class Helper
 	{
 		float NearestPlayerDist = 4.8151624E+09f;
 		int NearestPlayer = -1;
-		Player[] player2 = Main.player;
-		foreach (Player player in player2)
+		Player[] playerList = Main.player;
+		foreach (Player player in playerList)
 		{
 			if (player.Distance(npc.Center) < NearestPlayerDist)
 			{
@@ -109,10 +109,7 @@ public static class Helper
 
 	public static Vector2 PolarPos(Vector2 Point, float Distance, float Angle, int XOffset = 0, int YOffset = 0)
 	{
-		Vector2 result = default;
-		result.X = Distance * (float)Math.Sin(MathHelper.ToDegrees(Angle)) + Point.X + XOffset;
-		result.Y = Distance * (float)Math.Cos(MathHelper.ToDegrees(Angle)) + Point.Y + YOffset;
-		return result;
+		return new Vector2(Distance * (float)Math.Sin(MathHelper.ToDegrees(Angle)) + Point.X + XOffset, Distance * (float)Math.Cos(MathHelper.ToDegrees(Angle)) + Point.Y + YOffset);
 	}
 
 	public static Vector2 SmoothFromTo(Vector2 From, Vector2 To, float Smooth = 60f)

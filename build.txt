@@ -1,5 +1,5 @@
 ﻿displayName = ♥ Fabu's Mod ♥
-author = Fabu
+author = Fabu & Big Duckie
 version = 3.0
-homepage = https://forums.terraria.org/index.php?threads/fabus-mod-version-1-0.60792/
-includePDB = true
+homepage = https://git.theduckpond.club/big-duckie/FabusMod
+includeSource = true

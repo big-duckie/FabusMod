@@ -98,7 +98,7 @@ public class HellfireBeamProj : ModProjectile
 		if (Projectile.owner == Main.myPlayer)
 		{
 			Projectile.velocity = mousePos - player.Center;
-			Projectile.velocity.Normalize();s
+			Projectile.velocity.Normalize();
 			Projectile.direction = (Main.MouseWorld.X > player.position.X) ? 1 : (-1);
 			Projectile.netUpdate = true;
 		}

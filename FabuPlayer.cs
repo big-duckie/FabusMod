@@ -267,7 +267,7 @@ public class FabuPlayer : ModPlayer
 			else if (activated16)
 			{
 				SoundEngine.PlaySound(SoundID.Item4);
-				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed a soul!",;
+				CombatText.NewText(Player.Hitbox, new Color(210, 210, 90), "Absorbed a soul!");
 				activated16 = false;
 			}
 			if (!Player.HasBuff(ModContent.BuffType<Buffs.ShimadaSword.Stacks.EnrichmentTwo>()))

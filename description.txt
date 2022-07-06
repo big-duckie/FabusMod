@@ -1,11 +1,11 @@
-Fabu's Mod is a pretty cool mod, it does...this. Modify this file with a description of your mod.Fabu's Mod is a little Terraria Mod made with tModloader, which adds weapons that the player can upgrade as they progress in the game.
+This is an unoffical update to TML 1.4. Please report any bugs you find to the issue tracker linked below.
+
+Fabu's Mod is a little Terraria Mod made with tModloader, which adds weapons that the player can upgrade as they progress in the game.
 It also adds some new and unique weapons, which have surprisingly in-depth features.
 
-There are several weapons that you can craft in the beginning, and keep upgrading until post-Moon Lord.
-Including one accessory.
+There are several items that you can craft in the beginning, and keep upgrading until post-Moon Lord.
 
 It currently adds:
-
 - 81 new weapons (With 14 different dyed variants for some weapons!)
 - 11 new items
 - 2 new tiles
@@ -15,12 +15,4 @@ It currently adds:
 - 11 new accessories
 Keep in mind that this mod is still a work-in-progress, and if anything seems unfinished or unrefined, there is a high chance that it will be finished/refined in a future update.
 
-For a list of recipes I suggest using jopojelly's Recipe Browser mod, or any other recipe list mod.
-
 Credit for a lot of the sprites goes to KregJoke.
-
-Fabu's Mod has a Discord Server!
-Do you have any questions about the mod? Any suggestions? Any bugs you would like to see fixed?
-Come join, and talk to me!
-
-Want a preview of some of the weapons? Check out the forum post! Link below.

@@ -30,7 +30,7 @@ public class TheRainbowDemon : ModItem
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 25f;
 		Item.shoot = ModContent.ProjectileType<Projectiles.RainbowDemon.RainbowDemonMelee>();
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override Vector2? HoldoutOffset()

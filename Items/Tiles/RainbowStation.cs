@@ -22,7 +22,7 @@ public class RainbowStation : ModItem
 		Item.useTime = 10;
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.consumable = true;
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.createTile = ModContent.TileType<global::FabusMod.Tiles.RainbowStation>();
 	}
 

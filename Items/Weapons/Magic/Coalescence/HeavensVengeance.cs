@@ -19,7 +19,7 @@ public class HeavensVengeance : ModItem
 		Item.noMelee = true;
 		Item.channel = true;
 		Item.mana = 8;
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.width = 28;
 		Item.height = 30;
 		Item.useTime = 20;

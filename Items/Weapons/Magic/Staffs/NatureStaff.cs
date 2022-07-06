@@ -30,7 +30,7 @@ public class NatureStaff : ModItem
 		Item.noMelee = true;
 		Item.knockBack = 5f;
 		Item.value = Item.sellPrice(0, 8, 80, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.UseSound = SoundID.Item20;
 		Item.autoReuse = true;
 		Item.shoot = ModContent.ProjectileType<Projectiles.SorcerousStaff.NatureStaffProj>();

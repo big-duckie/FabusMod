@@ -30,7 +30,7 @@ public class GoldenStinger : ModItem
 		Item.autoReuse = true;
 		Item.shoot = ModContent.ProjectileType<Projectiles.LightBlasts.GoldenLightBlast>();
 		Item.shootSpeed = 10f;
-		Item.rare = 12;
+		Item.rare = ItemRarityID.Cyan;
 	}
 
 	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

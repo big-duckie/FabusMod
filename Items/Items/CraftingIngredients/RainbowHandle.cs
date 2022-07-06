@@ -16,6 +16,6 @@ public class RainbowHandle : ModItem
 		Item.height = 37;
 		Item.maxStack = 99;
 		Item.value = Item.sellPrice(18, 0, 0, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 }

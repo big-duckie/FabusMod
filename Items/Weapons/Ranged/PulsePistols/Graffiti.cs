@@ -32,7 +32,7 @@ public class Graffiti : ModItem
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 40f;
 		Item.useAmmo = AmmoID.Bullet;
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override bool CanConsumeAmmo(Item ammo, Player player)

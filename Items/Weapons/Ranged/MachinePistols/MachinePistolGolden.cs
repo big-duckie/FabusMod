@@ -31,7 +31,7 @@ public class MachinePistolGolden : ModItem
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 18f;
 		Item.useAmmo = AmmoID.Bullet;
-		Item.rare = 12;
+		Item.rare = ItemRarityID.Red;
 	}
 
 	public override Vector2? HoldoutOffset()

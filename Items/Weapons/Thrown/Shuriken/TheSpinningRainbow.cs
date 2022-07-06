@@ -28,7 +28,7 @@ public class TheSpinningRainbow : ModItem
 		Item.noMelee = true;
 		Item.autoReuse = true;
 		Item.value = Item.sellPrice(2, 70, 0, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.shootSpeed = 25f;
 		Item.reuseDelay = 8;
 		Item.shoot = ModContent.ProjectileType<Projectiles.TheSpinningRainbow>();

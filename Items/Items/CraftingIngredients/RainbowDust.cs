@@ -15,7 +15,7 @@ public class RainbowDust : ModItem
 		Item.width = 24;
 		Item.height = 24;
 		Item.maxStack = 999;
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.value = Item.sellPrice(0, 0, 4, 50);
 	}
 }

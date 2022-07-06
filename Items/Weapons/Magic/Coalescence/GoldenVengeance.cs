@@ -18,7 +18,6 @@ public class GoldenVengeance : ModItem
 		Item.noMelee = true;
 		Item.channel = true;
 		Item.mana = 10;
-		Item.expert = true;
 		Item.width = 28;
 		Item.height = 30;
 		Item.useTime = 20;
@@ -28,6 +27,7 @@ public class GoldenVengeance : ModItem
 		Item.useAnimation = 20;
 		Item.shoot = ModContent.ProjectileType<Projectiles.Lasers.GoldenBeam>();
 		Item.value = Item.sellPrice(0, 27, 50, 0);
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override void AddRecipes()

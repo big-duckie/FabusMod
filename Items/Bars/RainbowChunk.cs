@@ -17,7 +17,7 @@ public class RainbowChunk : ModItem
 		Item.height = 24;
 		Item.maxStack = 99;
 		Item.value = Item.sellPrice(0, 21, 0, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override void AddRecipes()

@@ -16,6 +16,6 @@ public class RainbowMuzzle : ModItem
 		Item.height = 33;
 		Item.maxStack = 99;
 		Item.value = Item.sellPrice(21, 0, 0, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 }

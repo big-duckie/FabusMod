@@ -31,7 +31,7 @@ public class TheRainbowDemonClaymore : ModItem
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 25f;
 		Item.shoot = ModContent.ProjectileType<Projectiles.RainbowDemon.RainbowDemonClaymoreProj>();
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override Vector2? HoldoutOffset()

@@ -27,12 +27,12 @@ public class Depriver : ModItem
 		Item.noMelee = true;
 		Item.knockBack = 4f;
 		Item.value = Item.sellPrice(2, 14, 0, 0);
-		Item.expert = true;
 		Item.UseSound = SoundID.Item38;
 		Item.autoReuse = true;
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 35f;
 		Item.useAmmo = AmmoID.Bullet;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

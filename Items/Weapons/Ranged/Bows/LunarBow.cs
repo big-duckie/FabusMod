@@ -27,7 +27,7 @@ public class LunarBow : ModItem
 		Item.noMelee = true;
 		Item.knockBack = 0f;
 		Item.value = Item.sellPrice(0, 15, 60, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.UseSound = SoundID.Item5;
 		Item.autoReuse = true;
 		Item.shootSpeed = 50f;

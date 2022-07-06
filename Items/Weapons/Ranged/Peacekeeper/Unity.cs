@@ -27,13 +27,13 @@ public class Unity : ModItem
 		Item.noMelee = true;
 		Item.knockBack = 4f;
 		Item.value = Item.sellPrice(2, 26, 0, 0);
-		Item.expert = true;
 		Item.UseSound = SoundID.Item11;
 		Item.autoReuse = true;
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 100f;
 		Item.reuseDelay = 12;
 		Item.useAmmo = AmmoID.Bullet;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override Vector2? HoldoutOffset()

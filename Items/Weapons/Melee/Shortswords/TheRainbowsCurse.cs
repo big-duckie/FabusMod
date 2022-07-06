@@ -25,7 +25,7 @@ public class TheRainbowsCurse : ModItem
 		Item.useStyle = ItemUseStyleID.Thrust;
 		Item.knockBack = 6f;
 		Item.value = Item.sellPrice(2, 20, 0, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.shoot = ModContent.ProjectileType<Projectiles.Shortsword.RainbowKnife>();
 		Item.shootSpeed = 65f;
 		Item.UseSound = SoundID.Item1;

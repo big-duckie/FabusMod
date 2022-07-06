@@ -31,7 +31,7 @@ public class Verano : ModItem
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 18f;
 		Item.useAmmo = AmmoID.Bullet;
-		Item.rare = ItemRarityID.Red;
+		Item.rare = ItemRarityID.Cyan;
 	}
 
 	public override Vector2? HoldoutOffset()

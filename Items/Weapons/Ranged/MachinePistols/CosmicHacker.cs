@@ -31,7 +31,7 @@ public class CosmicHacker : ModItem
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 18f;
 		Item.useAmmo = AmmoID.Bullet;
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override Vector2? HoldoutOffset()

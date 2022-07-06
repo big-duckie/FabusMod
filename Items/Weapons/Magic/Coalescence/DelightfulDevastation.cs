@@ -18,7 +18,6 @@ public class DelightfulDevastation : ModItem
 		Item.noMelee = true;
 		Item.channel = true;
 		Item.mana = 15;
-		Item.expert = true;
 		Item.width = 30;
 		Item.height = 32;
 		Item.useTime = 20;
@@ -28,6 +27,7 @@ public class DelightfulDevastation : ModItem
 		Item.useAnimation = 10;
 		Item.shoot = ModContent.ProjectileType<Projectiles.Lasers.RainbowBeam>();
 		Item.value = Item.sellPrice(2, 40, 0, 0);
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override void AddRecipes()

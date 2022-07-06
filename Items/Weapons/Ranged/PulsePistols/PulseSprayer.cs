@@ -32,7 +32,7 @@ public class PulseSprayer : ModItem
 		Item.shoot = ProjectileID.PurificationPowder;
 		Item.shootSpeed = 25f;
 		Item.useAmmo = AmmoID.Bullet;
-		Item.rare = ItemRarityID.Red;
+		Item.rare = ItemRarityID.Cyan;
 	}
 
 	public override bool CanConsumeAmmo(Item ammo, Player player)

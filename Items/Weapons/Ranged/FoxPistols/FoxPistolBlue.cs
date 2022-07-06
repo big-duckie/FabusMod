@@ -30,8 +30,8 @@ public class FoxPistolBlue : ModItem
 		Item.UseSound = SoundID.Item11;
 		Item.autoReuse = true;
 		Item.shootSpeed = 7f;
-		Item.expert = true;
 		Item.shoot = ModContent.ProjectileType<BlueBolt>();
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override Vector2? HoldoutOffset()

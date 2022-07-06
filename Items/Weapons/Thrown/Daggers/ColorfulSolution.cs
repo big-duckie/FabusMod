@@ -28,9 +28,9 @@ public class ColorfulSolution : ModItem
 		Item.noMelee = true;
 		Item.autoReuse = true;
 		Item.value = Item.sellPrice(3, 0, 0, 0);
-		Item.expert = true;
 		Item.shootSpeed = 28f;
 		Item.shoot = ModContent.ProjectileType<global::FabusMod.Projectiles.Daggers.ColorfulSolution>();
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override void AddRecipes()

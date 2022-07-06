@@ -18,7 +18,7 @@ public class HellfireBeam : ModItem
 		Item.noMelee = true;
 		Item.channel = true;
 		Item.mana = 7;
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.width = 28;
 		Item.height = 30;
 		Item.useTime = 20;

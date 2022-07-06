@@ -11,7 +11,6 @@ public class GoldenPulse : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Pulse");
 		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into golden Pulse Bullets");
 	}
 
@@ -32,7 +31,7 @@ public class GoldenPulse : ModItem
 		Item.shoot = ProjectileID.VilethornTip;
 		Item.shootSpeed = 25f;
 		Item.useAmmo = AmmoID.Bullet;
-		Item.rare = 12;
+		Item.rare = ItemRarityID.Red;
 	}
 
 	public override bool CanConsumeAmmo(Item ammo, Player player)

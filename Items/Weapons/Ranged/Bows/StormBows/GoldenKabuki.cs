@@ -25,10 +25,10 @@ public class GoldenKabuki : ModItem
 		Item.noMelee = true;
 		Item.knockBack = 3f;
 		Item.value = Item.sellPrice(0, 22, 0, 0);
-		Item.expert = true;
 		Item.UseSound = SoundID.Item5;
 		Item.autoReuse = true;
 		Item.shootSpeed = 18f;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override bool AltFunctionUse(Player player)

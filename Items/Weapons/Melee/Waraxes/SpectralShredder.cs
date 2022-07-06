@@ -26,7 +26,7 @@ public class SpectralShredder : ModItem
 		Item.tileBoost = 6;
 		Item.knockBack = 8f;
 		Item.value = Item.sellPrice(3, 20, 0, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.UseSound = SoundID.Item1;
 		Item.autoReuse = true;
 		Item.shootSpeed = 80f;

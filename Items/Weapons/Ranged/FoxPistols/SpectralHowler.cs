@@ -30,8 +30,8 @@ public class SpectralHowler : ModItem
 		Item.UseSound = SoundID.Item11;
 		Item.autoReuse = true;
 		Item.shootSpeed = 8f;
-		Item.expert = true;
 		Item.shoot = ModContent.ProjectileType<RainbowBolt>();
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override Vector2? HoldoutOffset()

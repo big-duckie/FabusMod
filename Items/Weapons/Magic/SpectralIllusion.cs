@@ -28,7 +28,7 @@ public class SpectralIllusion : ModItem
 		Item.value = Item.sellPrice(2, 50, 0, 0);
 		Item.autoReuse = true;
 		Item.shootSpeed = 7f;
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.reuseDelay = 20;
 		Item.UseSound = SoundID.Item72;
 		Item.shoot = ModContent.ProjectileType<Projectiles.IllusoryMirror.SpectralIllusionProj>();

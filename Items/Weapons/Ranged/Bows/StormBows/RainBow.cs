@@ -25,7 +25,7 @@ public class RainBow : ModItem
 		Item.noMelee = true;
 		Item.knockBack = 3f;
 		Item.value = Item.sellPrice(1, 50, 0, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.UseSound = SoundID.Item5;
 		Item.autoReuse = true;
 		Item.shootSpeed = 20f;

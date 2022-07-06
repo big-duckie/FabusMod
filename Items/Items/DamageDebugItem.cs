@@ -22,7 +22,7 @@ public class DamageDebugItem : ModItem
 		Item.maxStack = 1;
 		Item.useStyle = ItemUseStyleID.Shoot;
 		Item.value = Item.sellPrice(0, 0, 0, 0);
-		Item.expert = false;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override bool AltFunctionUse(Player player)

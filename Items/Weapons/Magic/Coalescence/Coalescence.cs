@@ -18,7 +18,6 @@ public class Coalescence : ModItem
 		Item.noMelee = true;
 		Item.channel = true;
 		Item.mana = 5;
-		Item.expert = true;
 		Item.width = 28;
 		Item.height = 30;
 		Item.useTime = 20;
@@ -28,6 +27,7 @@ public class Coalescence : ModItem
 		Item.useAnimation = 20;
 		Item.shoot = ModContent.ProjectileType<Projectiles.Lasers.CoalescenceBeam>();
 		Item.value = Item.sellPrice(0, 8, 50, 0);
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override void AddRecipes()

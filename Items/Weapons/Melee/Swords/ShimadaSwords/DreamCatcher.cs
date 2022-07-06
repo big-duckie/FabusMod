@@ -25,11 +25,11 @@ public class DreamCatcher : ModItem
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.knockBack = 2f;
 		Item.value = Item.sellPrice(2, 75, 0, 0);
-		Item.expert = true;
 		Item.shoot = ModContent.ProjectileType<DreamCatcherWave>();
 		Item.shootSpeed = 60f;
 		Item.UseSound = SoundID.Item1;
 		Item.autoReuse = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)

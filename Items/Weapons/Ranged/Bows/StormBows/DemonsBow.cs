@@ -25,10 +25,10 @@ public class DemonsBow : ModItem
 		Item.noMelee = true;
 		Item.knockBack = 3f;
 		Item.value = Item.sellPrice(0, 3, 0, 0);
-		Item.expert = true;
 		Item.UseSound = SoundID.Item5;
 		Item.autoReuse = true;
 		Item.shootSpeed = 16f;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override bool AltFunctionUse(Player player)

@@ -16,7 +16,7 @@ public class RainbowToken : ModItem
 		Item.height = 30;
 		Item.maxStack = 99;
 		Item.value = Item.sellPrice(0, 9, 80, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override void AddRecipes()

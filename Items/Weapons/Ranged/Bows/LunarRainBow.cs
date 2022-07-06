@@ -27,11 +27,11 @@ public class LunarRainBow : ModItem
 		Item.noMelee = true;
 		Item.knockBack = 0f;
 		Item.value = Item.sellPrice(2, 70, 0, 0);
-		Item.expert = true;
 		Item.UseSound = SoundID.Item5;
 		Item.autoReuse = true;
 		Item.shootSpeed = 50f;
 		Item.shoot = ModContent.ProjectileType<SpectralMoonBolt>();
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

@@ -29,7 +29,7 @@ public class FusedWish : ModItem
 		Item.autoReuse = true;
 		Item.shoot = ModContent.ProjectileType<Projectiles.WishNeedle>();
 		Item.shootSpeed = 16f;
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 	}
 
 	public override Vector2? HoldoutOffset()

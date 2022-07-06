@@ -24,7 +24,7 @@ public class RainbowClaymore : ModItem
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.knockBack = 3f;
 		Item.value = Item.sellPrice(3, 20, 0, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.UseSound = SoundID.Item1;
 		Item.autoReuse = true;
 		Item.shoot = ModContent.ProjectileType<Projectiles.RainbowOrb>();

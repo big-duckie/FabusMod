@@ -17,7 +17,7 @@ public class HarmonyScarf : ModItem
 		Item.width = 42;
 		Item.height = 38;
 		Item.value = Item.sellPrice(5, 0, 0, 0);
-		Item.expert = true;
+		Item.rare = ItemRarityID.Expert;
 		Item.accessory = true;
 		Item.defense = 16;
 	}

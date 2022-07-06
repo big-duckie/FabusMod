@@ -41,6 +41,6 @@ public class RainbowStation : ModTile
 
 	public override void KillMultiTile(int i, int j, int frameX, int frameY)
 	{
-		Item.NewItem(new EntitySource_Misc(""), i * 16, j * 16, 32, 16, ModContent.ItemType<Items.Tiles.RainbowStation>(), 1, false, 0, false, false);
+		Item.NewItem(new EntitySource_Misc(""), i * 16, j * 16, 32, 16, ModContent.ItemType<Items.Tiles.RainbowStation>());
 	}
 }

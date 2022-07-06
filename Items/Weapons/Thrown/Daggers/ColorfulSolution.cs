@@ -8,13 +8,13 @@ public class ColorfulSolution : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Colorful Solution");
 		Tooltip.SetDefault("Doesn't consume on use \n[c/B6FF00:Autothrows] \nInflicts [c/401440:Venom] for 12 seconds on hit");
 	}
 
 	public override void SetDefaults()
 	{
 		Item.maxStack = 1;
+		Item.DamageType = DamageClass.Throwing;
 		Item.damage = 195;
 		Item.knockBack = 3f;
 		Item.useStyle = ItemUseStyleID.Swing;
@@ -35,10 +35,10 @@ public class ColorfulSolution : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ItemID.MagicDagger, 1);
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ItemID.MagicDagger)
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 14)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

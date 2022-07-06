@@ -4,18 +4,18 @@ using Terraria.ModLoader;
 
 namespace FabusMod.Items.Weapons.Thrown.Shuriken;
 
-public class OniSlayer : ModItem
+public class DemonSlayer : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Demon Slayer");
 		Tooltip.SetDefault("[c/B6FF00:Autothrows]\nThrows 4 fast-flying Shurikens at once");
 	}
 
 	public override void SetDefaults()
 	{
-		Item.maxStack = 1;
 		Item.damage = 48;
+		Item.DamageType = DamageClass.Throwing;
+		Item.maxStack = 1;
 		Item.knockBack = 0f;
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.UseSound = SoundID.Item1;
@@ -36,12 +36,12 @@ public class OniSlayer : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddRecipeGroup("FabusMod:CarbonShuriken", 1);
-		val.AddRecipeGroup("FabusMod:AdamantiteBar", 6);
-		val.AddIngredient(ItemID.Ruby, 3);
-		val.AddIngredient(ItemID.SoulofNight, 3);
-		val.AddTile(TileID.DemonAltar);
-		val.Register();
+		CreateRecipe()
+			.AddRecipeGroup("FabusMod:CarbonShuriken")
+			.AddRecipeGroup("FabusMod:AdamantiteBar", 6)
+			.AddIngredient(ItemID.Ruby, 3)
+			.AddIngredient(ItemID.SoulofNight, 3)
+			.AddTile(TileID.DemonAltar)
+			.Register();
 	}
 }

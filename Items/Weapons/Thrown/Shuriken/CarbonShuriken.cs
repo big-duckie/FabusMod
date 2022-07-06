@@ -8,13 +8,13 @@ public class CarbonShuriken : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Carbon Shuriken");
 		Tooltip.SetDefault("[c/B6FF00:Autothrows, dyeable]\nThrows 3 fast-flying Shurikens at once");
 	}
 
 	public override void SetDefaults()
 	{
 		Item.maxStack = 1;
+		Item.DamageType = DamageClass.Throwing;
 		Item.damage = 19;
 		Item.knockBack = 0f;
 		Item.useStyle = ItemUseStyleID.Swing;
@@ -36,17 +36,17 @@ public class CarbonShuriken : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<HerosShuriken>());
-		val.AddRecipeGroup("FabusMod:DemoniteBar", 3);
-		val.AddIngredient(ItemID.Sapphire, 1);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<HerosShuriken>())
+			.AddRecipeGroup("FabusMod:DemoniteBar", 3)
+			.AddIngredient(ItemID.Sapphire)
+			.AddTile(TileID.Anvils)
+			.Register();
 
-		Recipe val2 = CreateRecipe();
-		val2.AddIngredient(ModContent.ItemType<CarbonShurikenNihon>());
-		val2.AddIngredient(ItemID.BlueDye, 1);
-		val2.AddTile(TileID.DyeVat);
-		val2.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<CarbonShurikenNihon>())
+			.AddIngredient(ItemID.BlueDye)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

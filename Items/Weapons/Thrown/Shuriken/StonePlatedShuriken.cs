@@ -15,8 +15,9 @@ public class StonePlatedShuriken : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.maxStack = 1;
 		Item.damage = 9;
+		Item.DamageType = DamageClass.Throwing;
+		Item.maxStack = 1;
 		Item.knockBack = 0f;
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.UseSound = SoundID.Item1;
@@ -36,11 +37,11 @@ public class StonePlatedShuriken : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedShurikenPart>());
-		val.AddIngredient(ItemID.StoneBlock, 3);
-		val.AddIngredient(ItemID.FallenStar, 1);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.WeaponParts.UntreatedShurikenPart>())
+			.AddIngredient(ItemID.StoneBlock, 3)
+			.AddIngredient(ItemID.FallenStar)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.ReinforcedWorkBench>())
+			.Register();
 	}
 }

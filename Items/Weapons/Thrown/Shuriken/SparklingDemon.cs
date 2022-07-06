@@ -37,7 +37,7 @@ public class SparklingDemon : ModItem
 	public override void AddRecipes()
 	{
 		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<OniSlayer>());
+		val.AddIngredient(ModContent.ItemType<DemonSlayer>());
 		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 6);
 		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.SoulofWisdom>(), 6);
 		val.AddTile(TileID.AdamantiteForge);

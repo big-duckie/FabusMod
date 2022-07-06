@@ -14,8 +14,9 @@ public class HerosShuriken : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.maxStack = 1;
 		Item.damage = 10;
+		Item.DamageType = DamageClass.Throwing;
+		Item.maxStack = 1;
 		Item.knockBack = 0f;
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.UseSound = SoundID.Item1;
@@ -36,11 +37,11 @@ public class HerosShuriken : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<StonePlatedShuriken>());
-		val.AddRecipeGroup("IronBar", 3);
-		val.AddIngredient(ItemID.Emerald, 1);
-		val.AddTile(TileID.Anvils);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<StonePlatedShuriken>())
+			.AddRecipeGroup("IronBar", 3)
+			.AddIngredient(ItemID.Emerald)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

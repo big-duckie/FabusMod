@@ -8,14 +8,14 @@ public class TheSpinningRainbow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Spinning Rainbow");
 		Tooltip.SetDefault("[c/B6FF00:Autothrows]\nThrows 6 Shurikens at once");
 	}
 
 	public override void SetDefaults()
 	{
-		Item.maxStack = 1;
 		Item.damage = 230;
+		Item.DamageType = DamageClass.Throwing;
+		Item.maxStack = 1;
 		Item.knockBack = 0f;
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.UseSound = SoundID.Item1;
@@ -36,10 +36,10 @@ public class TheSpinningRainbow : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<SparklingDemon>());
-		val.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6);
-		val.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>());
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<SparklingDemon>())
+			.AddIngredient(ModContent.ItemType<Bars.RainbowChunk>(), 6)
+			.AddTile(ModContent.TileType<global::FabusMod.Tiles.RainbowStation>())
+			.Register();
 	}
 }

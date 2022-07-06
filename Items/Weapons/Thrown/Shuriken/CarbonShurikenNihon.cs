@@ -14,8 +14,9 @@ public class CarbonShurikenNihon : ModItem
 
 	public override void SetDefaults()
 	{
-		Item.maxStack = 1;
 		Item.damage = 19;
+		Item.DamageType = DamageClass.Throwing;
+		Item.maxStack = 1;
 		Item.knockBack = 0f;
 		Item.useStyle = ItemUseStyleID.Swing;
 		Item.UseSound = SoundID.Item1;
@@ -36,10 +37,10 @@ public class CarbonShurikenNihon : ModItem
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<CarbonShuriken>());
-		val.AddIngredient(ItemID.SilverDye, 1);
-		val.AddTile(TileID.DyeVat);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<CarbonShuriken>())
+			.AddIngredient(ItemID.SilverDye, 1)
+			.AddTile(TileID.DyeVat)
+			.Register();
 	}
 }

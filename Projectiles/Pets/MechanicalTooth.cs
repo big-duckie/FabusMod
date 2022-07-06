@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace FabusMod.Projectiles.Pets;
@@ -14,9 +15,9 @@ public class MechanicalTooth : ModProjectile
 
 	public override void SetDefaults()
 	{
+		Projectile.CloneDefaults(ProjectileID.ZephyrFish);
 		Projectile.width = 26;
 		Projectile.height = 20;
-		Projectile.CloneDefaults(380);
         AIType = 380;
 	}
 
@@ -28,9 +29,9 @@ public class MechanicalTooth : ModProjectile
 
 	public override void AI()
 	{
-		Player obj = Main.player[Projectile.owner];
-		FabuPlayer modPlayer = obj.GetModPlayer<FabuPlayer>();
-		if (obj.dead)
+		Player player = Main.player[Projectile.owner];
+		FabuPlayer modPlayer = player.GetModPlayer<FabuPlayer>();
+		if (player.dead)
 		{
 			modPlayer.kregPet = false;
 		}

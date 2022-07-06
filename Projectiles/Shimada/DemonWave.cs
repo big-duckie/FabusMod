@@ -26,26 +26,25 @@ public class DemonWave : ModProjectile
 
 	public override void AI()
 	{
-		int num1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>(), 0f, 0f, 0, default, 1f);
-		Dust obj = Main.dust[num1];
-		obj.velocity *= 0f;
-		Main.dust[num1].noGravity = true;
-		int num2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>(), 0f, 0f, 0, default, 1f);
-		Dust obj2 = Main.dust[num2];
-		obj2.velocity *= 0f;
-		Main.dust[num2].noGravity = true;
-		int num3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>(), 0f, 0f, 0, default, 1f);
-		Dust obj3 = Main.dust[num3];
-		obj3.velocity *= 0f;
-		Main.dust[num3].noGravity = true;
-		int num4 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>(), 0f, 0f, 0, default, 1f);
-		Dust obj4 = Main.dust[num4];
-		obj4.velocity *= 0f;
-		Main.dust[num4].noGravity = true;
-		int num5 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>(), 0f, 0f, 0, default, 1f);
-		Dust obj5 = Main.dust[num5];
-		obj5.velocity *= 0f;
-		Main.dust[num5].noGravity = true;
+		int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>());
+		Main.dust[dust1].velocity *= 0f;
+		Main.dust[dust1].noGravity = true;
+
+		int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>());
+		Main.dust[dust2].velocity *= 0f;
+		Main.dust[dust2].noGravity = true;
+
+		int dust3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>());
+		Main.dust[dust3].velocity *= 0f;
+		Main.dust[dust3].noGravity = true;
+
+		int dust4 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>());
+		Main.dust[dust4].velocity *= 0f;
+		Main.dust[dust4].noGravity = true;
+
+		int dust5 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust3>());
+		Main.dust[dust5].velocity *= 0f;
+		Main.dust[dust5].noGravity = true;
 	}
 
 	public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)

@@ -55,14 +55,11 @@ public class IllusoryMirrorRMB : ModProjectile
 
 	public void AnimateProjectile()
 	{
-		Projectile projectile = Projectile;
-		projectile.frameCounter++;
+		Projectile.frameCounter++;
 		if (Projectile.frameCounter >= 7)
 		{
-			Projectile projectile2 = Projectile;
-			projectile2.frame++;
-			Projectile projectile3 = Projectile;
-			projectile3.frame %= 5;
+			Projectile.frame++;
+			Projectile.frame %= 5;
 			Projectile.frameCounter = 0;
 		}
 	}

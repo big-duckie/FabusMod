@@ -30,11 +30,10 @@ public class GoldenLightBlast : ModProjectile
 		Projectile.velocity.Y += Projectile.ai[0];
 		if (Utils.NextFloat(Main.rand) < 0.1f && Projectile.alpha <= 100)
 		{
-			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.MeatDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[dust1].scale = 0.9f;
-			Dust obj = Main.dust[dust1];
-			obj.velocity *= 0.1f;
-			Main.dust[dust1].noGravity = true;
+			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.MeatDust>());
+			Main.dust[dust].scale = 0.9f;
+			Main.dust[dust].velocity *= 0.1f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
@@ -42,11 +41,10 @@ public class GoldenLightBlast : ModProjectile
 	{
 		for (int i = 0; i < 5; i++)
 		{
-			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.MeatDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[dust1].scale = 0.9f;
-			Dust obj = Main.dust[dust1];
-			obj.velocity *= 0.1f;
-			Main.dust[dust1].noGravity = true;
+			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.MeatDust>());
+			Main.dust[dust].scale = 0.9f;
+			Main.dust[dust].velocity *= 0.1f;
+			Main.dust[dust].noGravity = true;
 		}
 		SoundEngine.PlaySound(SoundID.DD2_BetsyFireballShot, Projectile.position);
 	}

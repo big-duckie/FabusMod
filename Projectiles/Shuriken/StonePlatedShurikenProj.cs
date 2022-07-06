@@ -35,7 +35,7 @@ public class StonePlatedShurikenProj : ModProjectile
 		int item = 0;
 		if (Main.netMode == NetmodeID.MultiplayerClient && item >= 0)
 		{
-			NetMessage.SendData(MessageID.KillProjectile, -1, -1, null, 0, 0f, 0f, 0f, 0, 0, 0);
+			NetMessage.SendData(MessageID.KillProjectile);
 		}
 	}
 
@@ -43,11 +43,10 @@ public class StonePlatedShurikenProj : ModProjectile
 	{
 		if (Main.rand.NextBool(6))
 		{
-			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.Shuriken.StarDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[dust1].scale = 1f;
-			Dust obj = Main.dust[dust1];
-			obj.velocity *= 0.1f;
-			Main.dust[dust1].noGravity = false;
+			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.Shuriken.StarDust>());
+			Main.dust[dust].scale = 1f;
+			Main.dust[dust].velocity *= 0.1f;
+			Main.dust[dust].noGravity = false;
 		}
 	}
 }

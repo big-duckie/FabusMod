@@ -34,11 +34,11 @@ public class DemonProjRMB : ModProjectile
 		AnimateProjectile();
 		if (Main.rand.NextBool(2))
 		{
-			int num1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.BloodDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[num1].scale = 1.9f;
-			Main.dust[num1].velocity.Y -= 1.5f;
-			Main.dust[num1].velocity.X = 0f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.BloodDust>());
+			Main.dust[dust].scale = 1.9f;
+			Main.dust[dust].velocity.Y -= 1.5f;
+			Main.dust[dust].velocity.X = 0f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
@@ -94,14 +94,11 @@ public class DemonProjRMB : ModProjectile
 
 	public void AnimateProjectile()
 	{
-		Projectile projectile = Projectile;
-		projectile.frameCounter++;
+		Projectile.frameCounter++;
 		if (Projectile.frameCounter >= 3)
 		{
-			Projectile projectile2 = Projectile;
-			projectile2.frame++;
-			Projectile projectile3 = Projectile;
-			projectile3.frame %= 14;
+			Projectile.frame++;
+			Projectile.frame %= 14;
 			Projectile.frameCounter = 0;
 		}
 	}

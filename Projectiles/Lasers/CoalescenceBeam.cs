@@ -54,8 +54,7 @@ public class CoalescenceBeam : ModProjectile
 	{
 		if (Charge == MAX_CHARGE)
 		{
-			Vector2 unit = Projectile.velocity;
-			DrawLaser(TextureAssets.Projectile[Projectile.type].Value, Main.player[Projectile.owner].Center, unit, 10f, Projectile.damage, -1.57f, 1f, 1000f, Color.White, 60);
+			DrawLaser(TextureAssets.Projectile[Projectile.type].Value, Main.player[Projectile.owner].Center, Projectile.velocity, 10f, Projectile.damage, -1.57f, 1f, 1000f, Color.White, 60);
 		}
 		return false;
 	}
@@ -65,9 +64,8 @@ public class CoalescenceBeam : ModProjectile
 		float r = Utils.ToRotation(unit) + rotation;
 		for (float i = transDist; i <= Distance; i += step)
 		{
-			Color c = Color.White;
 			Vector2 origin = start + i * unit;
-			Main.EntitySpriteDraw(texture, origin - Main.screenPosition, new Rectangle(0, 26, 28, 26), (i < transDist) ? Color.Transparent : c, r, new Vector2(14f, 13f), scale, SpriteEffects.None, 0);
+			Main.EntitySpriteDraw(texture, origin - Main.screenPosition, new Rectangle(0, 26, 28, 26), (i < transDist) ? Color.Transparent : color, r, new Vector2(14f, 13f), scale, SpriteEffects.None, 0);
 		}
 		Main.EntitySpriteDraw(texture, start + unit * (transDist - step) - Main.screenPosition, new Rectangle(0, 0, 28, 26), Color.White, r, new Vector2(14f, 13f), scale, SpriteEffects.None, 0);
 		Main.EntitySpriteDraw(texture, start + (Distance + step) * unit - Main.screenPosition, new Rectangle(0, 52, 28, 26), Color.White, r, new Vector2(14f, 13f), scale, SpriteEffects.None, 0);
@@ -77,10 +75,9 @@ public class CoalescenceBeam : ModProjectile
 	{
 		if (Charge == MAX_CHARGE)
 		{
-			Player p = Main.player[Projectile.owner];
-			Vector2 unit = Projectile.velocity;
+			Player player = Main.player[Projectile.owner];
 			float point = 0f;
-			if (Collision.CheckAABBvLineCollision(Utils.TopLeft(targetHitbox), Utils.Size(targetHitbox), p.Center, p.Center + unit * Distance, 22f, ref point))
+			if (Collision.CheckAABBvLineCollision(Utils.TopLeft(targetHitbox), Utils.Size(targetHitbox), player.Center, player.Center + Projectile.velocity * Distance, 22f, ref point))
 			{
 				return true;
 			}
@@ -99,48 +96,44 @@ public class CoalescenceBeam : ModProjectile
 		Player player = Main.player[Projectile.owner];
 		if (Projectile.owner == Main.myPlayer)
 		{
-			Vector2 diff = mousePos - player.Center;
-			diff.Normalize();
-			Projectile.velocity = diff;
-			Projectile.direction = ((Main.MouseWorld.X > player.position.X) ? 1 : (-1));
+			Projectile.velocity = mousePos - player.Center;
+			Projectile.velocity.Normalize();
+			Projectile.direction = (Main.MouseWorld.X > player.position.X) ? 1 : (-1);
 			Projectile.netUpdate = true;
 		}
 		Projectile.position = player.Center + Projectile.velocity * MOVE_DISTANCE;
 		Projectile.timeLeft = 2;
-		int dir = Projectile.direction;
-		player.ChangeDir(dir);
+		player.ChangeDir(Projectile.direction);
 		player.heldProj = Projectile.whoAmI;
 		player.itemTime = 2;
 		player.itemAnimation = 2;
-		player.itemRotation = (float)Math.Atan2(Projectile.velocity.Y * dir, Projectile.velocity.X * dir);
+		player.itemRotation = (float)Math.Atan2(Projectile.velocity.Y * Projectile.direction, Projectile.velocity.X * Projectile.direction);
 		if (!player.channel)
 		{
 			Projectile.Kill();
 		}
 		else
 		{
-			if (Main.time % 10.0 < 1.0 && !player.CheckMana(player.inventory[player.selectedItem].mana, true, false))
+			if (Main.time % 10.0 < 1.0 && !player.CheckMana(player.inventory[player.selectedItem].mana, true))
 			{
 				Projectile.Kill();
 			}
-			Vector2 offset = Projectile.velocity;
-			offset *= 40f;
+			Vector2 offset = Projectile.velocity * 40f;
 			Vector2 pos = player.Center + offset - new Vector2(10f, 10f);
 			if (Charge < MAX_CHARGE)
 			{
 				Charge++;
 			}
 			int chargeFact = (int)(Charge / 20f);
-			Vector2 dustVelocity = Vector2.UnitX * 18f;
-			dustVelocity = Utils.RotatedBy(dustVelocity, (double)(Projectile.rotation - 1.57f), default);
+			Vector2 dustVelocity = Utils.RotatedBy(Vector2.UnitX * 18f, (double)(Projectile.rotation - 1.57f));
 			Vector2 spawnPos = Projectile.Center + dustVelocity;
 			for (int j = 0; j < chargeFact + 1; j++)
 			{
 				Vector2 spawn = spawnPos + Utils.ToRotationVector2((float)Main.rand.NextDouble() * 6.28f) * (12f - chargeFact * 2);
-				Dust obj = Main.dust[Dust.NewDust(pos, 20, 20, DustID.YellowTorch, Projectile.velocity.X / 2f, Projectile.velocity.Y / 2f, 0, default, 1f)];
-				obj.velocity = Vector2.Normalize(spawnPos - spawn) * 1.5f * (10f - chargeFact * 2f) / 10f;
-				obj.noGravity = true;
-				obj.scale = Main.rand.Next(10, 20) * 0.05f;
+				int dust = Dust.NewDust(pos, 20, 20, DustID.YellowTorch, Projectile.velocity.X / 2f, Projectile.velocity.Y / 2f);
+				Main.dust[dust].velocity = Vector2.Normalize(spawnPos - spawn) * 1.5f * (10f - chargeFact * 2f) / 10f;
+				Main.dust[dust].noGravity = true;
+				Main.dust[dust].scale = Main.rand.Next(10, 20) * 0.05f;
 			}
 		}
 		if (Charge < MAX_CHARGE)
@@ -167,9 +160,9 @@ public class CoalescenceBeam : ModProjectile
 		{
 			float num1 = Utils.ToRotation(Projectile.velocity) + ((Main.rand.NextBool(2)) ? (-1f) : 1f) * 1.57f;
 			float num2 = (float)(Main.rand.NextDouble() * 0.800000011920929 + 1.0);
-			//new Vector2((float)Math.Cos(num1) * num2, (float)Math.Sin(num1) * num2);
-			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.TerraDust2>(), 0f, 0f, 0, default, 1f);
-			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.FoxWitherDust>(), 0f, 0f, 0, default, 1f);
+			new Vector2((float)Math.Cos(num1) * num2, (float)Math.Sin(num1) * num2);
+			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.TerraDust2>());
+			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.FoxWitherDust>());
 		}
 		DelegateMethods.v3_1 = new Vector3(0.8f, 0.8f, 1f);
 		Utils.PlotTileLine(Projectile.Center, Projectile.Center + Projectile.velocity * (Distance - MOVE_DISTANCE), 26f, new Utils.TileActionAttempt(DelegateMethods.CastLight));
@@ -182,8 +175,7 @@ public class CoalescenceBeam : ModProjectile
 
 	public override void CutTiles()
 	{
-		DelegateMethods.tilecut_0 = (TileCuttingContext)2;
-		Vector2 unit = Projectile.velocity;
-		Utils.PlotTileLine(Projectile.Center, Projectile.Center + unit * Distance, (Projectile.width + 16) * Projectile.scale, new Utils.TileActionAttempt(DelegateMethods.CutTiles));
+		DelegateMethods.tilecut_0 = TileCuttingContext.AttackProjectile;
+		Utils.PlotTileLine(Projectile.Center, Projectile.Center + Projectile.velocity * Distance, (Projectile.width + 16) * Projectile.scale, new Utils.TileActionAttempt(DelegateMethods.CutTiles));
 	}
 }

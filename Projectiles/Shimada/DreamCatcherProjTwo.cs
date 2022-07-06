@@ -61,35 +61,34 @@ public class DreamCatcherProjTwo : ModProjectile
 			Projectile.velocity = (10f * Projectile.velocity + move) / 11f;
 			AdjustMagnitude(ref Projectile.velocity);
 		}
-		int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default, 1f);
+		int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>());
 		Main.dust[dust1].scale = 2f;
-		Dust obj = Main.dust[dust1];
-		obj.velocity *= 0.1f;
+		Main.dust[dust1].velocity *= 0.1f;
 		Main.dust[dust1].noGravity = true;
-		int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default, 1f);
+
+		int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>());
 		Main.dust[dust2].scale = 2f;
-		Dust obj2 = Main.dust[dust2];
-		obj2.velocity *= 0.1f;
+		Main.dust[dust2].velocity *= 0.1f;
 		Main.dust[dust2].noGravity = true;
-		int dust3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default, 1f);
+
+		int dust3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>());
 		Main.dust[dust3].scale = 2f;
-		Dust obj3 = Main.dust[dust3];
-		obj3.velocity *= 0.1f;
+		Main.dust[dust3].velocity *= 0.1f;
 		Main.dust[dust3].noGravity = true;
-		int dust4 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default, 1f);
+
+		int dust4 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>());
 		Main.dust[dust4].scale = 2f;
-		Dust obj4 = Main.dust[dust4];
-		obj4.velocity *= 0.1f;
+		Main.dust[dust4].velocity *= 0.1f;
 		Main.dust[dust4].noGravity = true;
-		int dust5 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default, 1f);
+
+		int dust5 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>());
 		Main.dust[dust5].scale = 2f;
-		Dust obj5 = Main.dust[dust5];
-		obj5.velocity *= 0.1f;
+		Main.dust[dust5].velocity *= 0.1f;
 		Main.dust[dust5].noGravity = true;
-		int dust6 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default, 1f);
+
+		int dust6 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>());
 		Main.dust[dust6].scale = 2f;
-		Dust obj6 = Main.dust[dust6];
-		obj6.velocity *= 0.1f;
+		Main.dust[dust6].velocity *= 0.1f;
 		Main.dust[dust6].noGravity = true;
 	}
 

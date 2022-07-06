@@ -55,10 +55,9 @@ public class FumaShuriken : ModProjectile
 		}
 		if (Main.rand.NextBool(3))
 		{
-			int num1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust>(), 0f, 0f, 0, default, 1f);
-			Dust obj = Main.dust[num1];
-			obj.velocity *= 0f;
-			Main.dust[num1].noGravity = true;
+			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RyuuDust>());
+			Main.dust[dust].velocity *= 0f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 

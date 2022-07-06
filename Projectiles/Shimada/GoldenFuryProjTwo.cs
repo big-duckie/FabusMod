@@ -28,15 +28,14 @@ public class GoldenFuryProjTwo : ModProjectile
 
 	public override void AI()
 	{
-		int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.MeatDust>(), 0f, 0f, 0, default, 1f);
+		int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.MeatDust>());
 		Main.dust[dust1].scale = 2f;
-		Dust obj = Main.dust[dust1];
-		obj.velocity *= 0.1f;
+		Main.dust[dust1].velocity *= 0.1f;
 		Main.dust[dust1].noGravity = true;
-		int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.MeatDust>(), 0f, 0f, 0, default, 1f);
+
+		int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.MeatDust>());
 		Main.dust[dust2].scale = 2f;
-		Dust obj2 = Main.dust[dust2];
-		obj2.velocity *= 0.1f;
+		Main.dust[dust2].velocity *= 0.1f;
 		Main.dust[dust2].noGravity = true;
 	}
 

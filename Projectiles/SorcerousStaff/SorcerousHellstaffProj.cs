@@ -24,26 +24,23 @@ public class SorcerousHellstaffProj : ModProjectile
 	{
 		if (Main.rand.NextBool(3))
 		{
-			int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.SorcerousHellDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[dust2].scale = 0.9f;
-			Dust obj = Main.dust[dust2];
-			obj.velocity *= 0.1f;
-			Main.dust[dust2].noGravity = true;
+			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.SorcerousHellDust>());
+			Main.dust[dust].scale = 0.9f;
+			Main.dust[dust].velocity *= 0.1f;
+			Main.dust[dust].noGravity = true;
 		}
 		if (Main.rand.NextBool(4))
 		{
-			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.SorcerousHellDust2>(), 0f, 0f, 0, default, 1f);
-			Main.dust[dust1].scale = 0.9f;
-			Dust obj2 = Main.dust[dust1];
-			obj2.velocity *= 0.1f;
-			Main.dust[dust1].noGravity = true;
+			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.SorcerousHellDust2>());
+			Main.dust[dust].scale = 0.9f;
+			Main.dust[dust].velocity *= 0.1f;
+			Main.dust[dust].noGravity = true;
 		}
 	}
 
 	public override bool OnTileCollide(Vector2 oldVelocity)
 	{
-		Projectile projectile = Projectile;
-		projectile.penetrate--;
+		Projectile.penetrate--;
 		if (Projectile.penetrate <= 0)
 		{
 			Projectile.Kill();
@@ -59,8 +56,7 @@ public class SorcerousHellstaffProj : ModProjectile
 			{
 				Projectile.velocity.Y = 0f - oldVelocity.Y;
 			}
-			Projectile projectile2 = Projectile;
-            projectile2.velocity *= 0.75f;
+			Projectile.velocity *= 0.75f;
 			SoundEngine.PlaySound(SoundID.Item27, Projectile.position);
 		}
 		return false;
@@ -70,11 +66,10 @@ public class SorcerousHellstaffProj : ModProjectile
 	{
 		for (int i = 0; i < 5; i++)
 		{
-			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.SorcerousHellDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[dust1].scale = 0.9f;
-			Dust obj = Main.dust[dust1];
-			obj.velocity *= 0.1f;
-			Main.dust[dust1].noGravity = true;
+			int dust = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.SorcerousHellDust>());
+			Main.dust[dust].scale = 0.9f;
+			Main.dust[dust].velocity *= 0.1f;
+			Main.dust[dust].noGravity = true;
 		}
 		SoundEngine.PlaySound(SoundID.Item27, Projectile.position);
 	}
@@ -83,7 +78,7 @@ public class SorcerousHellstaffProj : ModProjectile
 	{
 		if (Main.rand.NextBool(6))
 		{
-			target.AddBuff(24, 180, false);
+			target.AddBuff(BuffID.OnFire, 180, false);
 		}
 	}
 }

@@ -65,9 +65,8 @@ public class RainbowBeam : ModProjectile
         float r = Utils.ToRotation(unit) + rotation;
 		for (float i = transDist; i <= Distance; i += step)
 		{
-			Color c = Color.White;
             Vector2 origin = start + i * unit;
-            Main.EntitySpriteDraw(texture, origin - Main.screenPosition, new Rectangle(0, 26, 28, 26), (i < transDist) ? Color.Transparent : c, r, new Vector2(14f, 13f), scale, SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(texture, origin - Main.screenPosition, new Rectangle(0, 26, 28, 26), (i < transDist) ? Color.Transparent : color, r, new Vector2(14f, 13f), scale, SpriteEffects.None, 0);
 		}
 		Main.EntitySpriteDraw(texture, start + unit * (transDist - step) - Main.screenPosition, new Rectangle(0, 0, 28, 26), Color.White, r, new Vector2(14f, 13f), scale, SpriteEffects.None, 0);
 		Main.EntitySpriteDraw(texture, start + (Distance + step) * unit - Main.screenPosition, new Rectangle(0, 52, 28, 26), Color.White, r, new Vector2(14f, 13f), scale, SpriteEffects.None, 0);
@@ -101,9 +100,8 @@ public class RainbowBeam : ModProjectile
 		Player player = Main.player[Projectile.owner];
 		if (Projectile.owner == Main.myPlayer)
 		{
-			Vector2 diff = mousePos - player.Center;
-			diff.Normalize();
-			Projectile.velocity = diff;
+			Projectile.velocity = mousePos - player.Center;
+			Projectile.velocity.Normalize();
 			Projectile.direction = ((Main.MouseWorld.X > player.position.X) ? 1 : (-1));
 			Projectile.netUpdate = true;
 		}
@@ -139,7 +137,7 @@ public class RainbowBeam : ModProjectile
 			for (int j = 0; j < chargeFact + 1; j++)
 			{
 				Vector2 spawn = spawnPos + Utils.ToRotationVector2((float)Main.rand.NextDouble() * 6.28f) * (12f - chargeFact * 2);
-				Dust obj = Main.dust[Dust.NewDust(pos, 20, 20, DustID.YellowTorch, Projectile.velocity.X / 2f, Projectile.velocity.Y / 2f, 0, default, 1f)];
+				Dust obj = Main.dust[Dust.NewDust(pos, 20, 20, DustID.YellowTorch, Projectile.velocity.X / 2f, Projectile.velocity.Y / 2f)];
 				obj.velocity = Vector2.Normalize(spawnPos - spawn) * 1.5f * (10f - chargeFact * 2f) / 10f;
 				obj.noGravity = true;
 				obj.scale = Main.rand.Next(10, 20) * 0.05f;
@@ -167,12 +165,9 @@ public class RainbowBeam : ModProjectile
 		}
 		for (int i = 0; i < 2; i++)
 		{
-			float num1 = Utils.ToRotation(Projectile.velocity) + ((Main.rand.NextBool(2)) ? (-1f) : 1f) * 1.57f;
-			float num2 = (float)(Main.rand.NextDouble() * 0.800000011920929 + 1.0);
-			//new Vector2((float)Math.Cos(num1) * num2, (float)Math.Sin(num1) * num2);
-			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default, 1f);
-			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default, 1f);
-			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default, 1f);
+			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>());
+			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>());
+			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>());
 		}
 		DelegateMethods.v3_1 = new Vector3(0.8f, 0.8f, 1f);
 		Utils.PlotTileLine(Projectile.Center, Projectile.Center + Projectile.velocity * (Distance - MOVE_DISTANCE), 26f, new Utils.TileActionAttempt(DelegateMethods.CastLight));
@@ -185,8 +180,7 @@ public class RainbowBeam : ModProjectile
 
 	public override void CutTiles()
 	{
-		DelegateMethods.tilecut_0 = (TileCuttingContext)2;
-		Vector2 unit = Projectile.velocity;
-		Utils.PlotTileLine(Projectile.Center, Projectile.Center + unit * Distance, (Projectile.width + 16) * Projectile.scale, new Utils.TileActionAttempt(DelegateMethods.CutTiles));
+		DelegateMethods.tilecut_0 = TileCuttingContext.AttackProjectile;
+		Utils.PlotTileLine(Projectile.Center, Projectile.Center + Projectile.velocity * Distance, (Projectile.width + 16) * Projectile.scale, new Utils.TileActionAttempt(DelegateMethods.CutTiles));
 	}
 }

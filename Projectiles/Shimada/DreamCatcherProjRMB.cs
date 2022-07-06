@@ -26,7 +26,6 @@ public class DreamCatcherProjRMB : ModProjectile
 		Projectile.ignoreWater = true;
 		Projectile.tileCollide = false;
 		Projectile.extraUpdates = 0;
-		Projectile projectile = Projectile;
 		Projectile.velocity = Projectile.velocity * 0f;
 	}
 
@@ -35,21 +34,23 @@ public class DreamCatcherProjRMB : ModProjectile
 		AnimateProjectile();
 		if (Main.rand.NextBool(2))
 		{
-			int num1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default, 1f);
-			Main.dust[num1].scale = 1.9f;
-			Main.dust[num1].velocity.Y -= 1.5f;
-			Main.dust[num1].velocity.X = 0f;
-			Main.dust[num1].noGravity = true;
-			int num2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default, 1f);
-			Main.dust[num2].scale = 1.9f;
-			Main.dust[num2].velocity.Y -= 1.5f;
-			Main.dust[num2].velocity.X = 0f;
-			Main.dust[num2].noGravity = true;
-			int num3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default, 1f);
-			Main.dust[num3].scale = 1.9f;
-			Main.dust[num3].velocity.Y -= 1.5f;
-			Main.dust[num3].velocity.X = 0f;
-			Main.dust[num3].noGravity = true;
+			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>());
+			Main.dust[dust1].scale = 1.9f;
+			Main.dust[dust1].velocity.Y -= 1.5f;
+			Main.dust[dust1].velocity.X = 0f;
+			Main.dust[dust1].noGravity = true;
+
+			int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>());
+			Main.dust[dust2].scale = 1.9f;
+			Main.dust[dust2].velocity.Y -= 1.5f;
+			Main.dust[dust2].velocity.X = 0f;
+			Main.dust[dust2].noGravity = true;
+			
+			int dust3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>());
+			Main.dust[dust3].scale = 1.9f;
+			Main.dust[dust3].velocity.Y -= 1.5f;
+			Main.dust[dust3].velocity.X = 0f;
+			Main.dust[dust3].noGravity = true;
 		}
 	}
 
@@ -104,14 +105,11 @@ public class DreamCatcherProjRMB : ModProjectile
 
 	public void AnimateProjectile()
 	{
-		Projectile projectile = Projectile;
-		projectile.frameCounter++;
+		Projectile.frameCounter++;
 		if (Projectile.frameCounter >= 3)
 		{
-			Projectile projectile2 = Projectile;
-			projectile2.frame++;
-			Projectile projectile3 = Projectile;
-			projectile3.frame %= 14;
+			Projectile.frame++;
+			Projectile.frame %= 14;
 			Projectile.frameCounter = 0;
 		}
 	}

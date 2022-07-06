@@ -46,9 +46,9 @@ public class GoddessMinion : Minion
 
 	public override void CheckActive()
 	{
-		Player obj = Main.player[Projectile.owner];
-		FabuPlayer modPlayer = obj.GetModPlayer<FabuPlayer>();
-		if (obj.dead)
+		Player player = Main.player[Projectile.owner];
+		FabuPlayer modPlayer = player.GetModPlayer<FabuPlayer>();
+		if (player.dead)
 		{
 			modPlayer.goddessMinion = false;
 		}
@@ -60,14 +60,11 @@ public class GoddessMinion : Minion
 
 	public void AnimateProjectile()
 	{
-		Projectile projectile = Projectile;
-		projectile.frameCounter++;
+		Projectile.frameCounter++;
 		if (Projectile.frameCounter >= 2)
 		{
-			Projectile projectile2 = Projectile;
-			projectile2.frame++;
-			Projectile projectile3 = Projectile;
-			projectile3.frame %= 3;
+			Projectile.frame++;
+			Projectile.frame %= 3;
 			Projectile.frameCounter = 0;
 		}
 	}

@@ -34,8 +34,7 @@ public class RainbowBullet : ModProjectile
 	{
 		if (Projectile.alpha > 70)
 		{
-			Projectile projectile = Projectile;
-			projectile.alpha -= 15;
+			Projectile.alpha -= 15;
 			if (Projectile.alpha < 70)
 			{
 				Projectile.alpha = 70;
@@ -71,17 +70,16 @@ public class RainbowBullet : ModProjectile
 		}
 		if (Main.rand.NextBool(3))
 		{
-			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>(), 0f, 0f, 0, default, 1f);
-			int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>(), 0f, 0f, 0, default, 1f);
-			int dust3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>(), 0f, 0f, 0, default, 1f);
-			Dust obj = Main.dust[dust1];
-			obj.velocity *= 0f;
+			int dust1 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust>());
+			Main.dust[dust1].velocity *= 0f;
 			Main.dust[dust1].noGravity = true;
-			Dust obj2 = Main.dust[dust2];
-			obj2.velocity *= 0f;
+
+			int dust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust2>());
+			Main.dust[dust2].velocity *= 0f;
 			Main.dust[dust2].noGravity = true;
-			Dust obj3 = Main.dust[dust3];
-			obj3.velocity *= 0f;
+
+			int dust3 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.RainbowDust3>());
+			Main.dust[dust3].velocity *= 0f;
 			Main.dust[dust3].noGravity = true;
 		}
 	}

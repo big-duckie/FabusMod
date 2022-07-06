@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace FabusMod.Projectiles.Pets;
@@ -14,7 +15,7 @@ public class WindUpFabu : ModProjectile
 
 	public override void SetDefaults()
 	{
-		Projectile.CloneDefaults(112);
+		Projectile.CloneDefaults(ProjectileID.Penguin);
 		Projectile.width = 34;
 		Projectile.height = 34;
         AIType = 112;
@@ -28,9 +29,9 @@ public class WindUpFabu : ModProjectile
 
 	public override void AI()
 	{
-		Player obj = Main.player[Projectile.owner];
-		FabuPlayer modPlayer = obj.GetModPlayer<FabuPlayer>();
-		if (obj.dead)
+		Player player = Main.player[Projectile.owner];
+		FabuPlayer modPlayer = player.GetModPlayer<FabuPlayer>();
+		if (player.dead)
 		{
 			modPlayer.fabu = false;
 		}

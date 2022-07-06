@@ -33,7 +33,7 @@ public class BloodDrop : ModProjectile
 	{
 		if (Main.rand.NextBool(3)&& Projectile.alpha <= 100)
 		{
-			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.BloodDust>(), 0f, 0f, 0, default, 1f);
+			Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Dusts.BloodDust>());
 		}
 	}
 }

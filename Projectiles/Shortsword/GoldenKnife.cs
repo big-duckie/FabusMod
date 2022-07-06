@@ -42,11 +42,10 @@ public class GoldenKnife : ModProjectile
 		SoundEngine.PlaySound(SoundID.Dig, Projectile.position);
 		Vector2 position = Projectile.position;
 		Vector2 rotVector = Utils.ToRotationVector2(Projectile.rotation - MathHelper.ToRadians(90f));
-		_ = position + rotVector * 16f;
 		int item = 0;
 		if (Main.netMode == NetmodeID.MultiplayerClient && item >= 0)
 		{
-			NetMessage.SendData(MessageID.KillProjectile, -1, -1, null, 0, 0f, 0f, 0f, 0, 0, 0);
+			NetMessage.SendData(MessageID.KillProjectile);
 		}
 	}
 }

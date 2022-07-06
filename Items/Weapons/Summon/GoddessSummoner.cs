@@ -11,6 +11,7 @@ public class GoddessSummoner : ModItem
 	public override void SetDefaults()
 	{
 		Item.damage = 120;
+		Item.DamageType = DamageClass.Summon;
 		Item.mana = 18;
 		Item.width = 58;
 		Item.height = 62;
@@ -44,20 +45,20 @@ public class GoddessSummoner : ModItem
 		return player.altFunctionUse != 2;
 	}
 
-	public override bool? UseItem(Player player)/* tModPorter Suggestion: Return null instead of false */
+	public override bool? UseItem(Player player)
 	{
 		if (player.altFunctionUse == 2)
 		{
 			player.MinionNPCTargetAim(false);
 		}
-		return UseItem(player);
+		return base.UseItem(player);
 	}
 
 	public override void AddRecipes()
 	{
-		Recipe val = CreateRecipe();
-		val.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 16);
-		val.AddTile(TileID.AdamantiteForge);
-		val.Register();
+		CreateRecipe()
+			.AddIngredient(ModContent.ItemType<Items.CraftingIngredients.GoddessGold>(), 16)
+			.AddTile(TileID.AdamantiteForge)
+			.Register();
 	}
 }

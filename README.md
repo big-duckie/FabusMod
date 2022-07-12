@@ -11,11 +11,11 @@ There are a few things you'll need to use this:
 
 #### Downloading
 
-All releases can be found in [Releases](https://git.theduckpond.club/big-duckie/FabusMod/releases)
+All releases can be found in [Releases](https://github.com/big-duckie/FabusMod/releases)
 
 #### Building
 
-If you wish to build this from source, just open the .sln in Visual Studio 2022.
+To build this from source, clone the repo into your Terraria ModSources folder.
 
 #### FAQ
 
@@ -27,6 +27,6 @@ No. This decompilation and port is completely unofficial. There currently isn't 
 
 Maybe. There are quite a few things that I need to fix first, and quite a bit of polish that needs to be done to make it ready for the public. One day it might be ready to release to the public. On the upside, if I cannot solve some major game breaking bug, this version is open source, so if anyone else can fix it, they can release it.
 
-* I am Fabu, and I would like this taken down.
+* I am Fabu/NitsuneNiban, and I would like this taken down.
 
-Fair enough. Email me at bd(at)bigduckie(dot)me, and let me know. If you're fine with this staying up, feel free to email me anyways. Only Fabu though. I DO NOT do tech support through email. Issues and bugs go in the issue tracker above.
+Fair enough. Just let me know via an issue.

@@ -11,8 +11,8 @@ public class LunarBow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Lunar Bow");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, doesn't require ammo]\nGrants the [c/13A2DA:Shattered Moon's Grace] buff when shooting, reducing fall speed\nUsing <right> while under max HP grants the [c/5EDF85:Shattered Moon's Blessing] buff, which has the following effects:\n - Heals the player rapidly for 2 seconds, but disables the use of items\n - Grants [c/9CE53B:Shattered Moon's Rejuvenation] after 2 seconds, healing 100 HP over 10 seconds\n[c/5EDF85:Shattered Moon's Blessing] has a cooldown of [c/CA4646:50 seconds] once the effect ends");
+		// DisplayName.SetDefault("Lunar Bow");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, doesn't require ammo]\nGrants the [c/13A2DA:Shattered Moon's Grace] buff when shooting, reducing fall speed\nUsing <right> while under max HP grants the [c/5EDF85:Shattered Moon's Blessing] buff, which has the following effects:\n - Heals the player rapidly for 2 seconds, but disables the use of items\n - Grants [c/9CE53B:Shattered Moon's Rejuvenation] after 2 seconds, healing 100 HP over 10 seconds\n[c/5EDF85:Shattered Moon's Blessing] has a cooldown of [c/CA4646:50 seconds] once the effect ends");
 	}
 
 	public override void SetDefaults()

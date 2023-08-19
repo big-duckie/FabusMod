@@ -8,8 +8,8 @@ public class PinkFoxPetBuff : ModBuff
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Pink Fox Pet");
-		Description.SetDefault("A pink apple for a pink fox!");
+		// DisplayName.SetDefault("Pink Fox Pet");
+		// Description.SetDefault("A pink apple for a pink fox!");
 		Main.buffNoTimeDisplay[Type] = true;
 		Main.vanityPet[Type] = true;
 	}

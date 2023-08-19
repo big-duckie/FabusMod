@@ -9,7 +9,7 @@ public class FoxEars : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Dyeable]");
+		// Tooltip.SetDefault("[c/B6FF00:Dyeable]");
 
 		ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true;
 	}

@@ -10,8 +10,8 @@ public class HellfireShotgun : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Hellfire Shotgun");
-		Tooltip.SetDefault("Fires a spread of 5 bullets \nOnly uses one Bullet per use");
+		// DisplayName.SetDefault("Hellfire Shotgun");
+		// Tooltip.SetDefault("Fires a spread of 5 bullets \nOnly uses one Bullet per use");
 	}
 
 	public override void SetDefaults()

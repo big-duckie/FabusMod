@@ -14,7 +14,7 @@ public class TheSpinningRainbow : ModProjectile
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Spinning Rainbow");
+		// DisplayName.SetDefault("The Spinning Rainbow");
 	}
 
 	public override void SetDefaults()

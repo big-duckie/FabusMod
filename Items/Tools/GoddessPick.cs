@@ -9,7 +9,7 @@ public class GoddessPick : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Goddess' Pick");
+		// DisplayName.SetDefault("Goddess' Pick");
 	}
 
 	public override void SetDefaults()

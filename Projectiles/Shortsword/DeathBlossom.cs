@@ -14,7 +14,7 @@ public class DeathBlossom : ModProjectile
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Death Blossom Knife");
+		// DisplayName.SetDefault("Death Blossom Knife");
 	}
 
 	public override void SetDefaults()

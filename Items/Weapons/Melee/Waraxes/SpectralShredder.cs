@@ -10,7 +10,7 @@ public class SpectralShredder : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoswings] \nPressing <right> fires a long-ranged Rainbow-Axe wall");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings] \nPressing <right> fires a long-ranged Rainbow-Axe wall");
 	}
 
 	public override void SetDefaults()

@@ -9,8 +9,8 @@ public class GoldenKabuki : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Kabuki");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Holy Arrows (except with <right>) \nPressing <right> fires 16 spiritual, golden arrows in quick succession, but it has lower damage and a 1 second cooldown");
+		// DisplayName.SetDefault("Golden Kabuki");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Holy Arrows (except with <right>) \nPressing <right> fires 16 spiritual, golden arrows in quick succession, but it has lower damage and a 1 second cooldown");
 	}
 
 	public override void SetDefaults()

@@ -11,8 +11,8 @@ public class PiercingBow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Piercing Bow");
-		Tooltip.SetDefault("Converts Wooden Arrows into Piercing Arrows");
+		// DisplayName.SetDefault("Piercing Bow");
+		// Tooltip.SetDefault("Converts Wooden Arrows into Piercing Arrows");
 	}
 
 	public override void SetDefaults()

@@ -8,8 +8,8 @@ public class StonePlatedBow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Stone-Plated Bow");
-		Tooltip.SetDefault("Doesn't use ammo\nAlways shoots Wooden Arrows");
+		// DisplayName.SetDefault("Stone-Plated Bow");
+		// Tooltip.SetDefault("Doesn't use ammo\nAlways shoots Wooden Arrows");
 	}
 
 	public override void SetDefaults()

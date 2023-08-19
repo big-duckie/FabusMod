@@ -14,7 +14,7 @@ public class RainbowKnife : ModProjectile
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Rainbow Knife");
+		// DisplayName.SetDefault("Rainbow Knife");
 	}
 
 	public override void SetDefaults()

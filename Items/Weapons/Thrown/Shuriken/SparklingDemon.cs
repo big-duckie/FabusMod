@@ -8,8 +8,8 @@ public class SparklingDemon : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Sparkling Demon");
-		Tooltip.SetDefault("[c/B6FF00:Autothrows]\nThrows 5 fast-flying Shurikens at once");
+		// DisplayName.SetDefault("Sparkling Demon");
+		// Tooltip.SetDefault("[c/B6FF00:Autothrows]\nThrows 5 fast-flying Shurikens at once");
 	}
 
 	public override void SetDefaults()

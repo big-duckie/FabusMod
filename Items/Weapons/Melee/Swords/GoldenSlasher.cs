@@ -11,7 +11,7 @@ public class GoldenSlasher : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoswings] \nShoots two homing golden orbs in a medium-sized spread on swing");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings] \nShoots two homing golden orbs in a medium-sized spread on swing");
 	}
 
 	public override void SetDefaults()

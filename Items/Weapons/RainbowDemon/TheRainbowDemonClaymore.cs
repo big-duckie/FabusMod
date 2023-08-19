@@ -10,8 +10,8 @@ public class TheRainbowDemonClaymore : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Rainbow Demon - Claymore");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nUnleashes a slow-moving barrage of homing rainbow balls \nDoes not require ammo \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]");
+		// DisplayName.SetDefault("The Rainbow Demon - Claymore");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nUnleashes a slow-moving barrage of homing rainbow balls \nDoes not require ammo \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]");
 	}
 
 	public override void SetDefaults()

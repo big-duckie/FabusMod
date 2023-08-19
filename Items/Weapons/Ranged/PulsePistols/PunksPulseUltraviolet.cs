@@ -11,8 +11,8 @@ public class PunksPulseUltraviolet : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Punk's Pulse - Ultraviolet");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n70% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into pink Pulse Bullets");
+		// DisplayName.SetDefault("Punk's Pulse - Ultraviolet");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n70% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into pink Pulse Bullets");
 	}
 
 	public override void SetDefaults()

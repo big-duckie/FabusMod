@@ -11,7 +11,7 @@ public class CarbonDagger : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoswings, dyeable]\nThrows a medium-ranged Carbon Knife that deals more damage the closer you are to the target \nShortsword hits inflict [c/007700:Poison] debuff for 8 seconds\n[c/FF0000:Shortsword hits steal a small amount of life] \nShortsword hits grant the [c/FC3A3A:Rage] buff for 8 seconds");
+		//Tooltip.SetDefault("[c/B6FF00:Autoswings, dyeable]\nThrows a medium-ranged Carbon Knife that deals more damage the closer you are to the target \nShortsword hits inflict [c/007700:Poison] debuff for 8 seconds\n[c/FF0000:Shortsword hits steal a small amount of life] \nShortsword hits grant the [c/FC3A3A:Rage] buff for 8 seconds");
 	}
 
 	public override void SetDefaults()
@@ -44,9 +44,9 @@ public class CarbonDagger : ModItem
 		}
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
-		int healingAmount = damage / 18;
+		int healingAmount = damageDone / 18;
 		player.statLife += healingAmount;
 		player.HealEffect(healingAmount, true);
 		target.AddBuff(BuffID.Poisoned, 480, false);
@@ -67,7 +67,7 @@ public class CarbonDagger : ModItem
 	{
 		CreateRecipe()
 			.AddIngredient(ModContent.ItemType<Wakizashi>())
-			.AddRecipeGroup("FabusMod:OrichalcumBar", 6)
+			.AddRecipeGroup("FabusMod:MythrilBar", 6)
 			.AddIngredient(ItemID.Sapphire, 2)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();

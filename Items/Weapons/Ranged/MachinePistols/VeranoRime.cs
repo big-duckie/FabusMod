@@ -10,8 +10,8 @@ public class VeranoRime : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Verano - Rime");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast");
+		// DisplayName.SetDefault("Verano - Rime");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast");
 	}
 
 	public override void SetDefaults()

@@ -79,7 +79,7 @@ public class RainbowBoltRMB : ModProjectile
 		}
 	}
 
-	public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		target.AddBuff(ModContent.BuffType<Buffs.RainbowsWrath>(), 480, false);
 	}

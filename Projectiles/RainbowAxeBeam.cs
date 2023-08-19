@@ -7,7 +7,7 @@ public class RainbowAxeBeam : ModProjectile
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Rainbow Axe Beam");
+		// DisplayName.SetDefault("Rainbow Axe Beam");
 	}
 
 	public override void SetDefaults()

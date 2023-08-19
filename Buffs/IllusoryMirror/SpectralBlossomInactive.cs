@@ -7,8 +7,8 @@ public class SpectralBlossomInactive : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Spectral Blossom Inactive");
-        Description.SetDefault("Unable to produce a Spectral Blossom!");
+        // DisplayName.SetDefault("Spectral Blossom Inactive");
+        // Description.SetDefault("Unable to produce a Spectral Blossom!");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

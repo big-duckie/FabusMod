@@ -7,8 +7,8 @@ public class ShatteredMoonsRejuvenation : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Shattered Moon's Rejuvenation");
-        Description.SetDefault(" - Recovering 100 HP over 10 seconds");
+        // DisplayName.SetDefault("Shattered Moon's Rejuvenation");
+        // Description.SetDefault(" - Recovering 100 HP over 10 seconds");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = false;
     }

@@ -7,8 +7,8 @@ public class SpectralBlossomActive : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Spectral Blossom Active");
-        Description.SetDefault("Stand near it to receive buffs!");
+        // DisplayName.SetDefault("Spectral Blossom Active");
+        // Description.SetDefault("Stand near it to receive buffs!");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = false;
     }

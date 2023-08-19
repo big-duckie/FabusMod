@@ -10,8 +10,8 @@ public class GoddessRevolver : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Goddess' Revolver");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots 6 bullets in quick succession \n50% chance to not consume ammo \nConverts Musket Balls into High Velocity Bullets");
+		// DisplayName.SetDefault("Goddess' Revolver");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots 6 bullets in quick succession \n50% chance to not consume ammo \nConverts Musket Balls into High Velocity Bullets");
 	}
 
 	public override void SetDefaults()

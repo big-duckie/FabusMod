@@ -9,7 +9,7 @@ public class HallowedBand : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("8% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!] debuff");
+		// Tooltip.SetDefault("8% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!] debuff");
 	}
 
 	public override void SetDefaults()

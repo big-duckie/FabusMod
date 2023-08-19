@@ -7,8 +7,8 @@ public class SpectralMoonsGrace : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Spectral Moon's Grace");
-        Description.SetDefault(" - Falling slowly!\n - Immune to knockback");
+        // DisplayName.SetDefault("Spectral Moon's Grace");
+        // Description.SetDefault(" - Falling slowly!\n - Immune to knockback");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = true;
     }

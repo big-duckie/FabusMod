@@ -7,8 +7,8 @@ public class SpectralMoonlight : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Spectral Moonlight");
-        Description.SetDefault(" - Recovering HP rapidly!\n - Immune to all damage\n - Can't use items");
+        // DisplayName.SetDefault("Spectral Moonlight");
+        // Description.SetDefault(" - Recovering HP rapidly!\n - Immune to all damage\n - Can't use items");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

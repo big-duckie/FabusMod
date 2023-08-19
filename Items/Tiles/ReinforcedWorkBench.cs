@@ -8,7 +8,7 @@ public class ReinforcedWorkBench : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Used to craft stone-plated weapons");
+		// Tooltip.SetDefault("Used to craft stone-plated weapons");
 	}
 
 	public override void SetDefaults()

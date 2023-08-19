@@ -9,8 +9,8 @@ public class LeafyLegs : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Leafia Legs");
-		Tooltip.SetDefault("~~ Donator Item ~~");
+		// DisplayName.SetDefault("Leafia Legs");
+		// Tooltip.SetDefault("~~ Donator Item ~~");
 	}
 
 	public override void SetDefaults()

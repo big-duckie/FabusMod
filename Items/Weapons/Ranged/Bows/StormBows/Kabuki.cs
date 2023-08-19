@@ -9,8 +9,8 @@ public class Kabuki : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Kabuki");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Hellfire Arrows (except with <right>) \nPressing <right> fires 8 demonic arrows in quick succession, but it has lower damage and a 1.2 second cooldown");
+		// DisplayName.SetDefault("Kabuki");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Hellfire Arrows (except with <right>) \nPressing <right> fires 8 demonic arrows in quick succession, but it has lower damage and a 1.2 second cooldown");
 	}
 
 	public override void SetDefaults()

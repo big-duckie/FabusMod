@@ -7,8 +7,8 @@ public class FoxMendingBlue : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Fox Mending - Blue");
-        Description.SetDefault(" - Regenerating HP\n - Increased Movement Speed\n - -12% Damage");
+        // DisplayName.SetDefault("Fox Mending - Blue");
+        // Description.SetDefault(" - Regenerating HP\n - Increased Movement Speed\n - -12% Damage");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

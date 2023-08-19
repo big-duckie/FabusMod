@@ -10,8 +10,8 @@ public class Peacekeeper : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Peacekeeper");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots]");
+		// DisplayName.SetDefault("The Peacekeeper");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots]");
 	}
 
 	public override void SetDefaults()

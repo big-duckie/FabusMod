@@ -9,7 +9,7 @@ public class IllusoryMirror : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nShoots 5 instant beams in quick succession\nUsing <right> uses 50 Mana to summon a [c/E6A6CF:Blossom] at the player's position for 20 seconds:\n - Being around the [c/E6A6CF:Blossom] buffs HP regeneration, increases attack speed, and increases magic damage by 15%\n - [c/E6A6CF:Blossom] has a cooldown of [c/CA4646:50 seconds] once it disappears\nBest used on 'High' video quality!");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nShoots 5 instant beams in quick succession\nUsing <right> uses 50 Mana to summon a [c/E6A6CF:Blossom] at the player's position for 20 seconds:\n - Being around the [c/E6A6CF:Blossom] buffs HP regeneration, increases attack speed, and increases magic damage by 15%\n - [c/E6A6CF:Blossom] has a cooldown of [c/CA4646:50 seconds] once it disappears\nBest used on 'High' video quality!");
 	}
 
 	public override void SetDefaults()

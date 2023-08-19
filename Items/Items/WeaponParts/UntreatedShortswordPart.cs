@@ -8,7 +8,7 @@ public class UntreatedShortswordPart : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]");
+		// Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]");
 	}
 
 	public override void SetDefaults()

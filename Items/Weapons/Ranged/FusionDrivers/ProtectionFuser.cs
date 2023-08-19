@@ -9,8 +9,8 @@ public class ProtectionFuser : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Protective Fusion");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \n42% chance to not consume ammo");
+		// DisplayName.SetDefault("Protective Fusion");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \n42% chance to not consume ammo");
 	}
 
 	public override void SetDefaults()

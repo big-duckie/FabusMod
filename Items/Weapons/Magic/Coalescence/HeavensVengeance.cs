@@ -8,8 +8,8 @@ public class HeavensVengeance : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Heaven's Vengeance");
-		Tooltip.SetDefault("Enemies are invulnerable for 4 frames after getting hit \nPurify your foes out of existence with a powerful laser beam! \nInflicts the [c/FFFB62:Holy Smite] debuff for 3 seconds on hit \n[c/FFFB62:Holy Smite] causes enemies to lose life quickly");
+		// DisplayName.SetDefault("Heaven's Vengeance");
+		// Tooltip.SetDefault("Enemies are invulnerable for 4 frames after getting hit \nPurify your foes out of existence with a powerful laser beam! \nInflicts the [c/FFFB62:Holy Smite] debuff for 3 seconds on hit \n[c/FFFB62:Holy Smite] causes enemies to lose life quickly");
 	}
 
 	public override void SetDefaults()

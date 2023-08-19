@@ -8,7 +8,7 @@ public class StonePlatedShortsword : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Stone-Plated Shortsword");
+		// DisplayName.SetDefault("Stone-Plated Shortsword");
 	}
 
 	public override void SetDefaults()

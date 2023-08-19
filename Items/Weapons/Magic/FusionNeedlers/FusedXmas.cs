@@ -9,7 +9,7 @@ public class FusedXmas : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots]\n[c/FF0000:Watch your mana!]");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots]\n[c/FF0000:Watch your mana!]");
 	}
 
 	public override void SetDefaults()

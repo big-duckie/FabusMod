@@ -8,8 +8,8 @@ public class WindUpFabu : ModBuff
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Wind-Up Fabu");
-		Description.SetDefault("She wants to accompany you on your adventure!");
+		// DisplayName.SetDefault("Wind-Up Fabu");
+		// Description.SetDefault("She wants to accompany you on your adventure!");
 		Main.buffNoTimeDisplay[Type] = true;
 		Main.vanityPet[Type] = true;
 	}

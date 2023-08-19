@@ -20,7 +20,7 @@ public class Apple : ModItem
 
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Dyeable]\n[c/FFAF4F:Pet Summoning Item]\nSummons a fox to follow you around \n[c/FF2B6E:Currently Unobtainable]");
+		// Tooltip.SetDefault("[c/B6FF00:Dyeable]\n[c/FFAF4F:Pet Summoning Item]\nSummons a fox to follow you around \n[c/FF2B6E:Currently Unobtainable]");
 	}
 
 	public override void UseStyle(Player player, Rectangle heldItemFrame)

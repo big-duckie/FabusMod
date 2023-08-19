@@ -7,8 +7,8 @@ public class AdvancedBloodLoss : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Advanced Blood Loss");
-        Description.SetDefault(" - Losing life!");
+        // DisplayName.SetDefault("Advanced Blood Loss");
+        // Description.SetDefault(" - Losing life!");
         Main.buffNoTimeDisplay[Type] = false;
     }
 

@@ -8,7 +8,7 @@ public class WindUpFabu : ModProjectile
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Wind-Up Fabu");
+		// DisplayName.SetDefault("Wind-Up Fabu");
 		Main.projFrames[Projectile.type] = 3;
 		Main.projPet[Projectile.type] = true;
 	}

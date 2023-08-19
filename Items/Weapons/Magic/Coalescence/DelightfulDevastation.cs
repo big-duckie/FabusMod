@@ -8,7 +8,7 @@ public class DelightfulDevastation : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Enemies are invulnerable for 3 frames after getting hit \nVaporize your foes out of existence with the power of rainbows! \nInflicts the [c/AB2C2C:R][c/F3821B:a][c/E6AF31:i][c/63B465:n][c/82E8E8:b][c/9EF3EF:o][c/2BA0B5:w][c/734679:'s ][c/AB2C2C:W][c/F3821B:r][c/E6AF31:a][c/63B465:t][c/82E8E8:h] debuff for 2 seconds, and the [c/DAD45E:Midas] debuff for 3 seconds on hit\n[c/AB2C2C:R][c/F3821B:a][c/E6AF31:i][c/63B465:n][c/82E8E8:b][c/9EF3EF:o][c/2BA0B5:w][c/734679:'s ][c/AB2C2C:W][c/F3821B:r][c/E6AF31:a][c/63B465:t][c/82E8E8:h] causes enemies to lose life rapidly \n[c/DAD45E:Midas] causes enemies to drop more money on death ");
+		// Tooltip.SetDefault("Enemies are invulnerable for 3 frames after getting hit \nVaporize your foes out of existence with the power of rainbows! \nInflicts the [c/AB2C2C:R][c/F3821B:a][c/E6AF31:i][c/63B465:n][c/82E8E8:b][c/9EF3EF:o][c/2BA0B5:w][c/734679:'s ][c/AB2C2C:W][c/F3821B:r][c/E6AF31:a][c/63B465:t][c/82E8E8:h] debuff for 2 seconds, and the [c/DAD45E:Midas] debuff for 3 seconds on hit\n[c/AB2C2C:R][c/F3821B:a][c/E6AF31:i][c/63B465:n][c/82E8E8:b][c/9EF3EF:o][c/2BA0B5:w][c/734679:'s ][c/AB2C2C:W][c/F3821B:r][c/E6AF31:a][c/63B465:t][c/82E8E8:h] causes enemies to lose life rapidly \n[c/DAD45E:Midas] causes enemies to drop more money on death ");
 	}
 
 	public override void SetDefaults()

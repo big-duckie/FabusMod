@@ -10,8 +10,8 @@ public class TheRainbowDemonShredder : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Rainbow Demon - Shredder");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nUnleashes a barrage of rainbow axes \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]");
+		// DisplayName.SetDefault("The Rainbow Demon - Shredder");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nUnleashes a barrage of rainbow axes \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]");
 	}
 
 	public override void SetDefaults()

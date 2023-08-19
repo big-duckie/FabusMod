@@ -7,8 +7,8 @@ public class HolySmite : ModBuff
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Holy Smite");
-		Description.SetDefault(" - Losing life!\n - Lowered Movement Speed");
+		// DisplayName.SetDefault("Holy Smite");
+		// Description.SetDefault(" - Losing life!\n - Lowered Movement Speed");
 		Main.buffNoTimeDisplay[Type] = false;
 	}
 

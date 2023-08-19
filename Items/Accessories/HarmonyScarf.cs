@@ -9,7 +9,7 @@ public class HarmonyScarf : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Increases Max HP and Mana by 60\n20% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs \n'This would be a nice gift for a partner!'");
+		// Tooltip.SetDefault("Increases Max HP and Mana by 60\n20% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs \n'This would be a nice gift for a partner!'");
 	}
 
 	public override void SetDefaults()

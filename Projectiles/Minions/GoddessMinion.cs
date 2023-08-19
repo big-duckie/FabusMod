@@ -28,7 +28,7 @@ public class GoddessMinion : Minion
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Goddess' Summoner");
+		// DisplayName.SetDefault("Goddess' Summoner");
 	}
 
 	public override bool OnTileCollide(Vector2 oldVelocity)

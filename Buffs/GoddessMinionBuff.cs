@@ -7,8 +7,8 @@ public class GoddessMinionBuff : ModBuff
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Servant");
-		Description.SetDefault("A Golden Servant, at your service!");
+		// DisplayName.SetDefault("Golden Servant");
+		// Description.SetDefault("A Golden Servant, at your service!");
 		Main.buffNoSave[Type] = true;
 		Main.buffNoTimeDisplay[Type] = true;
 	}

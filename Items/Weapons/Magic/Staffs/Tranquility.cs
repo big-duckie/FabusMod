@@ -10,7 +10,7 @@ public class Tranquility : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots six oval-shaped rainbow projectiles three times in quick succession \nHas a high critical hit chance");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots six oval-shaped rainbow projectiles three times in quick succession \nHas a high critical hit chance");
 		Item.staff[Item.type] = true;
 	}
 

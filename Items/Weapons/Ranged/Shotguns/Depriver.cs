@@ -11,8 +11,8 @@ public class Depriver : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Color Splash");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nFires a spread of 8 bullets \nUsing <right> grants the [c/8A8A8A:Ultracharging] buff, which has the following effects:\n - After 2 seconds of not being able to use items, grants the [c/AB2C2C:U][c/F3821B:l][c/E6AF31:t][c/63B465:r][c/82E8E8:a][c/9EF3EF:c][c/2BA0B5:h][c/734679:a][c/AB2C2C:r][c/F3821B:g][c/E6AF31:e] buff\n - [c/AB2C2C:U][c/F3821B:l][c/E6AF31:t][c/63B465:r][c/82E8E8:a][c/9EF3EF:c][c/2BA0B5:h][c/734679:a][c/AB2C2C:r][c/F3821B:g][c/E6AF31:e] increases damage dealt by Color Splasher by 12%, and reduces Color Splasher's use time by 20% \n[c/AB2C2C:U][c/F3821B:l][c/E6AF31:t][c/63B465:r][c/82E8E8:a][c/9EF3EF:c][c/2BA0B5:h][c/734679:a][c/AB2C2C:r][c/F3821B:g][c/E6AF31:e] has a cooldown of [c/CA4646:40 seconds] once the effect ends\nConverts Musket Balls into homing Rainbow Bullets \nOnly uses one Bullet per use");
+		// DisplayName.SetDefault("Color Splash");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nFires a spread of 8 bullets \nUsing <right> grants the [c/8A8A8A:Ultracharging] buff, which has the following effects:\n - After 2 seconds of not being able to use items, grants the [c/AB2C2C:U][c/F3821B:l][c/E6AF31:t][c/63B465:r][c/82E8E8:a][c/9EF3EF:c][c/2BA0B5:h][c/734679:a][c/AB2C2C:r][c/F3821B:g][c/E6AF31:e] buff\n - [c/AB2C2C:U][c/F3821B:l][c/E6AF31:t][c/63B465:r][c/82E8E8:a][c/9EF3EF:c][c/2BA0B5:h][c/734679:a][c/AB2C2C:r][c/F3821B:g][c/E6AF31:e] increases damage dealt by Color Splasher by 12%, and reduces Color Splasher's use time by 20% \n[c/AB2C2C:U][c/F3821B:l][c/E6AF31:t][c/63B465:r][c/82E8E8:a][c/9EF3EF:c][c/2BA0B5:h][c/734679:a][c/AB2C2C:r][c/F3821B:g][c/E6AF31:e] has a cooldown of [c/CA4646:40 seconds] once the effect ends\nConverts Musket Balls into homing Rainbow Bullets \nOnly uses one Bullet per use");
 	}
 
 	public override void SetDefaults()

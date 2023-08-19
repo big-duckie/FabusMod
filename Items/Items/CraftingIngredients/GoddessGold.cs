@@ -8,7 +8,7 @@ public class GoddessGold : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nGold to fit a goddess!");
+		// Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nGold to fit a goddess!");
 	}
 
 	public override void SetDefaults()

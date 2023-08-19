@@ -7,8 +7,8 @@ public class SpectralMoonsCurse : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Spectral Moon's Curse");
-        Description.SetDefault("Unable to receive Spectral Moonlight!");
+        // DisplayName.SetDefault("Spectral Moon's Curse");
+        // Description.SetDefault("Unable to receive Spectral Moonlight!");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

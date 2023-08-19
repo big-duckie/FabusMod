@@ -9,7 +9,7 @@ public class ValkyrieWings : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Heroes always fly!");
+		// Tooltip.SetDefault("Heroes always fly!");
 	}
 
 	public override void SetDefaults()

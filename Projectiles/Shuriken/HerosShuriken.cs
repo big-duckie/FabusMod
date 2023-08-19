@@ -14,7 +14,7 @@ public class HerosShuriken : ModProjectile
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Hero's Shuriken");
+		// DisplayName.SetDefault("Hero's Shuriken");
 	}
 
 	public override void SetDefaults()

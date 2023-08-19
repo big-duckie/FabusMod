@@ -9,8 +9,8 @@ public class StormBow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Storm Bow");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Wooden Arrows (except with <right>) \nPressing <right> fires 6 Storm Arrows in quick succession, but it has lower damage and a 3 second cooldown");
+		// DisplayName.SetDefault("Storm Bow");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Wooden Arrows (except with <right>) \nPressing <right> fires 6 Storm Arrows in quick succession, but it has lower damage and a 3 second cooldown");
 	}
 
 	public override void SetDefaults()

@@ -7,8 +7,8 @@ public class Ultracharge : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Ultracharge");
-        Description.SetDefault(" - +12% damage for Color Splasher!\n - +12% faster use time for Color Splasher!");
+        // DisplayName.SetDefault("Ultracharge");
+        // Description.SetDefault(" - +12% damage for Color Splasher!\n - +12% faster use time for Color Splasher!");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = false;
     }

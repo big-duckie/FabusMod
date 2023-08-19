@@ -11,8 +11,8 @@ public class PulseSprayerCadet : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Pulse Sprayer - Cadet");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into Pulse Bullets");
+		// DisplayName.SetDefault("Pulse Sprayer - Cadet");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into Pulse Bullets");
 	}
 
 	public override void SetDefaults()

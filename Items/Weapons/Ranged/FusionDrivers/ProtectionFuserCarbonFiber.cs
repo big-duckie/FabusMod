@@ -9,8 +9,8 @@ public class ProtectionFuserCarbonFiber : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Protective Fusion - Carbon Fiber");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n42% chance to not consume ammo");
+		// DisplayName.SetDefault("Protective Fusion - Carbon Fiber");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n42% chance to not consume ammo");
 	}
 
 	public override void SetDefaults()

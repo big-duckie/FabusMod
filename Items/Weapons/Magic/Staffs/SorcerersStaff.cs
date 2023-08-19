@@ -8,8 +8,8 @@ public class SorcerersStaff : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Sorcerer's Staff");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots two oval-shaped magic projectiles in quick succession \nHas a high critical hit chance");
+		// DisplayName.SetDefault("Sorcerer's Staff");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots two oval-shaped magic projectiles in quick succession \nHas a high critical hit chance");
 		Item.staff[Item.type] = true;
 	}
 

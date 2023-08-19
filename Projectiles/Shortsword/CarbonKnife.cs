@@ -14,7 +14,7 @@ public class CarbonKnife : ModProjectile
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Carbon Knife");
+		// DisplayName.SetDefault("Carbon Knife");
 	}
 
 	public override void SetDefaults()

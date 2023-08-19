@@ -59,7 +59,7 @@ public class BlueBoltRMB : ModProjectile
 		}
 	}
 
-	public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		target.AddBuff(ModContent.BuffType<Buffs.FoxPistol.FoxWither>(), 240, false);
 	}

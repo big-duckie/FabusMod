@@ -8,7 +8,7 @@ public class CarbonShuriken : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autothrows, dyeable]\nThrows 3 fast-flying Shurikens at once");
+		// Tooltip.SetDefault("[c/B6FF00:Autothrows, dyeable]\nThrows 3 fast-flying Shurikens at once");
 	}
 
 	public override void SetDefaults()

@@ -7,8 +7,8 @@ public class FoxWither : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Fox Wither");
-        Description.SetDefault(" - Losing life!");
+        // DisplayName.SetDefault("Fox Wither");
+        // Description.SetDefault(" - Losing life!");
         Main.buffNoTimeDisplay[Type] = false;
     }
 

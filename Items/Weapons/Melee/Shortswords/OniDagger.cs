@@ -10,8 +10,8 @@ public class OniDagger : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Demon's Dagger");
-		Tooltip.SetDefault("[c/B6FF00:Autoswings]\nThrows a vampire knife that deals more damage the closer you are to the target \nInflicts the [c/007700:Poison] debuff for 10 seconds on hit \n[c/FF0000:Steals a small amount of life] \nGrants the [c/FC3A3A:Rage] buff for 8 seconds upon hitting an enemy \nGrants the [c/FC8719:Inferno] buff for 6 seconds upon hitting an enemy");
+		// DisplayName.SetDefault("Demon's Dagger");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings]\nThrows a vampire knife that deals more damage the closer you are to the target \nInflicts the [c/007700:Poison] debuff for 10 seconds on hit \n[c/FF0000:Steals a small amount of life] \nGrants the [c/FC3A3A:Rage] buff for 8 seconds upon hitting an enemy \nGrants the [c/FC8719:Inferno] buff for 6 seconds upon hitting an enemy");
 	}
 
 	public override void SetDefaults()
@@ -44,9 +44,9 @@ public class OniDagger : ModItem
 		}
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
-		int healingAmount = damage / 18;
+		int healingAmount = damageDone / 18;
 		player.statLife += healingAmount;
 		player.HealEffect(healingAmount, true);
 		target.AddBuff(20, 600, false);

@@ -9,8 +9,8 @@ public class LeafyHat : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Leafia Hat");
-		Tooltip.SetDefault("~~ Donator Item ~~");
+		// DisplayName.SetDefault("Leafia Hat");
+		// Tooltip.SetDefault("~~ Donator Item ~~");
 	}
 
 	public override void SetDefaults()

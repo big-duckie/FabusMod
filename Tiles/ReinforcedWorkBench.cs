@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -18,8 +19,8 @@ public class ReinforcedWorkBench : ModTile
 		TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
         TileObjectData.newTile.CoordinateHeights = new[] { 18 };
 		TileObjectData.addTile(Type);
-		ModTranslation name = this.CreateMapEntryName(null);
-		name.SetDefault("Reinforced Work Bench");
+		LocalizedText name = this.CreateMapEntryName();
+		// name.SetDefault("Reinforced Work Bench");
 		AddMapEntry(new Color(120, 120, 120), name);
         AdjTiles = new int[1] { 18 };
 	}

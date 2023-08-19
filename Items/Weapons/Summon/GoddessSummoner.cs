@@ -31,8 +31,8 @@ public class GoddessSummoner : ModItem
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Goddess' Summoning Staff");
-		Tooltip.SetDefault("Summons a golden servant to fight for you");
+		// DisplayName.SetDefault("Goddess' Summoning Staff");
+		// Tooltip.SetDefault("Summons a golden servant to fight for you");
 	}
 
 	public override bool AltFunctionUse(Player player)

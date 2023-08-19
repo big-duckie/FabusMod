@@ -8,7 +8,7 @@ public class ColorfulSolution : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Doesn't consume on use \n[c/B6FF00:Autothrows] \nInflicts [c/401440:Venom] for 12 seconds on hit");
+		// Tooltip.SetDefault("Doesn't consume on use \n[c/B6FF00:Autothrows] \nInflicts [c/401440:Venom] for 12 seconds on hit");
 	}
 
 	public override void SetDefaults()

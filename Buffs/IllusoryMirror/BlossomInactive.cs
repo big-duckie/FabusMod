@@ -7,8 +7,8 @@ public class BlossomInactive : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Blossom Inactive");
-        Description.SetDefault("Unable to produce a Blossom!");
+        // DisplayName.SetDefault("Blossom Inactive");
+        // Description.SetDefault("Unable to produce a Blossom!");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

@@ -10,8 +10,8 @@ public class Taegeukgi : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Taegeukgi");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots little light blasts");
+		// DisplayName.SetDefault("Taegeukgi");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots little light blasts");
 	}
 
 	public override void SetDefaults()
@@ -47,7 +47,7 @@ public class Taegeukgi : ModItem
 	{
 		CreateRecipe()
 			.AddIngredient(ModContent.ItemType<LightGun>())
-			.AddRecipeGroup("FabusMod:OrichalcumBar", 6)
+			.AddRecipeGroup("FabusMod:MythrilBar", 6)
 			.AddIngredient(ItemID.Sapphire, 6)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();

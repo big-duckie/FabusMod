@@ -10,8 +10,8 @@ public class TheWhisperingIceDonator : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Whispering Ice");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots three icicles that inflict Frostburn for 3 seconds \n'Guard your darkest thoughts well, for they are the cracks through which the Nightmare crawls.' \n~~ Donator Item ~~");
+		// DisplayName.SetDefault("The Whispering Ice");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots three icicles that inflict Frostburn for 3 seconds \n'Guard your darkest thoughts well, for they are the cracks through which the Nightmare crawls.' \n~~ Donator Item ~~");
 		Item.staff[Item.type] = true;
 	}
 

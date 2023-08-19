@@ -7,8 +7,8 @@ public class SpectralMoonsRejuvenation : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Spectral Moon's Rejuvenation");
-        Description.SetDefault(" - Recovering 150 HP over 10 seconds\n - Increased ranged crit rate");
+        // DisplayName.SetDefault("Spectral Moon's Rejuvenation");
+        // Description.SetDefault(" - Recovering 150 HP over 10 seconds\n - Increased ranged crit rate");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = false;
     }

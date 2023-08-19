@@ -9,8 +9,8 @@ public class LeafyChest : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Leafia Chest");
-		Tooltip.SetDefault("~~ Donator Item ~~");
+		// DisplayName.SetDefault("Leafia Chest");
+		// Tooltip.SetDefault("~~ Donator Item ~~");
 	}
 
 	public override void SetDefaults()

@@ -7,8 +7,8 @@ public class ShatteredMoonsBlessing : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Shattered Moon's Blessing");
-        Description.SetDefault(" - Recovering HP rapidly!\n - Can't use items");
+        // DisplayName.SetDefault("Shattered Moon's Blessing");
+        // Description.SetDefault(" - Recovering HP rapidly!\n - Can't use items");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

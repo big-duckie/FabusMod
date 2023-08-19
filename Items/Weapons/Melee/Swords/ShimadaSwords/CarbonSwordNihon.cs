@@ -10,8 +10,8 @@ public class CarbonSwordNihon : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Carbon Sword - Nihon");
-		Tooltip.SetDefault("[c/B6FF00:Autoswings, dyeable]\nFires a stream of particles that deals damage three times\nInflicts [c/7B2D2F:Advanced Blood Loss] for 10 seconds when hit with the blade, dealing damage over time");
+		// DisplayName.SetDefault("Carbon Sword - Nihon");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings, dyeable]\nFires a stream of particles that deals damage three times\nInflicts [c/7B2D2F:Advanced Blood Loss] for 10 seconds when hit with the blade, dealing damage over time");
 	}
 
 	public override void SetDefaults()
@@ -44,7 +44,7 @@ public class CarbonSwordNihon : ModItem
 		return false;
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		target.AddBuff(ModContent.BuffType<Buffs.ShimadaSword.AdvancedBloodLoss>(), 600, false);
 	}

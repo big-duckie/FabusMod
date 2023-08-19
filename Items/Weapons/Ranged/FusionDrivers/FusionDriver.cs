@@ -9,8 +9,8 @@ public class FusionDriver : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Fusion Driver");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots]");
+		// DisplayName.SetDefault("Fusion Driver");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots]");
 	}
 
 	public override void SetDefaults()

@@ -11,8 +11,8 @@ public class FoxPistolBlue : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Fox Pistol - Blue");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, doesn't require ammo, dyeable]\nGrants the [c/37C8AB:Fox Mending] buff for 5 seconds, which regenerates HP and increases speed, but lowers damage by 12% \nUsing <right> increases damage and reduces use time, as well as: \n - Grants the [c/9E9E9E:Fox Break] debuff for 1 second, reducing movement speed \n - Grants the [c/732C73:Fox Wither] debuff for 1.3 seconds on self, and 4 seconds on hit enemies \n - [c/732C73:Fox Wither] debuff deals damage over time and nullifies the [c/37C8AB:Fox Mending] buff's regeneration");
+		// DisplayName.SetDefault("Fox Pistol - Blue");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, doesn't require ammo, dyeable]\nGrants the [c/37C8AB:Fox Mending] buff for 5 seconds, which regenerates HP and increases speed, but lowers damage by 12% \nUsing <right> increases damage and reduces use time, as well as: \n - Grants the [c/9E9E9E:Fox Break] debuff for 1 second, reducing movement speed \n - Grants the [c/732C73:Fox Wither] debuff for 1.3 seconds on self, and 4 seconds on hit enemies \n - [c/732C73:Fox Wither] debuff deals damage over time and nullifies the [c/37C8AB:Fox Mending] buff's regeneration");
 	}
 
 	public override void SetDefaults()

@@ -8,7 +8,7 @@ public class RainbowChunk : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nFull of colors!");
+		// Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nFull of colors!");
 	}
 
 	public override void SetDefaults()

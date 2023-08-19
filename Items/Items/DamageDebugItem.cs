@@ -9,8 +9,8 @@ public class DamageDebugItem : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Damage Debug Item");
-		Tooltip.SetDefault("Use to damage yourself by 100 HP\nUse <right> to heal by 100 HP\n[c/FF2B6E:Currently Unobtainable]");
+		// DisplayName.SetDefault("Damage Debug Item");
+		// Tooltip.SetDefault("Use to damage yourself by 100 HP\nUse <right> to heal by 100 HP\n[c/FF2B6E:Currently Unobtainable]");
 	}
 
 	public override void SetDefaults()

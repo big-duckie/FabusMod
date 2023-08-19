@@ -10,7 +10,7 @@ public class DreamCatcher : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 8 times, and regenerates 1 Mana with every hit\nInflicts [c/806580:Bad Dream] for 16 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up [c/C4AB37:Midas]-inducing spikes from the ground, dealing damage with a 2% chance of granting a [c/FF52DC:Dream] stack\nHas a 10% chance to fire homing, soul-absorbing shards, healing for 20 HP and granting a stack of [c/FF52DC:Dream] when hit\nHaving 6 stacks of [c/FF52DC:Dream] restores 85 HP and Mana and puts you into an enraged state for 8 seconds, increasing melee damage dealt");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 8 times, and regenerates 1 Mana with every hit\nInflicts [c/806580:Bad Dream] for 16 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up [c/C4AB37:Midas]-inducing spikes from the ground, dealing damage with a 2% chance of granting a [c/FF52DC:Dream] stack\nHas a 10% chance to fire homing, soul-absorbing shards, healing for 20 HP and granting a stack of [c/FF52DC:Dream] when hit\nHaving 6 stacks of [c/FF52DC:Dream] restores 85 HP and Mana and puts you into an enraged state for 8 seconds, increasing melee damage dealt");
 	}
 
 	public override void SetDefaults()
@@ -32,7 +32,7 @@ public class DreamCatcher : ModItem
 		Item.rare = ItemRarityID.Expert;
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		target.AddBuff(ModContent.BuffType<Buffs.ShimadaSword.BadDream>(), 960, false);
 	}

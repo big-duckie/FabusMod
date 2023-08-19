@@ -11,8 +11,8 @@ public class PulseSprayer : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Pulse Sprayer");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \n80% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into dark blue Pulse Bullets");
+		// DisplayName.SetDefault("Pulse Sprayer");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \n80% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into dark blue Pulse Bullets");
 	}
 
 	public override void SetDefaults()

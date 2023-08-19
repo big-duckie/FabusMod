@@ -10,8 +10,8 @@ public class HellshiverGunHellfire : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Shivering Shotgun - Hellfire");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nFires a spread of 6 bullets \nOnly uses one Bullet per use");
+		// DisplayName.SetDefault("Shivering Shotgun - Hellfire");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nFires a spread of 6 bullets \nOnly uses one Bullet per use");
 	}
 
 	public override void SetDefaults()

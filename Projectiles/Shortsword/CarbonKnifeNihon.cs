@@ -14,7 +14,7 @@ public class CarbonKnifeNihon : ModProjectile
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Carbon Knife - Nihon");
+		// DisplayName.SetDefault("Carbon Knife - Nihon");
 	}
 
 	public override void SetDefaults()

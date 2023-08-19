@@ -9,8 +9,8 @@ public class DemonsFury : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Demon's Fury");
-		Tooltip.SetDefault("[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 5 times, and regenerates 1 Mana with every hit\nInflicts [c/7B2D2F:Advanced Blood Loss] for 14 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up spikes from the ground, dealing damage with a 2% chance of granting a [c/EC566E:Souleater] stack\nHas an 8% chance to fire soul-absorbing shards, granting a stack of [c/EC566E:Souleater] when hit\nHaving 6 stacks of [c/EC566E:Souleater] restores 75 HP and Mana");
+		// DisplayName.SetDefault("Demon's Fury");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 5 times, and regenerates 1 Mana with every hit\nInflicts [c/7B2D2F:Advanced Blood Loss] for 14 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up spikes from the ground, dealing damage with a 2% chance of granting a [c/EC566E:Souleater] stack\nHas an 8% chance to fire soul-absorbing shards, granting a stack of [c/EC566E:Souleater] when hit\nHaving 6 stacks of [c/EC566E:Souleater] restores 75 HP and Mana");
 	}
 
 	public override void SetDefaults()
@@ -32,7 +32,7 @@ public class DemonsFury : ModItem
 		Item.autoReuse = true;
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		target.AddBuff(ModContent.BuffType<Buffs.ShimadaSword.AdvancedBloodLoss>(), 840, false);
 	}

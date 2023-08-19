@@ -9,8 +9,8 @@ public class DynasticFuser : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Dynastic Fusion");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n30% chance to not consume ammo");
+		// DisplayName.SetDefault("Dynastic Fusion");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n30% chance to not consume ammo");
 	}
 
 	public override void SetDefaults()

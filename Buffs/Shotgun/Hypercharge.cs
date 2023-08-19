@@ -7,8 +7,8 @@ public class Hypercharge : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Hypercharge");
-        Description.SetDefault(" - +12% damage for Hellraiser & Golden Shotgun!\n - +12% faster use time for Hellraiser & Golden Shotgun!");
+        // DisplayName.SetDefault("Hypercharge");
+        // Description.SetDefault(" - +12% damage for Hellraiser & Golden Shotgun!\n - +12% faster use time for Hellraiser & Golden Shotgun!");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = false;
     }

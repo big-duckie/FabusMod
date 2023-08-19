@@ -1,0 +1,870 @@
+{
+  "Mods": {
+    "FabusMod": {
+      "Buffs": {
+        "FoxPetBuff": {
+          "DisplayName": "Fox Pet Buff",
+          "Description": "Mods.FabusMod.Buffs.FoxPetBuff.Description"
+        },
+        "FoxBreak": {
+          "DisplayName": "Fox Break",
+          "Description": "Mods.FabusMod.Buffs.FoxBreak.Description"
+        },
+        "FoxMending": {
+          "DisplayName": "Fox Mending",
+          "Description": "Mods.FabusMod.Buffs.FoxMending.Description"
+        },
+        "FoxMendingBlue": {
+          "DisplayName": "Fox Mending Blue",
+          "Description": "Mods.FabusMod.Buffs.FoxMendingBlue.Description"
+        },
+        "FoxWither": {
+          "DisplayName": "Fox Wither",
+          "Description": "Mods.FabusMod.Buffs.FoxWither.Description"
+        },
+        "SpectralMending": {
+          "DisplayName": "Spectral Mending",
+          "Description": "Mods.FabusMod.Buffs.SpectralMending.Description"
+        },
+        "SpectralWither": {
+          "DisplayName": "Spectral Wither",
+          "Description": "Mods.FabusMod.Buffs.SpectralWither.Description"
+        },
+        "GoddessMinionBuff": {
+          "DisplayName": "Goddess Minion Buff",
+          "Description": "Mods.FabusMod.Buffs.GoddessMinionBuff.Description"
+        },
+        "HolySmite": {
+          "DisplayName": "Holy Smite",
+          "Description": "Mods.FabusMod.Buffs.HolySmite.Description"
+        },
+        "BlossomActive": {
+          "DisplayName": "Blossom Active",
+          "Description": "Mods.FabusMod.Buffs.BlossomActive.Description"
+        },
+        "BlossomInactive": {
+          "DisplayName": "Blossom Inactive",
+          "Description": "Mods.FabusMod.Buffs.BlossomInactive.Description"
+        },
+        "SpectralBloom": {
+          "DisplayName": "Spectral Bloom",
+          "Description": "Mods.FabusMod.Buffs.SpectralBloom.Description"
+        },
+        "SpectralBlossomActive": {
+          "DisplayName": "Spectral Blossom Active",
+          "Description": "Mods.FabusMod.Buffs.SpectralBlossomActive.Description"
+        },
+        "SpectralBlossomInactive": {
+          "DisplayName": "Spectral Blossom Inactive",
+          "Description": "Mods.FabusMod.Buffs.SpectralBlossomInactive.Description"
+        },
+        "StrongerTogether": {
+          "DisplayName": "Stronger Together",
+          "Description": "Mods.FabusMod.Buffs.StrongerTogether.Description"
+        },
+        "ShatteredMoonsBlessing": {
+          "DisplayName": "Shattered Moons Blessing",
+          "Description": "Mods.FabusMod.Buffs.ShatteredMoonsBlessing.Description"
+        },
+        "ShatteredMoonsCurse": {
+          "DisplayName": "Shattered Moons Curse",
+          "Description": "Mods.FabusMod.Buffs.ShatteredMoonsCurse.Description"
+        },
+        "ShatteredMoonsGrace": {
+          "DisplayName": "Shattered Moons Grace",
+          "Description": "Mods.FabusMod.Buffs.ShatteredMoonsGrace.Description"
+        },
+        "ShatteredMoonsRejuvenation": {
+          "DisplayName": "Shattered Moons Rejuvenation",
+          "Description": "Mods.FabusMod.Buffs.ShatteredMoonsRejuvenation.Description"
+        },
+        "SpectralMoonlight": {
+          "DisplayName": "Spectral Moonlight",
+          "Description": "Mods.FabusMod.Buffs.SpectralMoonlight.Description"
+        },
+        "SpectralMoonsCurse": {
+          "DisplayName": "Spectral Moons Curse",
+          "Description": "Mods.FabusMod.Buffs.SpectralMoonsCurse.Description"
+        },
+        "SpectralMoonsGrace": {
+          "DisplayName": "Spectral Moons Grace",
+          "Description": "Mods.FabusMod.Buffs.SpectralMoonsGrace.Description"
+        },
+        "SpectralMoonsRejuvenation": {
+          "DisplayName": "Spectral Moons Rejuvenation",
+          "Description": "Mods.FabusMod.Buffs.SpectralMoonsRejuvenation.Description"
+        },
+        "MechanicalTooth": {
+          "DisplayName": "Mechanical Tooth",
+          "Description": "Mods.FabusMod.Buffs.MechanicalTooth.Description"
+        },
+        "PinkFoxPetBuff": {
+          "DisplayName": "Pink Fox Pet Buff",
+          "Description": "Mods.FabusMod.Buffs.PinkFoxPetBuff.Description"
+        },
+        "RainbowsWrath": {
+          "DisplayName": "Rainbows Wrath",
+          "Description": "Mods.FabusMod.Buffs.RainbowsWrath.Description"
+        },
+        "AdvancedBloodLoss": {
+          "DisplayName": "Advanced Blood Loss",
+          "Description": "Mods.FabusMod.Buffs.AdvancedBloodLoss.Description"
+        },
+        "BadDream": {
+          "DisplayName": "Bad Dream",
+          "Description": "Mods.FabusMod.Buffs.BadDream.Description"
+        },
+        "BloodLoss": {
+          "DisplayName": "Blood Loss",
+          "Description": "Mods.FabusMod.Buffs.BloodLoss.Description"
+        },
+        "SpectralRage": {
+          "DisplayName": "Spectral Rage",
+          "Description": "Mods.FabusMod.Buffs.SpectralRage.Description"
+        },
+        "DreamFive": {
+          "DisplayName": "Dream Five",
+          "Description": "Mods.FabusMod.Buffs.DreamFive.Description"
+        },
+        "DreamFour": {
+          "DisplayName": "Dream Four",
+          "Description": "Mods.FabusMod.Buffs.DreamFour.Description"
+        },
+        "DreamOne": {
+          "DisplayName": "Dream One",
+          "Description": "Mods.FabusMod.Buffs.DreamOne.Description"
+        },
+        "DreamThree": {
+          "DisplayName": "Dream Three",
+          "Description": "Mods.FabusMod.Buffs.DreamThree.Description"
+        },
+        "DreamTwo": {
+          "DisplayName": "Dream Two",
+          "Description": "Mods.FabusMod.Buffs.DreamTwo.Description"
+        },
+        "EnrichmentFive": {
+          "DisplayName": "Enrichment Five",
+          "Description": "Mods.FabusMod.Buffs.EnrichmentFive.Description"
+        },
+        "EnrichmentFour": {
+          "DisplayName": "Enrichment Four",
+          "Description": "Mods.FabusMod.Buffs.EnrichmentFour.Description"
+        },
+        "EnrichmentOne": {
+          "DisplayName": "Enrichment One",
+          "Description": "Mods.FabusMod.Buffs.EnrichmentOne.Description"
+        },
+        "EnrichmentThree": {
+          "DisplayName": "Enrichment Three",
+          "Description": "Mods.FabusMod.Buffs.EnrichmentThree.Description"
+        },
+        "EnrichmentTwo": {
+          "DisplayName": "Enrichment Two",
+          "Description": "Mods.FabusMod.Buffs.EnrichmentTwo.Description"
+        },
+        "SouleaterFive": {
+          "DisplayName": "Souleater Five",
+          "Description": "Mods.FabusMod.Buffs.SouleaterFive.Description"
+        },
+        "SouleaterFour": {
+          "DisplayName": "Souleater Four",
+          "Description": "Mods.FabusMod.Buffs.SouleaterFour.Description"
+        },
+        "SouleaterOne": {
+          "DisplayName": "Souleater One",
+          "Description": "Mods.FabusMod.Buffs.SouleaterOne.Description"
+        },
+        "SouleaterThree": {
+          "DisplayName": "Souleater Three",
+          "Description": "Mods.FabusMod.Buffs.SouleaterThree.Description"
+        },
+        "SouleaterTwo": {
+          "DisplayName": "Souleater Two",
+          "Description": "Mods.FabusMod.Buffs.SouleaterTwo.Description"
+        },
+        "Hypercharge": {
+          "DisplayName": "Hypercharge",
+          "Description": "Mods.FabusMod.Buffs.Hypercharge.Description"
+        },
+        "HyperchargeCooldown": {
+          "DisplayName": "Hypercharge Cooldown",
+          "Description": "Mods.FabusMod.Buffs.HyperchargeCooldown.Description"
+        },
+        "Hypercharging": {
+          "DisplayName": "Hypercharging",
+          "Description": "Mods.FabusMod.Buffs.Hypercharging.Description"
+        },
+        "Ultracharge": {
+          "DisplayName": "Ultracharge",
+          "Description": "Mods.FabusMod.Buffs.Ultracharge.Description"
+        },
+        "UltrachargeCooldown": {
+          "DisplayName": "Ultracharge Cooldown",
+          "Description": "Mods.FabusMod.Buffs.UltrachargeCooldown.Description"
+        },
+        "Ultracharging": {
+          "DisplayName": "Ultracharging",
+          "Description": "Mods.FabusMod.Buffs.Ultracharging.Description"
+        },
+        "WindUpFabu": {
+          "DisplayName": "Wind Up Fabu",
+          "Description": "Mods.FabusMod.Buffs.WindUpFabu.Description"
+        }
+      },
+      "Items": {
+        "HallowedBand": {
+          "DisplayName": "Hallowed Band",
+          "Tooltip": "8% increased all damage\nGrants immunity to the [c/FF4E00:On Fire!] debuff"
+        },
+        "HarmonyScarf": {
+          "DisplayName": "Harmony Scarf",
+          "Tooltip": "Increases Max HP and Mana by 60\n20% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs \n'This would be a nice gift for a partner!'"
+        },
+        "HarmonyScarfUpgraded": {
+          "DisplayName": "Harmony Scarf Upgraded",
+          "Tooltip": "Increases Max HP and Mana by 120\n30% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs \n'What else is left...?'"
+        },
+        "HellfireBand": {
+          "DisplayName": "Hellfire Band",
+          "Tooltip": "4% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!] debuff"
+        },
+        "IronBand": {
+          "DisplayName": "Iron Band",
+          "Tooltip": ""
+        },
+        "LunaticBand": {
+          "DisplayName": "Lunatic Band",
+          "Tooltip": "14% increased all damage\nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs"
+        },
+        "NebulaBand": {
+          "DisplayName": "Nebula Band",
+          "Tooltip": "12% increased magic damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs"
+        },
+        "SolarBand": {
+          "DisplayName": "Solar Band",
+          "Tooltip": "12% increased melee and throwing damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs"
+        },
+        "StardustBand": {
+          "DisplayName": "Stardust Band",
+          "Tooltip": "12% increased minion damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs"
+        },
+        "ValkyrieWings": {
+          "DisplayName": "Valkyrie Wings",
+          "Tooltip": "Heroes always fly!"
+        },
+        "VortexBand": {
+          "DisplayName": "Vortex Band",
+          "Tooltip": "12% increased ranged damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs"
+        },
+        "RainbowChunk": {
+          "DisplayName": "Rainbow Chunk",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\nFull of colors!"
+        },
+        "BrokenBand": {
+          "DisplayName": "Broken Band",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\n'This broken band feels oddly important to you...' \nIt would be wise to keep it."
+        },
+        "GoddessGold": {
+          "DisplayName": "Goddess Gold",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\nGold to fit a goddess!"
+        },
+        "NatureToken": {
+          "DisplayName": "Nature Token",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\nUsed to convert the raw power of nature into weapons"
+        },
+        "OminousBook": {
+          "DisplayName": "Ominous Book",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\nAn ominous presence emits from this book. Maybe pack some gems and bring it to an altar?"
+        },
+        "RainbowDust": {
+          "DisplayName": "Rainbow Dust",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\nDon't inhale it!"
+        },
+        "RainbowHandle": {
+          "DisplayName": "Rainbow Handle",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\nUsed to craft The Rainbow Demon \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "RainbowMuzzle": {
+          "DisplayName": "Rainbow Muzzle",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\nUsed to craft The Rainbow Demon \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "RainbowToken": {
+          "DisplayName": "Rainbow Token",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\nUsed to convert the raw power of rainbows into weapons"
+        },
+        "SoulofWisdom": {
+          "DisplayName": "Soul of Wisdom",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]\n'The essence of everlasting knowledge'"
+        },
+        "DamageDebugItem": {
+          "DisplayName": "Damage Debug Item",
+          "Tooltip": "Use to damage yourself by 100 HP\nUse <right> to heal by 100 HP\n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "Apple": {
+          "DisplayName": "Apple",
+          "Tooltip": "[c/B6FF00:Dyeable]\n[c/FFAF4F:Pet Summoning Item]\nSummons a fox to follow you around \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "PinkApple": {
+          "DisplayName": "Pink Apple",
+          "Tooltip": "[c/B6FF00:Dyeable]\n[c/FFAF4F:Pet Summoning Item]\nSummons a pink fox to follow you around \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "SuspiciousFlower": {
+          "DisplayName": "Suspicious Flower",
+          "Tooltip": "[c/FFAF4F:Pet Summoning Item]\nI wonder who this flower belongs to? \n[c/46FFFF:~~ Developer Pet ~~]"
+        },
+        "SuspiciousLookingScrew": {
+          "DisplayName": "Suspicious Looking Screw",
+          "Tooltip": "[c/FFAF4F:Pet Summoning Item]\nSummons Mechanical Teeth to follow you around \n[c/46FFFF:~~ Developer Pet ~~]"
+        },
+        "UntreatedBowPart": {
+          "DisplayName": "Untreated Bow Part",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]"
+        },
+        "UntreatedShortswordPart": {
+          "DisplayName": "Untreated Shortsword Part",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]"
+        },
+        "UntreatedShurikenPart": {
+          "DisplayName": "Untreated Shuriken Part",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]"
+        },
+        "UntreatedSwordParts": {
+          "DisplayName": "Untreated Sword Parts",
+          "Tooltip": "[c/C9FF4C:Crafting Ingredient]"
+        },
+        "RainbowStation": {
+          "DisplayName": "Rainbow Station",
+          "Tooltip": "Used to craft rainbow weapons"
+        },
+        "ReinforcedWorkBench": {
+          "DisplayName": "Reinforced Work Bench",
+          "Tooltip": "Used to craft stone-plated weapons"
+        },
+        "GoddessPick": {
+          "DisplayName": "Goddess Pick",
+          "Tooltip": ""
+        },
+        "GoldenDiggingClaw": {
+          "DisplayName": "Golden Digging Claw",
+          "Tooltip": "[c/FF3C2B:Mining speed too high may result in no funcionality]"
+        },
+        "GoldenHamaxe": {
+          "DisplayName": "Golden Hamaxe",
+          "Tooltip": ""
+        },
+        "BlueFoxEars": {
+          "DisplayName": "Blue Fox Ears",
+          "Tooltip": "Now in blue!"
+        },
+        "FoxEars": {
+          "DisplayName": "Fox Ears",
+          "Tooltip": "[c/B6FF00:Dyeable]"
+        },
+        "PinkFoxEars": {
+          "DisplayName": "Pink Fox Ears",
+          "Tooltip": "Now in pink!"
+        },
+        "LeafyChest": {
+          "DisplayName": "Leafy Chest",
+          "Tooltip": "~~ Donator Item ~~"
+        },
+        "LeafyHat": {
+          "DisplayName": "Leafy Hat",
+          "Tooltip": "~~ Donator Item ~~"
+        },
+        "LeafyLegs": {
+          "DisplayName": "Leafy Legs",
+          "Tooltip": "~~ Donator Item ~~"
+        },
+        "Coalescence": {
+          "DisplayName": "Coalescence",
+          "Tooltip": "Enemies are invulnerable for 8 frames after getting hit \nBeam your foes out of existence with a powerful laser beam!"
+        },
+        "DelightfulDevastation": {
+          "DisplayName": "Delightful Devastation",
+          "Tooltip": "Enemies are invulnerable for 3 frames after getting hit \nVaporize your foes out of existence with the power of rainbows! \nInflicts the [c/AB2C2C:R][c/F3821B:a][c/E6AF31:i][c/63B465:n][c/82E8E8:b][c/9EF3EF:o][c/2BA0B5:w][c/734679:'s ][c/AB2C2C:W][c/F3821B:r][c/E6AF31:a][c/63B465:t][c/82E8E8:h] debuff for 2 seconds, and the [c/DAD45E:Midas] debuff for 3 seconds on hit\n[c/AB2C2C:R][c/F3821B:a][c/E6AF31:i][c/63B465:n][c/82E8E8:b][c/9EF3EF:o][c/2BA0B5:w][c/734679:'s ][c/AB2C2C:W][c/F3821B:r][c/E6AF31:a][c/63B465:t][c/82E8E8:h] causes enemies to lose life rapidly \n[c/DAD45E:Midas] causes enemies to drop more money on death"
+        },
+        "GoldenVengeance": {
+          "DisplayName": "Golden Vengeance",
+          "Tooltip": "Enemies are invulnerable for 4 frames after getting hit \nPurify your foes out of existence with a powerful laser beam! \nInflicts the [c/FFFB62:Holy Smite] debuff for 4 seconds, and the [c/DAD45E:Midas] debuff for 3 seconds on hit\n[c/FFFB62:Holy Smite] causes enemies to lose life quickly \n[c/DAD45E:Midas] causes enemies to drop more money on death"
+        },
+        "HeavensVengeance": {
+          "DisplayName": "Heavens Vengeance",
+          "Tooltip": "Enemies are invulnerable for 4 frames after getting hit \nPurify your foes out of existence with a powerful laser beam! \nInflicts the [c/FFFB62:Holy Smite] debuff for 3 seconds on hit \n[c/FFFB62:Holy Smite] causes enemies to lose life quickly"
+        },
+        "HellfireBeam": {
+          "DisplayName": "Hellfire Beam",
+          "Tooltip": "Enemies are invulnerable for 5 frames after getting hit \nBurn your foes out of existence with a powerful laser beam! \nInflicts the [c/DA0205:On Fire!] debuff for 2 seconds on hit"
+        },
+        "FusedWish": {
+          "DisplayName": "Fused Wish",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots homing rainbow needles\n[c/FF0000:Watch your mana!]"
+        },
+        "FusedXmas": {
+          "DisplayName": "Fused Xmas",
+          "Tooltip": "[c/B6FF00:Autoshoots]\n[c/FF0000:Watch your mana!]"
+        },
+        "FusionNeedler": {
+          "DisplayName": "Fusion Needler",
+          "Tooltip": "[c/B6FF00:Autoshoots]\n[c/FF0000:Watch your mana!]"
+        },
+        "IllusoryMirror": {
+          "DisplayName": "Illusory Mirror",
+          "Tooltip": "[c/B6FF00:Autoshoots]\nShoots 5 instant beams in quick succession\nUsing <right> uses 50 Mana to summon a [c/E6A6CF:Blossom] at the player's position for 20 seconds:\n - Being around the [c/E6A6CF:Blossom] buffs HP regeneration, increases attack speed, and increases magic damage by 15%\n - [c/E6A6CF:Blossom] has a cooldown of [c/CA4646:50 seconds] once it disappears\nBest used on 'High' video quality!"
+        },
+        "SpectralIllusion": {
+          "DisplayName": "Spectral Illusion",
+          "Tooltip": "[c/B6FF00:Autoshoots]\nShoots 6 instant beams in quick succession\nUsing <right> uses 50 Mana to summon a [c/82E8E8:Spectral Blossom] at the player's position for 20 seconds:\n - Being around the [c/82E8E8:Spectral Blossom] buffs HP regeneration, increases attack speed, and increases magic damage by 18%\n - Being around the [c/82E8E8:Spectral Blossom] also increases invincibility time after being hit, and has a cooldown of [c/BF5E3B:50 seconds] once it disappears\nBest used on 'High' video quality!"
+        },
+        "GoldenStaff": {
+          "DisplayName": "Golden Staff",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots four oval-shaped magic projectiles twice in quick succession \nHas a high critical hit chance"
+        },
+        "NatureStaff": {
+          "DisplayName": "Nature Staff",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots three oval-shaped magic projectiles twice in quick succession \nHas a 25% chance of inflicting the [c/0E3517:Poisoned] debuff for 3 seconds \nHas a high critical hit chance"
+        },
+        "PiercingStaff": {
+          "DisplayName": "Piercing Staff",
+          "Tooltip": "Fires gravity-affected, piercing iron stingers"
+        },
+        "SorcerersHellstaff": {
+          "DisplayName": "Sorcerers Hellstaff",
+          "Tooltip": "[c/B6FF00:Autoshoots, dyeable] \nShoots two oval-shaped magic projectiles in quick succession \nHas a 16% chance of inflicting the [c/DA0205:On Fire!] debuff for 3 seconds \nHas a high critical hit chance"
+        },
+        "SorcerersHellstaffWhite": {
+          "DisplayName": "Sorcerers Hellstaff White",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots two oval-shaped magic projectiles in quick succession \nHas a 16% chance of inflicting the [c/DA0205:On Fire!] debuff for 3 seconds \nHas a high critical hit chance"
+        },
+        "SorcerersStaff": {
+          "DisplayName": "Sorcerers Staff",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots two oval-shaped magic projectiles in quick succession \nHas a high critical hit chance"
+        },
+        "TheWhisperingIceDonator": {
+          "DisplayName": "The Whispering Ice Donator",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots three icicles that inflict Frostburn for 3 seconds \n'Guard your darkest thoughts well, for they are the cracks through which the Nightmare crawls.' \n~~ Donator Item ~~"
+        },
+        "Tranquility": {
+          "DisplayName": "Tranquility",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots six oval-shaped rainbow projectiles three times in quick succession \nHas a high critical hit chance"
+        },
+        "CarbonDagger": {
+          "DisplayName": "Carbon Dagger",
+          "Tooltip": "[c/B6FF00:Autoswings, dyeable]\nThrows a medium-ranged Carbon Knife that deals more damage the closer you are to the target \nShortsword hits inflict [c/007700:Poison] debuff for 8 seconds\n[c/FF0000:Shortsword hits steal a small amount of life] \nShortsword hits grant the [c/FC3A3A:Rage] buff for 8 seconds"
+        },
+        "CarbonDaggerNihon": {
+          "DisplayName": "Carbon Dagger Nihon",
+          "Tooltip": "[c/B6FF00:Autoswings]\nThrows a medium-ranged Carbon Knife that deals more damage the closer you are to the target \nShortsword hits inflict [c/007700:Poison] debuff for 8 seconds\n[c/FF0000:Shortsword hits steal a small amount of life] \nShortsword hits grant the [c/FC3A3A:Rage] buff for 8 seconds"
+        },
+        "GoldenDagger": {
+          "DisplayName": "Golden Dagger",
+          "Tooltip": "[c/B6FF00:Autoswings]\nThrows two short-ranged golden knives in any direction, as well as one very fast dagger \nShortsword hits steal a small amount of life, and inflict the [c/007700:Poison] debuff for 10 seconds \nGolden knives do not steal life  \nGrants the [c/FC3A3A:Rage] buff for 8 seconds upon hitting an enemy with the Shortsword \nGrants the [c/FC8719:Inferno] buff for 6 seconds upon hitting an enemy with the Shortsword"
+        },
+        "OniDagger": {
+          "DisplayName": "Oni Dagger",
+          "Tooltip": "[c/B6FF00:Autoswings]\nThrows a vampire knife that deals more damage the closer you are to the target \nInflicts the [c/007700:Poison] debuff for 10 seconds on hit \n[c/FF0000:Steals a small amount of life] \nGrants the [c/FC3A3A:Rage] buff for 8 seconds upon hitting an enemy \nGrants the [c/FC8719:Inferno] buff for 6 seconds upon hitting an enemy"
+        },
+        "StonePlatedShortsword": {
+          "DisplayName": "Stone-Plated Shortsword",
+          "Tooltip": ""
+        },
+        "TheRainbowsCurse": {
+          "DisplayName": "The Rainbows Curse",
+          "Tooltip": "[c/B6FF00:Autoswings]\nThrows three medium-ranged rainbow knives in any direction, as well as one very fast dagger \nShortsword hits steal a small amount of life, and inflict the [c/007700:Poison] debuff for 12 seconds\nRainbow knives do not steal life \nGrants the [c/FC3A3A:Rage] buff for 10 seconds, and the [c/FC8719:Inferno] buff for 8 seconds upon hitting an enemy with the Shortsword"
+        },
+        "Wakizashi": {
+          "DisplayName": "Wakizashi",
+          "Tooltip": "Inflicts [c/007700:Poison] debuff for 5 seconds on hit"
+        },
+        "GoldenSlasher": {
+          "DisplayName": "Golden Slasher",
+          "Tooltip": "[c/B6FF00:Autoswings] \nShoots two homing golden orbs in a medium-sized spread on swing"
+        },
+        "RainbowClaymore": {
+          "DisplayName": "Rainbow Claymore",
+          "Tooltip": "[c/B6FF00:Autoswings] \nShoots three homing rainbow orbs in a large spread on swing"
+        },
+        "CarbonSword": {
+          "DisplayName": "Carbon Sword",
+          "Tooltip": "[c/B6FF00:Autoswings, dyeable]\nFires a stream of particles that deals damage three times\nInflicts [c/7B2D2F:Advanced Blood Loss] for 10 seconds when hit with the blade, dealing damage over time"
+        },
+        "CarbonSwordNihon": {
+          "DisplayName": "Carbon Sword Nihon",
+          "Tooltip": "[c/B6FF00:Autoswings, dyeable]\nFires a stream of particles that deals damage three times\nInflicts [c/7B2D2F:Advanced Blood Loss] for 10 seconds when hit with the blade, dealing damage over time"
+        },
+        "DemonsFury": {
+          "DisplayName": "Demons Fury",
+          "Tooltip": "[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 5 times, and regenerates 1 Mana with every hit\nInflicts [c/7B2D2F:Advanced Blood Loss] for 14 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up spikes from the ground, dealing damage with a 2% chance of granting a [c/EC566E:Souleater] stack\nHas an 8% chance to fire soul-absorbing shards, granting a stack of [c/EC566E:Souleater] when hit\nHaving 6 stacks of [c/EC566E:Souleater] restores 75 HP and Mana"
+        },
+        "DreamCatcher": {
+          "DisplayName": "Dream Catcher",
+          "Tooltip": "[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 8 times, and regenerates 1 Mana with every hit\nInflicts [c/806580:Bad Dream] for 16 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up [c/C4AB37:Midas]-inducing spikes from the ground, dealing damage with a 2% chance of granting a [c/FF52DC:Dream] stack\nHas a 10% chance to fire homing, soul-absorbing shards, healing for 20 HP and granting a stack of [c/FF52DC:Dream] when hit\nHaving 6 stacks of [c/FF52DC:Dream] restores 85 HP and Mana and puts you into an enraged state for 8 seconds, increasing melee damage dealt"
+        },
+        "GoldenFury": {
+          "DisplayName": "Golden Fury",
+          "Tooltip": "[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 6 times, and regenerates 1 Mana with every hit\nInflicts [c/7B2D2F:Advanced Blood Loss] for 14 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up [c/C4AB37:Midas]-inducing spikes from the ground, dealing damage with a 2% chance of granting an [c/D2D25A:Enrichment] stack\nHas a 10% chance to fire soul-absorbing shards, granting a stack of [c/D2D25A:Enrichment] when hit\nHaving 6 stacks of [c/D2D25A:Enrichment] restores 75 HP and Mana"
+        },
+        "ShimadaSword": {
+          "DisplayName": "Shimada Sword",
+          "Tooltip": "Inflicts [c/7B2D2F:Blood Loss] for 3 seconds on hit, dealing damage over time"
+        },
+        "StonePlatedKatana": {
+          "DisplayName": "Stone-Plated Katana",
+          "Tooltip": ""
+        },
+        "SpectralShredder": {
+          "DisplayName": "Spectral Shredder",
+          "Tooltip": "[c/B6FF00:Autoswings] \nPressing <right> fires a long-ranged Rainbow-Axe wall"
+        },
+        "TheRainbowDemon": {
+          "DisplayName": "The Rainbow Demon",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nUnleashes a barrage of rainbow waves \nDoes not require ammo \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "TheRainbowDemonClaymore": {
+          "DisplayName": "The Rainbow Demon Claymore",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nUnleashes a slow-moving barrage of homing rainbow balls \nDoes not require ammo \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "TheRainbowDemonMagic": {
+          "DisplayName": "The Rainbow Demon Magic",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nUnleashes a barrage of oval-shaped rainbow projectiles \nDoes not require mana \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "TheRainbowDemonRanged": {
+          "DisplayName": "The Rainbow Demon Ranged",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nUnleashes a barrage of rainbow arrows \nDoes not require ammo \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "TheRainbowDemonShredder": {
+          "DisplayName": "The Rainbow Demon Shredder",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nUnleashes a barrage of rainbow axes \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "TheRainbowDemonThrowing": {
+          "DisplayName": "The Rainbow Demon Throwing",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nUnleashes a barrage of rainbow daggers \nDoes not require ammo \nClass and projectiles fired can be changed via crafting \n[c/FF2B6E:Currently Unobtainable]"
+        },
+        "LunarBow": {
+          "DisplayName": "Lunar Bow",
+          "Tooltip": "[c/B6FF00:Autoshoots, doesn't require ammo]\nGrants the [c/13A2DA:Shattered Moon's Grace] buff when shooting, reducing fall speed\nUsing <right> while under max HP grants the [c/5EDF85:Shattered Moon's Blessing] buff, which has the following effects:\n - Heals the player rapidly for 2 seconds, but disables the use of items\n - Grants [c/9CE53B:Shattered Moon's Rejuvenation] after 2 seconds, healing 100 HP over 10 seconds\n[c/5EDF85:Shattered Moon's Blessing] has a cooldown of [c/CA4646:50 seconds] once the effect ends"
+        },
+        "LunarRainBow": {
+          "DisplayName": "Lunar Rain-Bow",
+          "Tooltip": "[c/B6FF00:Autoshoots, doesn't require ammo]\nGrants the [c/E6A6CF:Spectral Moon's Grace] buff when shooting, reducing fall speed and nullifying knockback \nUsing <right> while under max HP grants the [c/82E8E8:Spectral Moonlight] buff, which has the following effects:\n - Heals the player rapidly for 2 seconds and grants immunity, but disables the use of items\n - Grants [c/6DE5D8:Spectral Moon's Rejuvenation] after 2 seconds, healing 200 HP over 10 seconds and increasing ranged crit rate by 60\n[c/82E8E8:Spectral Moonlight] has a cooldown of [c/BF5E3B:50 seconds] once the effect ends"
+        },
+        "PiercingBow": {
+          "DisplayName": "Piercing Bow",
+          "Tooltip": "Converts Wooden Arrows into Piercing Arrows"
+        },
+        "DemonsBow": {
+          "DisplayName": "Demons Bow",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Hellfire Arrows (except with <right>) \nPressing <right> fires 6 demonic arrows in quick succession, but it has lower damage and a 2 second cooldown"
+        },
+        "GoldenKabuki": {
+          "DisplayName": "Golden Kabuki",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Holy Arrows (except with <right>) \nPressing <right> fires 16 spiritual, golden arrows in quick succession, but it has lower damage and a 1 second cooldown"
+        },
+        "Kabuki": {
+          "DisplayName": "Kabuki",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Hellfire Arrows (except with <right>) \nPressing <right> fires 8 demonic arrows in quick succession, but it has lower damage and a 1.2 second cooldown"
+        },
+        "RainBow": {
+          "DisplayName": "Rain-Bow",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots two Rainbow Arrows in quick succession (except with <right>) \nPressing <right> fires 18 Holy Arrows in quick succession, but it has  lower damage and a 1 second cooldown"
+        },
+        "StonePlatedBow": {
+          "DisplayName": "Stone-Plated Bow",
+          "Tooltip": "Doesn't use ammo\nAlways shoots Wooden Arrows"
+        },
+        "StormBow": {
+          "DisplayName": "Storm Bow",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Wooden Arrows (except with <right>) \nPressing <right> fires 6 Storm Arrows in quick succession, but it has lower damage and a 3 second cooldown"
+        },
+        "FoxPistol": {
+          "DisplayName": "Fox Pistol",
+          "Tooltip": "[c/B6FF00:Autoshoots, doesn't require ammo, dyeable]\nGrants the [c/D78624:Fox Mending] buff for 5 seconds, which regenerates HP and increases speed, but lowers damage by 12% \nUsing <right> increases damage and reduces use time, as well as: \n - Grants the [c/9E9E9E:Fox Break] debuff for 1 second, reducing movement speed \n - Grants the [c/732C73:Fox Wither] debuff for 1.3 seconds on self, and 4 seconds on hit enemies \n - [c/732C73:Fox Wither] debuff deals damage over time and nullifies the [c/D78624:Fox Mending] buff's regeneration"
+        },
+        "FoxPistolBlue": {
+          "DisplayName": "Fox Pistol Blue",
+          "Tooltip": "[c/B6FF00:Autoshoots, doesn't require ammo, dyeable]\nGrants the [c/37C8AB:Fox Mending] buff for 5 seconds, which regenerates HP and increases speed, but lowers damage by 12% \nUsing <right> increases damage and reduces use time, as well as: \n - Grants the [c/9E9E9E:Fox Break] debuff for 1 second, reducing movement speed \n - Grants the [c/732C73:Fox Wither] debuff for 1.3 seconds on self, and 4 seconds on hit enemies \n - [c/732C73:Fox Wither] debuff deals damage over time and nullifies the [c/37C8AB:Fox Mending] buff's regeneration"
+        },
+        "SpectralHowler": {
+          "DisplayName": "Spectral Howler",
+          "Tooltip": "[c/B6FF00:Autoshoots, doesn't require ammo]\nGrants the [c/AB2C2C:S][c/F3821B:p][c/E6AF31:e][c/63B465:c][c/82E8E8:t][c/9EF3EF:r][c/2BA0B5:a][c/734679:l ][c/AB2C2C:M][c/F3821B:e][c/E6AF31:n][c/63B465:d][c/82E8E8:i][c/9EF3EF:n][c/2BA0B5:g] buff for 7 seconds, which has the following effects:\n - Increases max HP by 200, regenerates HP, and increases movement speed, but lowers damage by 7% \nUsing <right> increases damage and reduces use time, as well as: \n - Grants the [c/8F77AF:Spectral Wither] debuff for 0.4 seconds, dealing damage over time and nullifying [c/AB2C2C:S][c/F3821B:p][c/E6AF31:e][c/63B465:c][c/82E8E8:t][c/9EF3EF:r][c/2BA0B5:a][c/734679:l ][c/AB2C2C:M][c/F3821B:e][c/E6AF31:n][c/63B465:d][c/82E8E8:i][c/9EF3EF:n][c/2BA0B5:g]'s regeneration\n - Inflicts the [c/AB2C2C:R][c/F3821B:a][c/E6AF31:i][c/63B465:n][c/82E8E8:b][c/9EF3EF:o][c/2BA0B5:w][c/734679:'s ][c/AB2C2C:W][c/F3821B:r][c/E6AF31:a][c/63B465:t][c/82E8E8:h] debuff on hit enemies for 8 seconds, dealing damage over time"
+        },
+        "DynasticFuser": {
+          "DisplayName": "Dynastic Fuser",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n30% chance to not consume ammo"
+        },
+        "DynasticFuserGolden": {
+          "DisplayName": "Dynastic Fuser Golden",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n55% chance to not consume ammo"
+        },
+        "FusedRainbow": {
+          "DisplayName": "Fused Rainbow",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nConverts Musket Balls into homing rainbow bullets"
+        },
+        "FusionDriver": {
+          "DisplayName": "Fusion Driver",
+          "Tooltip": "[c/B6FF00:Autoshoots]"
+        },
+        "ProtectionFuser": {
+          "DisplayName": "Protection Fuser",
+          "Tooltip": "[c/B6FF00:Autoshoots, dyeable] \n42% chance to not consume ammo"
+        },
+        "ProtectionFuserCarbonFiber": {
+          "DisplayName": "Protection Fuser Carbon Fiber",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n42% chance to not consume ammo"
+        },
+        "GoldenStinger": {
+          "DisplayName": "Golden Stinger",
+          "Tooltip": "[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots golden light blasts"
+        },
+        "LightGun": {
+          "DisplayName": "Light Gun",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nDoesn't require ammo \nShoots little light blasts"
+        },
+        "SpectralBlaster": {
+          "DisplayName": "Spectral Blaster",
+          "Tooltip": "[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots rainbow blasts"
+        },
+        "Taegeukgi": {
+          "DisplayName": "Taegeukgi",
+          "Tooltip": "[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots little light blasts"
+        },
+        "TheStinger": {
+          "DisplayName": "The Stinger",
+          "Tooltip": "[c/B6FF00:Autoshoots, dyeable]\nDoesn't require ammo\nShoots little light blasts"
+        },
+        "TheStingerBlackCat": {
+          "DisplayName": "The Stinger Black Cat",
+          "Tooltip": "[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots little light blasts"
+        },
+        "AugmentedUzi": {
+          "DisplayName": "Augmented Uzi",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n70% chance to not consume ammo \nShoots incredibly fast"
+        },
+        "CosmicHacker": {
+          "DisplayName": "Cosmic Uzi"
+          "Tooltip": "[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nConverts Musket Balls into homing Rainbow Bullets"
+        },
+        "MachinePistol": {
+          "DisplayName": "Machine Pistol",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast"
+        },
+        "MachinePistolGolden": {
+          "DisplayName": "Machine Pistol Golden",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast"
+        },
+        "Verano": {
+          "DisplayName": "Verano",
+          "Tooltip": "[c/B6FF00:Autoshoots, dyeable] \n80% chance to not consume ammo \nShoots incredibly fast"
+        },
+        "VeranoRime": {
+          "DisplayName": "Verano Rime",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast"
+        },
+        "GoddessRevolver": {
+          "DisplayName": "Goddess Revolver",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots 6 bullets in quick succession \n50% chance to not consume ammo \nConverts Musket Balls into High Velocity Bullets"
+        },
+        "Peaceforcer": {
+          "DisplayName": "Peaceforcer",
+          "Tooltip": "[c/B6FF00:Autoshoots, dyeable] \nShoots 6 bullets in quick succession \n50% chance to not consume ammo \nConverts Musket Balls into High Velocity Bullets"
+        },
+        "PeaceforcerVanHelsing": {
+          "DisplayName": "Peaceforcer Van Helsing",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots 6 bullets in quick succession \n50% chance to not consume ammo \nConverts Musket Balls into High Velocity Bullets"
+        },
+        "Peacegunner": {
+          "DisplayName": "Peacegunner",
+          "Tooltip": "[c/B6FF00:Autoshoots, dyeable]"
+        },
+        "PeacegunnerAmerican": {
+          "DisplayName": "Peacegunner American",
+          "Tooltip": "[c/B6FF00:Autoshoots]"
+        },
+        "Peacekeeper": {
+          "DisplayName": "Peacekeeper",
+          "Tooltip": "[c/B6FF00:Autoshoots]"
+        },
+        "Unity": {
+          "DisplayName": "Unity",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nShoots 6 bullets in quick succession \n60% chance to not consume ammo \nConverts Musket Balls into homing rainbow bullets"
+        },
+        "GoldenPulse": {
+          "DisplayName": "Golden Pulse",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into golden Pulse Bullets"
+        },
+        "Graffiti": {
+          "DisplayName": "Graffiti",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nConverts Musket Balls into homing Rainbow Bullets"
+        },
+        "PulsePistol": {
+          "DisplayName": "Pulse Pistol",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n70% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into Pulse Bullets"
+        },
+        "PulseSprayer": {
+          "DisplayName": "Pulse Sprayer",
+          "Tooltip": "[c/B6FF00:Autoshoots, dyeable] \n80% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into dark blue Pulse Bullets"
+        },
+        "PulseSprayerCadet": {
+          "DisplayName": "Pulse Sprayer Cadet",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into Pulse Bullets"
+        },
+        "PunksPulse": {
+          "DisplayName": "Punks Pulse",
+          "Tooltip": "[c/B6FF00:Autoshoots, dyeable] \n70% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into Pulse Bullets"
+        },
+        "PunksPulseUltraviolet": {
+          "DisplayName": "Punks Pulse Ultraviolet",
+          "Tooltip": "[c/B6FF00:Autoshoots] \n70% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into pink Pulse Bullets"
+        },
+        "Depriver": {
+          "DisplayName": "Depriver",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nFires a spread of 8 bullets \nUsing <right> grants the [c/8A8A8A:Ultracharging] buff, which has the following effects:\n - After 2 seconds of not being able to use items, grants the [c/AB2C2C:U][c/F3821B:l][c/E6AF31:t][c/63B465:r][c/82E8E8:a][c/9EF3EF:c][c/2BA0B5:h][c/734679:a][c/AB2C2C:r][c/F3821B:g][c/E6AF31:e] buff\n - [c/AB2C2C:U][c/F3821B:l][c/E6AF31:t][c/63B465:r][c/82E8E8:a][c/9EF3EF:c][c/2BA0B5:h][c/734679:a][c/AB2C2C:r][c/F3821B:g][c/E6AF31:e] increases damage dealt by Color Splasher by 12%, and reduces Color Splasher's use time by 20% \n[c/AB2C2C:U][c/F3821B:l][c/E6AF31:t][c/63B465:r][c/82E8E8:a][c/9EF3EF:c][c/2BA0B5:h][c/734679:a][c/AB2C2C:r][c/F3821B:g][c/E6AF31:e] has a cooldown of [c/CA4646:40 seconds] once the effect ends\nConverts Musket Balls into homing Rainbow Bullets \nOnly uses one Bullet per use"
+        },
+        "GoldenShotgun": {
+          "DisplayName": "Golden Shotgun",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nFires a spread of 7 bullets \nUsing <right> grants the [c/8A8A8A:Hypercharging] buff, which has the following effects:\n - After 2 seconds of not being able to use items, grants the [c/FF9300:Hypercharge] buff\n - [c/FF9300:Hypercharge] increases damage dealt by Golden Shotgun by 12%, and reduces Golden Shotgun's use time by 20% \n[c/FF9300:Hypercharge] has a cooldown of [c/CA4646:40 seconds] once the effect ends\nOnly uses one Bullet per use"
+        },
+        "HellfireShotgun": {
+          "DisplayName": "Hellfire Shotgun",
+          "Tooltip": "Fires a spread of 5 bullets \nOnly uses one Bullet per use"
+        },
+        "HellkinShotgun": {
+          "DisplayName": "Hellkin Shotgun",
+          "Tooltip": "[0/B6FF00:Autoshoots, dyeable] \nFires a spread of 6 bullets \nUsing <right> grants the [c/8A8A8A:Hypercharging] buff, which has the following effects:\n - After 2 seconds of not being able to use items, grants the [c/FF9300:Hypercharge] buff\n - [c/FF9300:Hypercharge] increases damage dealt by Hellraiser by 12%, and reduces Hellraiser's use time by 20% \n[c/FF9300:Hypercharge] has a cooldown of [c/CA4646:40 seconds] once the effect ends\nOnly uses one Bullet per use"
+        },
+        "HellkinShotgunDracula": {
+          "DisplayName": "Hellkin Shotgun Dracula",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nFires a spread of 6 bullets \nUsing <right> grants the [c/8A8A8A:Hypercharging] buff, which has the following effects:\n - After 2 seconds of not being able to use items, grants the [c/FF9300:Hypercharge] buff\n - [c/FF9300:Hypercharge] increases damage dealt by Hellraiser by 12%, and reduces Hellraiser's use time by 20% \n[c/FF9300:Hypercharge] has a cooldown of [c/CA4646:40 seconds] once the effect ends\nOnly uses one Bullet per use"
+        },
+        "HellshiverGun": {
+          "DisplayName": "Hellshiver Gun",
+          "Tooltip": "[c/B6FF00:Autoshoots, dyeable] \nFires a spread of 6 bullets \nOnly uses one Bullet per use"
+        },
+        "HellshiverGunHellfire": {
+          "DisplayName": "Hellshiver Gun Hellfire",
+          "Tooltip": "[c/B6FF00:Autoshoots] \nFires a spread of 6 bullets \nOnly uses one Bullet per use"
+        },
+        "GoddessSummoner": {
+          "DisplayName": "Goddess Summoner",
+          "Tooltip": "Summons a golden servant to fight for you"
+        },
+        "ColorfulSolution": {
+          "DisplayName": "Colorful Solution",
+          "Tooltip": "Doesn't consume on use \n[c/B6FF00:Autothrows] \nInflicts [c/401440:Venom] for 12 seconds on hit"
+        },
+        "CarbonShuriken": {
+          "DisplayName": "Carbon Shuriken",
+          "Tooltip": "[c/B6FF00:Autothrows, dyeable]\nThrows 3 fast-flying Shurikens at once"
+        },
+        "CarbonShurikenNihon": {
+          "DisplayName": "Carbon Shuriken Nihon",
+          "Tooltip": "[c/B6FF00:Autothrows]\nThrows 3 fast-flying Shurikens at once"
+        },
+        "DemonSlayer": {
+          "DisplayName": "Demon Slayer",
+          "Tooltip": "[c/B6FF00:Autothrows]\nThrows 4 fast-flying Shurikens at once"
+        },
+        "HerosShuriken": {
+          "DisplayName": "Hero's Shuriken",
+          "Tooltip": ""
+        },
+        "SparklingDemon": {
+          "DisplayName": "Sparkling Demon",
+          "Tooltip": "[c/B6FF00:Autothrows]\nThrows 5 fast-flying Shurikens at once"
+        },
+        "StonePlatedShuriken": {
+          "DisplayName": "Stone-Plated Shuriken",
+          "Tooltip": ""
+        },
+        "TheSpinningRainbow": {
+          "DisplayName": "The Spinning Rainbow",
+          "Tooltip": "[c/B6FF00:Autothrows]\nThrows 6 Shurikens at once"
+        }
+      },
+      "Projectiles": {
+        "DemonArrow.DisplayName": "Demon Arrow",
+        "GoldenSpiritArrow.DisplayName": "Golden Spirit Arrow",
+        "LegendaryArrow.DisplayName": "Legendary Arrow",
+        "PiercingArrow.DisplayName": "Piercing Arrow",
+        "RainbowArrow.DisplayName": "Rainbow Arrow",
+        "StormArrow.DisplayName": "Storm Arrow",
+        "ColorfulSolution.DisplayName": "Colorful Solution",
+        "BlueBolt.DisplayName": "Blue Bolt",
+        "BlueBoltRMB.DisplayName": "Blue Bolt R M B",
+        "OrangeBolt.DisplayName": "Orange Bolt",
+        "OrangeBoltRMB.DisplayName": "Orange Bolt R M B",
+        "RainbowBolt.DisplayName": "Rainbow Bolt",
+        "RainbowBoltRMB.DisplayName": "Rainbow Bolt R M B",
+        "GoldenOrb.DisplayName": "Golden Orb",
+        "IllusoryMirrorProj.DisplayName": "Illusory Mirror Proj",
+        "IllusoryMirrorRMB.DisplayName": "Illusory Mirror R M B",
+        "SpectralIllusionProj.DisplayName": "Spectral Illusion Proj",
+        "SpectralIllusionRMB.DisplayName": "Spectral Illusion R M B",
+        "IronStinger.DisplayName": "Iron Stinger",
+        "CoalescenceBeam.DisplayName": "Coalescence Beam",
+        "GoldenBeam.DisplayName": "Golden Beam",
+        "HellfireBeamProj.DisplayName": "Hellfire Beam Proj",
+        "RainbowBeam.DisplayName": "Rainbow Beam",
+        "VengeanceBeam.DisplayName": "Vengeance Beam",
+        "GoldenLightBlast.DisplayName": "Golden Light Blast",
+        "LightBlast.DisplayName": "Light Blast",
+        "RainbowLightBlast.DisplayName": "Rainbow Light Blast",
+        "LunarBolt.DisplayName": "Lunar Bolt",
+        "GoddessMinion.DisplayName": "Goddess Minion",
+        "FoxPet.DisplayName": "Fox Pet",
+        "MechanicalTooth.DisplayName": "Mechanical Tooth",
+        "PinkFoxPet.DisplayName": "Pink Fox Pet",
+        "WindUpFabu.DisplayName": "Wind Up Fabu",
+        "PulseBullet.DisplayName": "Pulse Bullet",
+        "PulseBulletBlue.DisplayName": "Pulse Bullet Blue",
+        "PulseBulletGolden.DisplayName": "Pulse Bullet Golden",
+        "PulseBulletPink.DisplayName": "Pulse Bullet Pink",
+        "RainbowAxeBeam.DisplayName": "Rainbow Axe Beam",
+        "RainbowBullet.DisplayName": "Rainbow Bullet",
+        "RainbowDemonArrow.DisplayName": "Rainbow Demon Arrow",
+        "RainbowDemonClaymoreProj.DisplayName": "Rainbow Demon Claymore Proj",
+        "RainbowDemonKnife.DisplayName": "Rainbow Demon Knife",
+        "RainbowDemonMagicBall.DisplayName": "Rainbow Demon Magic Ball",
+        "RainbowDemonMelee.DisplayName": "Rainbow Demon Melee",
+        "RainbowDemonShredderProj.DisplayName": "Rainbow Demon Shredder Proj",
+        "RainbowOrb.DisplayName": "Rainbow Orb",
+        "BloodDrop.DisplayName": "Blood Drop",
+        "DemonProjRMB.DisplayName": "Demon Proj R M B",
+        "DemonProjTwo.DisplayName": "Demon Proj Two",
+        "DemonWave.DisplayName": "Demon Wave",
+        "DreamCatcherProjRMB.DisplayName": "Dream Catcher Proj R M B",
+        "DreamCatcherProjTwo.DisplayName": "Dream Catcher Proj Two",
+        "DreamCatcherWave.DisplayName": "Dream Catcher Wave",
+        "GoldenFuryProjRMB.DisplayName": "Golden Fury Proj R M B",
+        "GoldenFuryProjTwo.DisplayName": "Golden Fury Proj Two",
+        "GoldenFuryWave.DisplayName": "Golden Fury Wave",
+        "RainbowClump.DisplayName": "Rainbow Clump",
+        "ShimadaWave.DisplayName": "Shimada Wave",
+        "ShimadaWaveNihon.DisplayName": "Shimada Wave Nihon",
+        "CarbonKnife.DisplayName": "Carbon Knife",
+        "CarbonKnifeNihon.DisplayName": "Carbon Knife Nihon",
+        "DeathBlossom.DisplayName": "Death Blossom",
+        "FumaShuriken.DisplayName": "Fuma Shuriken",
+        "GoldenKnife.DisplayName": "Golden Knife",
+        "RainbowKnife.DisplayName": "Rainbow Knife",
+        "Substitute.DisplayName": "Substitute",
+        "CarbonShuriken.DisplayName": "Carbon Shuriken",
+        "CarbonShurikenNihon.DisplayName": "Carbon Shuriken Nihon",
+        "HerosShuriken.DisplayName": "Heros Shuriken",
+        "OniSlayer.DisplayName": "Oni Slayer",
+        "SparklingDemon.DisplayName": "Sparkling Demon",
+        "StonePlatedShurikenProj.DisplayName": "Stone Plated Shuriken Proj",
+        "GoldenStaffProj.DisplayName": "Golden Staff Proj",
+        "NatureStaffProj.DisplayName": "Nature Staff Proj",
+        "SorcerousHellstaffProj.DisplayName": "Sorcerous Hellstaff Proj",
+        "SorcerousHellstaffProjWhite.DisplayName": "Sorcerous Hellstaff Proj White",
+        "SorcerousStaffProj.DisplayName": "Sorcerous Staff Proj",
+        "TranquilityProj.DisplayName": "Tranquility Proj",
+        "SpectralMoonBolt.DisplayName": "Spectral Moon Bolt",
+        "TheSpinningRainbow.DisplayName": "The Spinning Rainbow",
+        "TheWhisperingIcicle.DisplayName": "The Whispering Icicle",
+        "WishNeedle.DisplayName": "Wish Needle"
+      }
+    }
+  }
+}

@@ -11,8 +11,8 @@ public class PulsePistol : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Pulse Pistol");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n70% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into Pulse Bullets");
+		// DisplayName.SetDefault("Pulse Pistol");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n70% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into Pulse Bullets");
 	}
 
 	public override void SetDefaults()

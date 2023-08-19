@@ -8,8 +8,8 @@ public class HerosShuriken : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Hero's Shuriken");
-		Tooltip.SetDefault("Does not consume on use \nThrows 3 fast-flying Shurikens at once");
+		// DisplayName.SetDefault("Hero's Shuriken");
+		// Tooltip.SetDefault("Does not consume on use \nThrows 3 fast-flying Shurikens at once");
 	}
 
 	public override void SetDefaults()

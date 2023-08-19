@@ -10,8 +10,8 @@ public class SoulofWisdom : ModItem
 	public override void SetStaticDefaults()
 	{
 		Main.RegisterItemAnimation(Type, new DrawAnimationVertical(5, 4));
-		DisplayName.SetDefault("Soul of Wisdom");
-		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\n'The essence of everlasting knowledge'");
+		// DisplayName.SetDefault("Soul of Wisdom");
+		// Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\n'The essence of everlasting knowledge'");
 	}
 
 	public override void SetDefaults()

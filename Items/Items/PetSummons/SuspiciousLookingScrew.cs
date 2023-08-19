@@ -9,7 +9,7 @@ public class SuspiciousLookingScrew : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/FFAF4F:Pet Summoning Item]\nSummons Mechanical Teeth to follow you around \n[c/46FFFF:~~ Developer Pet ~~]");
+		// Tooltip.SetDefault("[c/FFAF4F:Pet Summoning Item]\nSummons Mechanical Teeth to follow you around \n[c/46FFFF:~~ Developer Pet ~~]");
 	}
 
 	public override void SetDefaults()

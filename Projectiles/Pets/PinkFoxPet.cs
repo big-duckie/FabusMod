@@ -18,7 +18,7 @@ public class PinkFoxPet : ModProjectile
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Pink Fox Pet");
+		// DisplayName.SetDefault("Pink Fox Pet");
 	}
 
 	public override bool PreAI()

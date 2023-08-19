@@ -11,7 +11,7 @@ public class GoldenPulse : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into golden Pulse Bullets");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into golden Pulse Bullets");
 	}
 
 	public override void SetDefaults()

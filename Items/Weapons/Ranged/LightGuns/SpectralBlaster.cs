@@ -10,8 +10,8 @@ public class SpectralBlaster : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Spectral Blaster");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots rainbow blasts");
+		// DisplayName.SetDefault("Spectral Blaster");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots rainbow blasts");
 	}
 
 	public override void SetDefaults()

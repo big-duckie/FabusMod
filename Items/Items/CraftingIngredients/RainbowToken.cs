@@ -8,7 +8,7 @@ public class RainbowToken : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nUsed to convert the raw power of rainbows into weapons");
+		// Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nUsed to convert the raw power of rainbows into weapons");
 	}
 
 	public override void SetDefaults()

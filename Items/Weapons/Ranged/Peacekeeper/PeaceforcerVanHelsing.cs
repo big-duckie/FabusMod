@@ -10,8 +10,8 @@ public class PeaceforcerVanHelsing : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Silencer - Van Helsing");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots 6 bullets in quick succession \n50% chance to not consume ammo \nConverts Musket Balls into High Velocity Bullets");
+		// DisplayName.SetDefault("The Silencer - Van Helsing");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots 6 bullets in quick succession \n50% chance to not consume ammo \nConverts Musket Balls into High Velocity Bullets");
 	}
 
 	public override void SetDefaults()

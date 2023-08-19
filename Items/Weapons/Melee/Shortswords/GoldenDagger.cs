@@ -10,8 +10,8 @@ public class GoldenDagger : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Dagger");
-		Tooltip.SetDefault("[c/B6FF00:Autoswings]\nThrows two short-ranged golden knives in any direction, as well as one very fast dagger \nShortsword hits steal a small amount of life, and inflict the [c/007700:Poison] debuff for 10 seconds \nGolden knives do not steal life  \nGrants the [c/FC3A3A:Rage] buff for 8 seconds upon hitting an enemy with the Shortsword \nGrants the [c/FC8719:Inferno] buff for 6 seconds upon hitting an enemy with the Shortsword");
+		// DisplayName.SetDefault("Golden Dagger");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings]\nThrows two short-ranged golden knives in any direction, as well as one very fast dagger \nShortsword hits steal a small amount of life, and inflict the [c/007700:Poison] debuff for 10 seconds \nGolden knives do not steal life  \nGrants the [c/FC3A3A:Rage] buff for 8 seconds upon hitting an enemy with the Shortsword \nGrants the [c/FC8719:Inferno] buff for 6 seconds upon hitting an enemy with the Shortsword");
 	}
 
 	public override void SetDefaults()
@@ -62,9 +62,9 @@ public class GoldenDagger : ModItem
 		return true;
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
-		int healingAmount = damage / 17;
+		int healingAmount = damageDone / 17;
 		player.statLife += healingAmount;
 		player.HealEffect(healingAmount, true);
         target.AddBuff(20, 600, false);

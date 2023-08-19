@@ -8,7 +8,7 @@ public class RainbowStation : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Used to craft rainbow weapons");
+		// Tooltip.SetDefault("Used to craft rainbow weapons");
 	}
 
 	public override void SetDefaults()

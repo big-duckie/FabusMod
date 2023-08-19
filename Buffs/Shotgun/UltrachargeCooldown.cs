@@ -7,8 +7,8 @@ public class UltrachargeCooldown : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Ultracharge Cooldown");
-        Description.SetDefault("Unable to Ultracharge!");
+        // DisplayName.SetDefault("Ultracharge Cooldown");
+        // Description.SetDefault("Unable to Ultracharge!");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

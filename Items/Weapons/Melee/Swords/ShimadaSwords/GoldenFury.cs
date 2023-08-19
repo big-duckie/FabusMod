@@ -9,7 +9,7 @@ public class GoldenFury : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 6 times, and regenerates 1 Mana with every hit\nInflicts [c/7B2D2F:Advanced Blood Loss] for 14 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up [c/C4AB37:Midas]-inducing spikes from the ground, dealing damage with a 2% chance of granting an [c/D2D25A:Enrichment] stack\nHas a 10% chance to fire soul-absorbing shards, granting a stack of [c/D2D25A:Enrichment] when hit\nHaving 6 stacks of [c/D2D25A:Enrichment] restores 75 HP and Mana");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings]\nFires a beam of particles that ignores immunity frames, pierces 6 times, and regenerates 1 Mana with every hit\nInflicts [c/7B2D2F:Advanced Blood Loss] for 14 seconds when hit with the blade, dealing damage over time\n<right> uses 40 Mana to bring up [c/C4AB37:Midas]-inducing spikes from the ground, dealing damage with a 2% chance of granting an [c/D2D25A:Enrichment] stack\nHas a 10% chance to fire soul-absorbing shards, granting a stack of [c/D2D25A:Enrichment] when hit\nHaving 6 stacks of [c/D2D25A:Enrichment] restores 75 HP and Mana");
 	}
 
 	public override void SetDefaults()
@@ -31,7 +31,7 @@ public class GoldenFury : ModItem
 		Item.autoReuse = true;
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		target.AddBuff(ModContent.BuffType<Buffs.ShimadaSword.AdvancedBloodLoss>(), 840, false);
 	}

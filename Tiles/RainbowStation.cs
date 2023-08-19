@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -16,8 +17,8 @@ public class RainbowStation : ModTile
 		TileObjectData.newTile.CopyFrom(TileObjectData.Style5x4);
 		TileObjectData.addTile(Type);
         AnimationFrameHeight = 72;
-		ModTranslation name = this.CreateMapEntryName(null);
-		name.SetDefault("Rainbow Station");
+		LocalizedText name = this.CreateMapEntryName();
+		// name.SetDefault("Rainbow Station");
         AddMapEntry(new Color(113, 85, 122), name);
 	}
 

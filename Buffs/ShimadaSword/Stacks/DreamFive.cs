@@ -7,8 +7,8 @@ public class DreamFive : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Dream Sap - Five");
-        Description.SetDefault(" - Accumulating dreams!\n - A stack of 6 will heal your HP and Mana");
+        // DisplayName.SetDefault("Dream Sap - Five");
+        // Description.SetDefault(" - Accumulating dreams!\n - A stack of 6 will heal your HP and Mana");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = false;
     }

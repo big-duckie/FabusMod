@@ -11,8 +11,8 @@ public class PunksPulse : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Punk's Pulse");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \n70% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into Pulse Bullets");
+		// DisplayName.SetDefault("Punk's Pulse");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \n70% chance to not consume ammo \nShoots incredibly fast \nConverts Musket Balls into Pulse Bullets");
 	}
 
 	public override void SetDefaults()

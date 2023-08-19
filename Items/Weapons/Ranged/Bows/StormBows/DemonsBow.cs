@@ -9,8 +9,8 @@ public class DemonsBow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Demon's Bow");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Hellfire Arrows (except with <right>) \nPressing <right> fires 6 demonic arrows in quick succession, but it has lower damage and a 2 second cooldown");
+		// DisplayName.SetDefault("Demon's Bow");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots Hellfire Arrows (except with <right>) \nPressing <right> fires 6 demonic arrows in quick succession, but it has lower damage and a 2 second cooldown");
 	}
 
 	public override void SetDefaults()

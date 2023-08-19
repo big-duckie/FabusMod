@@ -7,8 +7,8 @@ public class ShatteredMoonsGrace : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Shattered Moon's Grace");
-        Description.SetDefault(" - Falling slowly!");
+        // DisplayName.SetDefault("Shattered Moon's Grace");
+        // Description.SetDefault(" - Falling slowly!");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = true;
     }

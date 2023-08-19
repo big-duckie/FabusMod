@@ -11,8 +11,8 @@ public class Graffiti : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Graffiti");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nConverts Musket Balls into homing Rainbow Bullets");
+		// DisplayName.SetDefault("Graffiti");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nConverts Musket Balls into homing Rainbow Bullets");
 	}
 
 	public override void SetDefaults()

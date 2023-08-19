@@ -10,8 +10,8 @@ public class PeacegunnerAmerican : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Solitude - American");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots]");
+		// DisplayName.SetDefault("Solitude - American");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots]");
 	}
 
 	public override void SetDefaults()

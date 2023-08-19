@@ -9,7 +9,7 @@ public class Wakizashi : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Inflicts [c/007700:Poison] debuff for 5 seconds on hit");
+		// Tooltip.SetDefault("Inflicts [c/007700:Poison] debuff for 5 seconds on hit");
 	}
 
 	public override void SetDefaults()
@@ -40,7 +40,7 @@ public class Wakizashi : ModItem
 		}
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		target.AddBuff(20, 300, false);
 	}

@@ -10,8 +10,8 @@ public class TheRainbowsCurse : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Rainbow's Curse");
-		Tooltip.SetDefault("[c/B6FF00:Autoswings]\nThrows three medium-ranged rainbow knives in any direction, as well as one very fast dagger \nShortsword hits steal a small amount of life, and inflict the [c/007700:Poison] debuff for 12 seconds\nRainbow knives do not steal life \nGrants the [c/FC3A3A:Rage] buff for 10 seconds, and the [c/FC8719:Inferno] buff for 8 seconds upon hitting an enemy with the Shortsword");
+		// DisplayName.SetDefault("The Rainbow's Curse");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings]\nThrows three medium-ranged rainbow knives in any direction, as well as one very fast dagger \nShortsword hits steal a small amount of life, and inflict the [c/007700:Poison] debuff for 12 seconds\nRainbow knives do not steal life \nGrants the [c/FC3A3A:Rage] buff for 10 seconds, and the [c/FC8719:Inferno] buff for 8 seconds upon hitting an enemy with the Shortsword");
 	}
 
 	public override void SetDefaults()
@@ -74,9 +74,9 @@ public class TheRainbowsCurse : ModItem
 		return true;
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
-		int healingAmount = damage / 16;
+		int healingAmount = damageDone / 16;
 		player.statLife += healingAmount;
 		player.HealEffect(healingAmount, true);
 		target.AddBuff(20, 720, false);

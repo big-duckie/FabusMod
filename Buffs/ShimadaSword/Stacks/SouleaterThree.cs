@@ -7,8 +7,8 @@ public class SouleaterThree : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Souleater - Three");
-        Description.SetDefault(" - Accumulating souls!\n - A stack of 6 will heal your HP and Mana");
+        // DisplayName.SetDefault("Souleater - Three");
+        // Description.SetDefault(" - Accumulating souls!\n - A stack of 6 will heal your HP and Mana");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = false;
     }

@@ -9,8 +9,8 @@ public class StonePlatedShuriken : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Stone-Plated Shuriken");
-		Tooltip.SetDefault("Does not consume on use");
+		// DisplayName.SetDefault("Stone-Plated Shuriken");
+		// Tooltip.SetDefault("Does not consume on use");
 	}
 
 	public override void SetDefaults()

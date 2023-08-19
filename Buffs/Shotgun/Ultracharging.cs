@@ -7,8 +7,8 @@ public class Ultracharging : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Ultracharging...");
-        Description.SetDefault("- Charging your weapon!\n - Can't use items!");
+        // DisplayName.SetDefault("Ultracharging...");
+        // Description.SetDefault("- Charging your weapon!\n - Can't use items!");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

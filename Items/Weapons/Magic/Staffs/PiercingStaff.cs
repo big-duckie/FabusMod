@@ -8,8 +8,8 @@ public class PiercingStaff : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Piercing Staff");
-		Tooltip.SetDefault("Fires gravity-affected, piercing iron stingers");
+		// DisplayName.SetDefault("Piercing Staff");
+		// Tooltip.SetDefault("Fires gravity-affected, piercing iron stingers");
 		Item.staff[Item.type] = true;
 	}
 

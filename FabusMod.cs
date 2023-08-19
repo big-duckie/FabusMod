@@ -7,7 +7,7 @@ namespace FabusMod;
 
 public class FabusMod : Mod
 {
-	public override void AddRecipeGroups()
+	/*public override void AddRecipeGroups()*//* tModPorter Note: Removed. Use ModSystem.AddRecipeGroups *//*
 	{
 		RecipeGroup group = new(() => Language.GetTextValue("LegacyMisc.37") + " Fox Ears", new int[3] {
             Find<ModItem>("FoxEars").Type,
@@ -104,13 +104,13 @@ public class FabusMod : Mod
 		RecipeGroup group16 = new(() => Language.GetTextValue("LegacyMisc.37") + " Demonite Bar", new int[2] { 57, 1257 });
 		RecipeGroup.RegisterGroup("FabusMod:DemoniteBar", group16);
 
-		/*RecipeGroup group17 = new(() => Language.GetTextValue("LegacyMisc.37") + " Elemental Water Staff", new int[4] {
+		*//*RecipeGroup group17 = new(() => Language.GetTextValue("LegacyMisc.37") + " Elemental Water Staff", new int[4] {
             Find<ModItem>("ElementalWaterStaff").Type,
             Find<ModItem>("ElementalWaterStaffRed").Type,
             Find<ModItem>("ElementalWaterStaffGreen").Type,
             Find<ModItem>("ElementalWaterStaffYellow").Type
 		});
-		RecipeGroup.RegisterGroup("FabusMod:ElementalWaterStaff", group17);*/
+		RecipeGroup.RegisterGroup("FabusMod:ElementalWaterStaff", group17);*//*
 
 		RecipeGroup group18 = new(() => Language.GetTextValue("LegacyMisc.37") + " Gold Bar", new int[2] { 19, 706 });
 		RecipeGroup.RegisterGroup("FabusMod:GoldBar", group18);
@@ -125,7 +125,7 @@ public class FabusMod : Mod
 		RecipeGroup.RegisterGroup("FabusMod:ProtectionFuser", group20);
 
 		RecipeGroup group21 = new(() => Language.GetTextValue("LegacyMisc.37") + " Orichalcum Bar", new int[2] { 1191, 382 });
-		RecipeGroup.RegisterGroup("FabusMod:OrichalcumBar", group21);
+		RecipeGroup.RegisterGroup("FabusMod:MythrilBar", group21);
 
 		RecipeGroup group22 = new(() => Language.GetTextValue("LegacyMisc.37") + " Verano", new int[2] {
             Find<ModItem>("Verano").Type,
@@ -134,7 +134,7 @@ public class FabusMod : Mod
 		RecipeGroup.RegisterGroup("FabusMod:Verano", group22);
 	}
 
-	public override void AddRecipes()
+	public override void AddRecipes()*//* tModPorter Note: Removed. Use ModSystem.AddRecipes *//*
 	{
 		Recipe val = Recipe.Create(ModContent.ItemType<Items.Vanity.FoxEars.FoxEars>());
 		val.AddRecipeGroup("FabusMod:FoxEars", 1);
@@ -153,5 +153,5 @@ public class FabusMod : Mod
 		val3.AddIngredient(ItemID.SkyBlueDye, 1);
 		val3.AddTile(TileID.DyeVat);
 		val3.Register();
-	}
+	}*/
 }

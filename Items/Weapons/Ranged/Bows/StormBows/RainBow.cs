@@ -9,8 +9,8 @@ public class RainBow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Rain-Bow");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots two Rainbow Arrows in quick succession (except with <right>) \nPressing <right> fires 18 Holy Arrows in quick succession, but it has  lower damage and a 1 second cooldown");
+		// DisplayName.SetDefault("Rain-Bow");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't use ammo \nAlways shoots two Rainbow Arrows in quick succession (except with <right>) \nPressing <right> fires 18 Holy Arrows in quick succession, but it has  lower damage and a 1 second cooldown");
 	}
 
 	public override void SetDefaults()

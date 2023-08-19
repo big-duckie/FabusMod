@@ -10,8 +10,8 @@ public class MachinePistolGolden : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Machine Pistol");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast");
+		// DisplayName.SetDefault("Golden Machine Pistol");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast");
 	}
 
 	public override void SetDefaults()

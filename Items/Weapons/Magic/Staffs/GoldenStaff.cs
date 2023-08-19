@@ -10,7 +10,7 @@ public class GoldenStaff : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots four oval-shaped magic projectiles twice in quick succession \nHas a high critical hit chance");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots four oval-shaped magic projectiles twice in quick succession \nHas a high critical hit chance");
 		Item.staff[Type] = true;
 	}
 

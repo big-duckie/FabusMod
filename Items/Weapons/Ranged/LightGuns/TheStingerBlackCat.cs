@@ -10,8 +10,8 @@ public class TheStingerBlackCat : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Stinger - Black Cat");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots little light blasts");
+		// DisplayName.SetDefault("The Stinger - Black Cat");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots little light blasts");
 	}
 
 	public override void SetDefaults()

@@ -9,7 +9,7 @@ public class GoldenHamaxe : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Hamaxe");
+		// DisplayName.SetDefault("Golden Hamaxe");
 	}
 
 	public override void SetDefaults()

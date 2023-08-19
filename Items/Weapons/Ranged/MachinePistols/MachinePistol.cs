@@ -10,8 +10,8 @@ public class MachinePistol : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Machine Pistol");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast ");
+		// DisplayName.SetDefault("Machine Pistol");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nShoots incredibly fast ");
 	}
 
 	public override void SetDefaults()
@@ -53,7 +53,7 @@ public class MachinePistol : ModItem
 	public override void AddRecipes()
 	{
 		CreateRecipe()
-			.AddRecipeGroup("FabusMod:OrichalcumBar", 16)
+			.AddRecipeGroup("FabusMod:MythrilBar", 16)
 			.AddIngredient(ItemID.Amethyst, 5)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();

@@ -8,8 +8,8 @@ public class SorcerersHellstaff : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Sorcerer's Hellstaff");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \nShoots two oval-shaped magic projectiles in quick succession \nHas a 16% chance of inflicting the [c/DA0205:On Fire!] debuff for 3 seconds \nHas a high critical hit chance");
+		// DisplayName.SetDefault("Sorcerer's Hellstaff");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \nShoots two oval-shaped magic projectiles in quick succession \nHas a 16% chance of inflicting the [c/DA0205:On Fire!] debuff for 3 seconds \nHas a high critical hit chance");
 		Item.staff[Item.type] = true;
 	}
 

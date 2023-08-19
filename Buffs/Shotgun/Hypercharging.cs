@@ -7,8 +7,8 @@ public class Hypercharging : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Hypercharging...");
-        Description.SetDefault("- Charging your weapon!\n - Can't use items!");
+        // DisplayName.SetDefault("Hypercharging...");
+        // Description.SetDefault("- Charging your weapon!\n - Can't use items!");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

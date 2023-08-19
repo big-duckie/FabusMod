@@ -10,8 +10,8 @@ public class GoldenShotgun : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Shotgun");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nFires a spread of 7 bullets \nUsing <right> grants the [c/8A8A8A:Hypercharging] buff, which has the following effects:\n - After 2 seconds of not being able to use items, grants the [c/FF9300:Hypercharge] buff\n - [c/FF9300:Hypercharge] increases damage dealt by Golden Shotgun by 12%, and reduces Golden Shotgun's use time by 20% \n[c/FF9300:Hypercharge] has a cooldown of [c/CA4646:40 seconds] once the effect ends\nOnly uses one Bullet per use");
+		// DisplayName.SetDefault("Golden Shotgun");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nFires a spread of 7 bullets \nUsing <right> grants the [c/8A8A8A:Hypercharging] buff, which has the following effects:\n - After 2 seconds of not being able to use items, grants the [c/FF9300:Hypercharge] buff\n - [c/FF9300:Hypercharge] increases damage dealt by Golden Shotgun by 12%, and reduces Golden Shotgun's use time by 20% \n[c/FF9300:Hypercharge] has a cooldown of [c/CA4646:40 seconds] once the effect ends\nOnly uses one Bullet per use");
 	}
 
 	public override void SetDefaults()

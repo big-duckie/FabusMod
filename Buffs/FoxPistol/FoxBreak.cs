@@ -7,8 +7,8 @@ public class FoxBreak : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Fox Break");
-        Description.SetDefault(" - Lowered Movement Speed");
+        // DisplayName.SetDefault("Fox Break");
+        // Description.SetDefault(" - Lowered Movement Speed");
         Main.buffNoTimeDisplay[Type] = false;
         Main.debuff[Type] = true;
     }

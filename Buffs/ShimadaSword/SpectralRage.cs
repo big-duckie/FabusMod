@@ -7,8 +7,8 @@ public class SpectralRage : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Spectral Rage");
-        Description.SetDefault(" - +10% damage!");
+        // DisplayName.SetDefault("Spectral Rage");
+        // Description.SetDefault(" - +10% damage!");
         Main.debuff[Type] = false;
         Main.buffNoTimeDisplay[Type] = false;
     }

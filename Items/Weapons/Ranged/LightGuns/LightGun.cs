@@ -10,8 +10,8 @@ public class LightGun : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Light Gun");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't require ammo \nShoots little light blasts");
+		// DisplayName.SetDefault("Light Gun");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nDoesn't require ammo \nShoots little light blasts");
 	}
 
 	public override void SetDefaults()

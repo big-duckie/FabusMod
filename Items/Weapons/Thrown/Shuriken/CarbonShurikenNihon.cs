@@ -8,8 +8,8 @@ public class CarbonShurikenNihon : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Carbon Shuriken - Nihon");
-		Tooltip.SetDefault("[c/B6FF00:Autothrows]\nThrows 3 fast-flying Shurikens at once");
+		// DisplayName.SetDefault("Carbon Shuriken - Nihon");
+		// Tooltip.SetDefault("[c/B6FF00:Autothrows]\nThrows 3 fast-flying Shurikens at once");
 	}
 
 	public override void SetDefaults()

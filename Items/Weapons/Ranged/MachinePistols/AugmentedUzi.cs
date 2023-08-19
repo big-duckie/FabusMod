@@ -10,8 +10,8 @@ public class AugmentedUzi : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Augmented Uzi");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n70% chance to not consume ammo \nShoots incredibly fast");
+		// DisplayName.SetDefault("Augmented Uzi");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n70% chance to not consume ammo \nShoots incredibly fast");
 	}
 
 	public override void SetDefaults()

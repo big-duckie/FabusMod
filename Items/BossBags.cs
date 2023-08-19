@@ -7,7 +7,7 @@ namespace FabusMod.Items;
 
 public class BossBags : GlobalItem
 {
-	public override void OpenVanillaBag(string context, Player player, int arg)
+	/*public override void OpenVanillaBag(string context, Player player, int arg)
 	{
 		if (context == "bossBag" && arg == ItemID.KingSlimeBossBag && Utils.NextFloat(Main.rand) < 0.5f && Main.expertMode)
 		{
@@ -30,5 +30,5 @@ public class BossBags : GlobalItem
 			player.QuickSpawnItem(new EntitySource_Misc(""), ModContent.ItemType<Vanity.Leafy.LeafyChest>());
 			player.QuickSpawnItem(new EntitySource_Misc(""), ModContent.ItemType<Vanity.Leafy.LeafyLegs>());
 		}
-	}
+	}*/
 }

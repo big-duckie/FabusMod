@@ -7,8 +7,8 @@ public class HyperchargeCooldown : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Hypercharge Cooldown");
-        Description.SetDefault("Unable to Hypercharge!");
+        // DisplayName.SetDefault("Hypercharge Cooldown");
+        // Description.SetDefault("Unable to Hypercharge!");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

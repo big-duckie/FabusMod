@@ -10,8 +10,8 @@ public class TheStinger : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Stinger");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable]\nDoesn't require ammo\nShoots little light blasts");
+		// DisplayName.SetDefault("The Stinger");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable]\nDoesn't require ammo\nShoots little light blasts");
 	}
 
 	public override void SetDefaults()

@@ -7,8 +7,8 @@ public class ShatteredMoonsCurse : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Shattered Moon's Curse");
-        Description.SetDefault("Unable to receive the Shattered Moon's Blessing!");
+        // DisplayName.SetDefault("Shattered Moon's Curse");
+        // Description.SetDefault("Unable to receive the Shattered Moon's Blessing!");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

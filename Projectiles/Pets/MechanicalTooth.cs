@@ -8,7 +8,7 @@ public class MechanicalTooth : ModProjectile
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Mechanical Tooth");
+		// DisplayName.SetDefault("Mechanical Tooth");
 		Main.projFrames[Projectile.type] = 4;
 		Main.projPet[Projectile.type] = true;
 	}

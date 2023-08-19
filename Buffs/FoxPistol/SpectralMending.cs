@@ -7,8 +7,8 @@ public class SpectralMending : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Spectral Mending");
-        Description.SetDefault(" - HP +200\n - Regenerating HP\n - Increased Movement Speed\n - -7% Damage");
+        // DisplayName.SetDefault("Spectral Mending");
+        // Description.SetDefault(" - HP +200\n - Regenerating HP\n - Increased Movement Speed\n - -7% Damage");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = false;
     }

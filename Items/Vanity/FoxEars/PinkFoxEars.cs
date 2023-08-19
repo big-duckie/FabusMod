@@ -9,7 +9,7 @@ public class PinkFoxEars : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Now in pink!");
+		// Tooltip.SetDefault("Now in pink!");
 
 		ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true;
 	}

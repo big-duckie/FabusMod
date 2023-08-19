@@ -8,8 +8,8 @@ public class MechanicalTooth : ModBuff
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Mechanical Tooth");
-		Description.SetDefault("Chomping away at your bits!");
+		// DisplayName.SetDefault("Mechanical Tooth");
+		// Description.SetDefault("Chomping away at your bits!");
 		Main.buffNoTimeDisplay[Type] = true;
 		Main.vanityPet[Type] = true;
 	}

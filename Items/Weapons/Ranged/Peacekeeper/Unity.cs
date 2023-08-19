@@ -11,8 +11,8 @@ public class Unity : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Unity");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots 6 bullets in quick succession \n60% chance to not consume ammo \nConverts Musket Balls into homing rainbow bullets");
+		// DisplayName.SetDefault("Unity");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots 6 bullets in quick succession \n60% chance to not consume ammo \nConverts Musket Balls into homing rainbow bullets");
 	}
 
 	public override void SetDefaults()

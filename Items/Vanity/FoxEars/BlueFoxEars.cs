@@ -9,7 +9,7 @@ public class BlueFoxEars : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Now in blue!");
+		// Tooltip.SetDefault("Now in blue!");
 
 		ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true;
 	}

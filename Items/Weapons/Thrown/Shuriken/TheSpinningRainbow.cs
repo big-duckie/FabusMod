@@ -8,7 +8,7 @@ public class TheSpinningRainbow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autothrows]\nThrows 6 Shurikens at once");
+		// Tooltip.SetDefault("[c/B6FF00:Autothrows]\nThrows 6 Shurikens at once");
 	}
 
 	public override void SetDefaults()

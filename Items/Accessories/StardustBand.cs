@@ -9,7 +9,7 @@ public class StardustBand : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("12% increased minion damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs");
+		// Tooltip.SetDefault("12% increased minion damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs");
 	}
 
 	public override void SetDefaults()

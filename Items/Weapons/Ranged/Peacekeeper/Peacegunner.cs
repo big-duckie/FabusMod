@@ -10,8 +10,8 @@ public class Peacegunner : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Solitude");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable]");
+		// DisplayName.SetDefault("Solitude");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable]");
 	}
 
 	public override void SetDefaults()

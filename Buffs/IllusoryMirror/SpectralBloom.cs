@@ -7,8 +7,8 @@ public class SpectralBloom : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("SpectralBloom");
-        Description.SetDefault(" - Buffed HP Regeneration!\n - +18% magic damage\n - Increased Attack Speed for Spectral Illusion\n - Longer Invincibility after being hit");
+        // DisplayName.SetDefault("SpectralBloom");
+        // Description.SetDefault(" - Buffed HP Regeneration!\n - +18% magic damage\n - Increased Attack Speed for Spectral Illusion\n - Longer Invincibility after being hit");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = true;
     }

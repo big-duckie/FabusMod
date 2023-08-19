@@ -8,8 +8,8 @@ public class BadDream : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Bad Dream");
-        Description.SetDefault(" - Losing life!\n - Sweating!");
+        // DisplayName.SetDefault("Bad Dream");
+        // Description.SetDefault(" - Losing life!\n - Sweating!");
         Main.buffNoTimeDisplay[Type] = false;
     }
 

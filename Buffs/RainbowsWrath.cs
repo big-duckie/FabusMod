@@ -7,8 +7,8 @@ public class RainbowsWrath : ModBuff
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Rainbow's Wrath");
-		Description.SetDefault(" - Losing life\n - Lowered Movement Speed");
+		// DisplayName.SetDefault("Rainbow's Wrath");
+		// Description.SetDefault(" - Losing life\n - Lowered Movement Speed");
 		Main.buffNoTimeDisplay[Type] = false;
 	}
 

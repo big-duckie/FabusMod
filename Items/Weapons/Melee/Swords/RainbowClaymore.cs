@@ -10,8 +10,8 @@ public class RainbowClaymore : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("The Spectrum");
-		Tooltip.SetDefault("[c/B6FF00:Autoswings] \nShoots three homing rainbow orbs in a large spread on swing");
+		// DisplayName.SetDefault("The Spectrum");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings] \nShoots three homing rainbow orbs in a large spread on swing");
 	}
 
 	public override void SetDefaults()

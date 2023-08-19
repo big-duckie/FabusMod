@@ -9,7 +9,7 @@ public class GoldenDiggingClaw : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/FF3C2B:Mining speed too high may result in no funcionality]");
+		// Tooltip.SetDefault("[c/FF3C2B:Mining speed too high may result in no funcionality]");
 	}
 
 	public override void SetDefaults()

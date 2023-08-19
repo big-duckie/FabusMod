@@ -11,8 +11,8 @@ public class LunarRainBow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Lunar Rain-Bow");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, doesn't require ammo]\nGrants the [c/E6A6CF:Spectral Moon's Grace] buff when shooting, reducing fall speed and nullifying knockback \nUsing <right> while under max HP grants the [c/82E8E8:Spectral Moonlight] buff, which has the following effects:\n - Heals the player rapidly for 2 seconds and grants immunity, but disables the use of items\n - Grants [c/6DE5D8:Spectral Moon's Rejuvenation] after 2 seconds, healing 200 HP over 10 seconds and increasing ranged crit rate by 60\n[c/82E8E8:Spectral Moonlight] has a cooldown of [c/BF5E3B:50 seconds] once the effect ends");
+		// DisplayName.SetDefault("Lunar Rain-Bow");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, doesn't require ammo]\nGrants the [c/E6A6CF:Spectral Moon's Grace] buff when shooting, reducing fall speed and nullifying knockback \nUsing <right> while under max HP grants the [c/82E8E8:Spectral Moonlight] buff, which has the following effects:\n - Heals the player rapidly for 2 seconds and grants immunity, but disables the use of items\n - Grants [c/6DE5D8:Spectral Moon's Rejuvenation] after 2 seconds, healing 200 HP over 10 seconds and increasing ranged crit rate by 60\n[c/82E8E8:Spectral Moonlight] has a cooldown of [c/BF5E3B:50 seconds] once the effect ends");
 	}
 
 	public override void SetDefaults()

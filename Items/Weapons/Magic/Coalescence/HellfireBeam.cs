@@ -8,7 +8,7 @@ public class HellfireBeam : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Enemies are invulnerable for 5 frames after getting hit \nBurn your foes out of existence with a powerful laser beam! \nInflicts the [c/DA0205:On Fire!] debuff for 2 seconds on hit");
+		// Tooltip.SetDefault("Enemies are invulnerable for 5 frames after getting hit \nBurn your foes out of existence with a powerful laser beam! \nInflicts the [c/DA0205:On Fire!] debuff for 2 seconds on hit");
 	}
 
 	public override void SetDefaults()

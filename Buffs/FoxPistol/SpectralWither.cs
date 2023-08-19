@@ -7,8 +7,8 @@ public class SpectralWither : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Spectral Wither");
-        Description.SetDefault(" - Losing life!");
+        // DisplayName.SetDefault("Spectral Wither");
+        // Description.SetDefault(" - Losing life!");
         Main.buffNoTimeDisplay[Type] = false;
     }
 

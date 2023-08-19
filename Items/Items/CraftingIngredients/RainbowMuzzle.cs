@@ -8,7 +8,7 @@ public class RainbowMuzzle : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nUsed to craft The Rainbow Demon \n[c/FF2B6E:Currently Unobtainable]");
+		// Tooltip.SetDefault("[c/C9FF4C:Crafting Ingredient]\nUsed to craft The Rainbow Demon \n[c/FF2B6E:Currently Unobtainable]");
 	}
 
 	public override void SetDefaults()

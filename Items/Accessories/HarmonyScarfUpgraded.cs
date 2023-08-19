@@ -9,8 +9,8 @@ public class HarmonyScarfUpgraded : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Ultimate Scarf of Hope");
-		Tooltip.SetDefault("Increases Max HP and Mana by 120\n30% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs \n'What else is left...?'");
+		// DisplayName.SetDefault("Ultimate Scarf of Hope");
+		// Tooltip.SetDefault("Increases Max HP and Mana by 120\n30% increased all damage \nGrants immunity to the [c/FF4E00:On Fire!], [c/A84DFD:Distorted], and [c/9362B3:Obstructed] debuffs \n'What else is left...?'");
 	}
 
 	public override void SetDefaults()

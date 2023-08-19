@@ -10,8 +10,8 @@ public class CosmicHacker : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Cosmic Uzi");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nConverts Musket Balls into homing Rainbow Bullets");
+		// DisplayName.SetDefault("Cosmic Uzi");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n90% chance to not consume ammo \nConverts Musket Balls into homing Rainbow Bullets");
 	}
 
 	public override void SetDefaults()

@@ -10,7 +10,7 @@ public class NatureStaff : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots three oval-shaped magic projectiles twice in quick succession \nHas a 25% chance of inflicting the [c/0E3517:Poisoned] debuff for 3 seconds \nHas a high critical hit chance");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \nShoots three oval-shaped magic projectiles twice in quick succession \nHas a 25% chance of inflicting the [c/0E3517:Poisoned] debuff for 3 seconds \nHas a high critical hit chance");
 		Item.staff[Item.type] = true;
 	}
 

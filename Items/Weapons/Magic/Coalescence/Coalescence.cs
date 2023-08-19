@@ -8,7 +8,7 @@ public class Coalescence : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Enemies are invulnerable for 8 frames after getting hit \nBeam your foes out of existence with a powerful laser beam!");
+		// Tooltip.SetDefault("Enemies are invulnerable for 8 frames after getting hit \nBeam your foes out of existence with a powerful laser beam!");
 	}
 
 	public override void SetDefaults()

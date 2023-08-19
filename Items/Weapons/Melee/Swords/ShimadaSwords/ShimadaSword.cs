@@ -9,7 +9,7 @@ public class ShimadaSword : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("Inflicts [c/7B2D2F:Blood Loss] for 3 seconds on hit, dealing damage over time");
+		// Tooltip.SetDefault("Inflicts [c/7B2D2F:Blood Loss] for 3 seconds on hit, dealing damage over time");
 	}
 
 	public override void SetDefaults()
@@ -41,7 +41,7 @@ public class ShimadaSword : ModItem
 		}
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		target.AddBuff(ModContent.BuffType<Buffs.ShimadaSword.BloodLoss>(), 180, false);
 	}

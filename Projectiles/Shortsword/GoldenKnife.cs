@@ -14,7 +14,7 @@ public class GoldenKnife : ModProjectile
 
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Knife");
+		// DisplayName.SetDefault("Golden Knife");
 	}
 
 	public override void SetDefaults()

@@ -10,8 +10,8 @@ public class HellshiverGun : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Shivering Shotgun");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \nFires a spread of 6 bullets \nOnly uses one Bullet per use");
+		// DisplayName.SetDefault("Shivering Shotgun");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots, dyeable] \nFires a spread of 6 bullets \nOnly uses one Bullet per use");
 	}
 
 	public override void SetDefaults()
@@ -54,7 +54,7 @@ public class HellshiverGun : ModItem
 	{
 		CreateRecipe()
 			.AddIngredient(ModContent.ItemType<HellfireShotgun>())
-			.AddRecipeGroup("FabusMod:OrichalcumBar", 6)
+			.AddRecipeGroup("FabusMod:MythrilBar", 6)
 			.AddIngredient(ItemID.IceBlock, 20)
 			.AddTile(TileID.MythrilAnvil)
 			.Register();

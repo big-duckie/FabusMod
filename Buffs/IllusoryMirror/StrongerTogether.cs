@@ -7,8 +7,8 @@ public class StrongerTogether : ModBuff
 {
     public override void SetStaticDefaults()
     {
-        DisplayName.SetDefault("Stronger Together");
-        Description.SetDefault(" - Buffed HP Regeneration!\n - +15% magic damage\n - Increased Attack Speed for Illusory Mirror");
+        // DisplayName.SetDefault("Stronger Together");
+        // Description.SetDefault(" - Buffed HP Regeneration!\n - +15% magic damage\n - Increased Attack Speed for Illusory Mirror");
         Main.debuff[Type] = true;
         Main.buffNoTimeDisplay[Type] = true;
     }

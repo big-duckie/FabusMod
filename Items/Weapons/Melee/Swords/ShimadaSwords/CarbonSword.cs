@@ -10,7 +10,7 @@ public class CarbonSword : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		Tooltip.SetDefault("[c/B6FF00:Autoswings, dyeable]\nFires a stream of particles that deals damage three times\nInflicts [c/7B2D2F:Advanced Blood Loss] for 10 seconds when hit with the blade, dealing damage over time");
+		// Tooltip.SetDefault("[c/B6FF00:Autoswings, dyeable]\nFires a stream of particles that deals damage three times\nInflicts [c/7B2D2F:Advanced Blood Loss] for 10 seconds when hit with the blade, dealing damage over time");
 	}
 
 	public override void SetDefaults()
@@ -55,7 +55,7 @@ public class CarbonSword : ModItem
 		}
 	}
 
-	public override void OnHitNPC(Player player, NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		target.AddBuff(ModContent.BuffType<Buffs.ShimadaSword.AdvancedBloodLoss>(), 600, false);
 	}
@@ -64,7 +64,7 @@ public class CarbonSword : ModItem
 	{
 		CreateRecipe()
 			.AddIngredient(ModContent.ItemType<ShimadaSword>())
-			.AddRecipeGroup("FabusMod:OrichalcumBar", 10)
+			.AddRecipeGroup("FabusMod:MythrilBar", 10)
 			.AddTile(TileID.DemonAltar)
 			.Register();
 

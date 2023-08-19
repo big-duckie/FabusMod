@@ -51,7 +51,7 @@ public class DreamCatcherWave : ModProjectile
 		Main.dust[num6].noGravity = true;
 	}
 
-	public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+	public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 	{
 		if (Projectile.owner == Main.myPlayer)
 		{

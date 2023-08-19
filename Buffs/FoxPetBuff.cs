@@ -8,8 +8,8 @@ public class FoxPetBuff : ModBuff
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Fox Pet");
-		Description.SetDefault("Does it want your apple?");
+		// DisplayName.SetDefault("Fox Pet");
+		// Description.SetDefault("Does it want your apple?");
 		Main.buffNoTimeDisplay[Type] = true;
 		Main.vanityPet[Type] = true;
 	}

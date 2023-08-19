@@ -11,8 +11,8 @@ public class FusedRainbow : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Cosmic Fusion");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nConverts Musket Balls into homing rainbow bullets");
+		// DisplayName.SetDefault("Cosmic Fusion");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots] \n80% chance to not consume ammo \nConverts Musket Balls into homing rainbow bullets");
 	}
 
 	public override void SetDefaults()

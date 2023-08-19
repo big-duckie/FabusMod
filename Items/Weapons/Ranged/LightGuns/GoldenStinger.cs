@@ -10,8 +10,8 @@ public class GoldenStinger : ModItem
 {
 	public override void SetStaticDefaults()
 	{
-		DisplayName.SetDefault("Golden Stinger");
-		Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots golden light blasts");
+		// DisplayName.SetDefault("Golden Stinger");
+		// Tooltip.SetDefault("[c/B6FF00:Autoshoots]\nDoesn't require ammo\nShoots golden light blasts");
 	}
 
 	public override void SetDefaults()
